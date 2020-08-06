@@ -1,0 +1,30 @@
+# This travis file currently is NOT used.
+# It is an example, for us to enable soon.
+
+# Adapted from: https://rust-lang.github.io/mdBook/continuous-integration.html
+
+language: rust
+sudo: false
+
+cache:
+  - cargo
+
+rust:
+  - stable
+
+before_script:
+  - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
+  - (test -x $HOME/.cargo/bin/mdbook || cargo install --vers "^0.4" mdbook)
+  - cargo install-update -a
+
+script:
+  - mdbook build && mdbook test
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: book
+  keep-history: false
+  on:
+    branch: master
