@@ -1,6 +1,3 @@
-# This travis file currently is NOT used.
-# It is an example, for us to enable soon.
-
 # Adapted from: https://rust-lang.github.io/mdBook/continuous-integration.html
 
 language: rust
