@@ -23,7 +23,7 @@ Antenna 1 is an Ubiquiti LAP-120 mounted on the West arm of the building, south 
 
 ### Antenna 2
 
-Antenna 2 is an Ubiquiti LAP-120 mounted on the south arm of the building, east side of the roof colocated with Cisco on their mounts. The antenna is facing east.
+Antenna 2 is an Ubiquiti LAP-120 mounted on the south arm of the building, on the east side of the roof, colocated with Cisco on their mounts. The antenna is facing east.
 
 ![image](images/supernode1-hardware-antenna2.jpg)
 
