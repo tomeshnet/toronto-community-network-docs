@@ -39,6 +39,7 @@ Router is configured with a STATIC ip and only routes for the exit node and a se
 ## Physical Environment
 
 Roof is accessable through ceiling hatches on the top floor of the building.
+
 ![image](images/supernode1-access-roof.jpg)
 
 The router is installed in a black metal cabinet located on the back wall of the ballast tank room on top of 200 Woolner. This room is accessable only from the roof. The entrance is on the east wall of the elevator hut. The doors are shorter then normal.
