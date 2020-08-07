@@ -30,7 +30,7 @@ Antenna 2 is an Ubiquiti LAP-120 mounted on the south arm of the building, on th
 ### Router 1
 
 
-Router 1 is a Ubiquti EdgeRouter X-SFP mounted in the inside Cisco cabinet in the ballast room. It is connected to the exit node over a L2TP tunnel using UDP.
+Router 1 is a Ubiquti EdgeRouter X-SFP mounted inside the Cisco cabinet in the ballast room. It is connected to the exit node over a L2TP tunnel using UDP.
 
 Router is configured with a STATIC ip and only routes for the exit node and a secondary VPS server. Secondary VPS is used to provide an OpenVPN link for out of band management of the device.
 
