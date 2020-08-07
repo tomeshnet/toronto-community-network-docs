@@ -53,15 +53,15 @@ Network cables are run through a hole in the east wall.
 
 Testing was done at several points that had line-of-sight to the antenna. The antenna was hand-held, not tuned precisely. Results are for reference only, and do not necessarily represent what a permanent deployment could attain at that distance.
 
-| Point     | Distance (m)    | Ping      |  Speed RX/TX (mbps)   | Signal (dBm)   |
-|-----------|-------------|-----------|-----------------|----------|
-| a         |   200m      |    4.57   |  86/194Mbps     | -64      |
-| b         |   200m      |    2.86   |  80/194Mbps     | -60      |
-| c         |   237m      |    5.82   |   50/178Mbps    | -58      |
-| d         |   270m      |    5.27   |  103/149Mbps    | -50      |
-| e (1)     |   396m      |     5.11  |  83/172Mbps     | -58      |
-| f         |   2520m     |   4.57    |  8.68/1.6Mbps   | -81      |
-| f (2)     |   2520m     |    4.57   |  64.58/40.79Mbps| -74      |
+| Point     | Distance (m) | Ping      |  Speed RX/TX (mbps)   | Signal (dBm)   |
+|-----------|--------------|-----------|-----------------------|----------------|
+| a         | 200          | 4.57      |  86/194               | -64            |
+| b         | 200          | 2.86      |  80/194               | -60            |
+| c         | 237          | 5.82      |   50/17s              | -58            |
+| d         | 270          | 5.27      |  103/14s              | -50            |
+| e (1)     | 396          | 5.11      |  83/172               | -58            |
+| f         | 2520         | 4.57      |  8.68/1.6             | -81            |
+| f (2)     | 2520         | 4.57      |  64.58/40.79          | -74            |
 
 (1) Used both Loco AC and LiteBeam AC. Both performed the same.  
 (2) Second attempt done after corrected issue with sn1a2.
