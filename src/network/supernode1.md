@@ -63,7 +63,7 @@ Testing was done at several poits that where line of sight to the anteanna. Ante
 | f         |   2520m     |   4.57    |  8.68/1.6Mbps   | -81      |
 | f (2)     |   2520m     |    4.57   |  64.58/40.79Mbps| -74      |
 
-(1) Used both Loco AC and LiteBeam AC. Both performed the same.
+(1) Used both Loco AC and LiteBeam AC. Both performed the same.  
 (2) Second attempt done after corrected issue with sn1a2.
 
 ## Additional notes
