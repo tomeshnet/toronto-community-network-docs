@@ -51,7 +51,7 @@ Network cables are run through a hole in the east wall.
 
 ## Neighborhood  Testing
 
-Testing was done at several poits that where line of sight to the anteanna. Antenna was hand held not tune precisely. Results are for refrence only.
+Testing was done at several points that had line-of-sight to the antenna. The antenna was hand-held, not tuned precisely. Results are for reference only, and do not necessarily represent what a permanent deployment could attain at that distance.
 
 | Point     | Distance    | Ping      |  Speed RX/TX    | Signal   |
 |-----------|-------------|-----------|-----------------|----------|
