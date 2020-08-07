@@ -52,8 +52,8 @@ Network cables are run through a hole in the east wall.
 
 Testing was done at several poits that where line of sight to the anteanna. Antenna was hand held not tune precisely. Results are for refrence only.
 
-| Point   | Distance   | Ping   |  Speed RX/TX  | Signal |
-|----------|---------------|--------------|----------|---------------------|----------|
+| Point     | Distance    | Ping      |  Speed RX/TX    | Signal   |
+|-----------|-------------|-----------|-----------------|----------|
 | a         |   200m      |    4.57   |  86/194Mbps     | -64      |
 | b         |   200m      |    2.86   |  80/194Mbps     | -60      |
 | c         |   237m      |    5.82   |   50/178Mbps    | -58      |
