@@ -17,7 +17,7 @@ The router acts as a Babel routing device. The antennas are configured in bridge
 ### Antenna 1
 
 
-Antenna 1 is an Ubiquiti LAP-120 mounted on the West arm of the building, south side of the roof colocated with Cisco on their mounts. The antenna is facing south.
+Antenna 1 is an Ubiquiti LAP-120 mounted on the West arm of the building, on the south side of the roof, colocated with Cisco on their mounts. The antenna is facing south.
 
 ![image](images/supernode1-hardware-antenna1.jpg)
 
