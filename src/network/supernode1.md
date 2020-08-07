@@ -53,7 +53,7 @@ Network cables are run through a hole in the east wall.
 
 Testing was done at several points that had line-of-sight to the antenna. The antenna was hand-held, not tuned precisely. Results are for reference only, and do not necessarily represent what a permanent deployment could attain at that distance.
 
-| Point     | Distance    | Ping      |  Speed RX/TX    | Signal   |
+| Point     | Distance (m)    | Ping      |  Speed RX/TX (mbps)   | Signal (dBm)   |
 |-----------|-------------|-----------|-----------------|----------|
 | a         |   200m      |    4.57   |  86/194Mbps     | -64      |
 | b         |   200m      |    2.86   |  80/194Mbps     | -60      |
