@@ -38,7 +38,7 @@ Router is configured with a static IP and only routes to the exit node and a sec
 
 ## Physical Environment
 
-Roof is accessable through ceiling hatches on the top floor of the building.
+The roof is accessible through ceiling hatches on the top floor of the building.
 
 ![image](images/supernode1-access-roof.jpg)
 
