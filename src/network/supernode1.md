@@ -42,7 +42,7 @@ Roof is accessable through ceiling hatches on the top floor of the building.
 
 ![image](images/supernode1-access-roof.jpg)
 
-The router is installed in a black metal cabinet located on the back wall of the ballast tank room on top of 200 Woolner. This room is accessable only from the roof. The entrance is on the east wall of the elevator hut. The doors are shorter then normal.
+The router is installed in a black metal cabinet, located on the back wall of the ballast tank room on the roof. This room is accessible only from the roof. The entrance is on the east wall of the elevator hut. The doors are shorter then normal.
 
 Network cables are run through a hole in the east wall.
 
