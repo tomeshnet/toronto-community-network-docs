@@ -1,19 +1,12 @@
----
-layout: page
-title: "Supernode 1"
----
 # Supernode 1
 
 ![image](images/supernode1-view.jpg)
 
-Location: 200 Woolner Ave, Toronto
-
-**Notes**  
-The supernode was deployed along side a Cisco deployed infustructure belonging to the City of Toronto.
+Supernode 1 is located on top of 200 Woolner Ave, Toronto. The supernode was deployed along side a Cisco deployed infustructure belonging to the City of Toronto.
 
 ## Network
 
-The supernode consists of 2 antennas and a router. The router is connected to the Cisco switch which in turn is connected to the Bell 2000 modem that offers internet access for use as a gateway path.
+The supernode consists of 2 antennas and a router. The router is connected to the Cisco switch which is connected to the Bell 2000 modem that offers internet access for use as a gateway path.
 
 The router acts as a Babel routing device. The antennas are configured in bridge mode.
 
@@ -23,21 +16,55 @@ The router acts as a Babel routing device. The antennas are configured in bridge
 
 ### Antenna 1
 
-![image](images/supernode1-hardware-antenna1.jpg)
 
-Antenna 1 is a Ubiquiti LAP-120 mounted on the West arm of the building, south side of the roof colocated with Cisco on their mounts. It is facing south.
+Antenna 1 is an Ubiquiti LAP-120 mounted on the West arm of the building, south side of the roof colocated with Cisco on their mounts. The antenna is facing south.
+
+![image](images/supernode1-hardware-antenna1.jpg)
 
 ### Antenna 2
 
+Antenna 2 is an Ubiquiti LAP-120 mounted on the south arm of the building, east side of the roof colocated with Cisco on their mounts. The antenna is facing east.
+
 ![image](images/supernode1-hardware-antenna2.jpg)
-Antenna 2 is a Ubiquiti LAP-120 mounted on the south arm of the building, east side of the roof colocated with Cisco on their mounts. It is facing east.
 
 ### Router 1
 
-Router 1 is a Ubiquti EdgeRouter X-SFP mounted in the inside Cisco cabinate in the ballast room.
 
-## Enviroment
+Router 1 is a Ubiquti EdgeRouter X-SFP mounted in the inside Cisco cabinet in the ballast room. It is connected to the exit node over a L2TP tunnel using UDP.
 
-The router is installed in a black metal encosure located on the back wall of the ballast tank room on top of 200 Woolner. This room is accessable only from the roof. The entrance is on the east wall of the elevator hut. The doors are shorter then normal.
+Router is configured with a STATIC ip and only routes for the exit node and a secondary VPS server. Secondary VPS is used to provide an OpenVPN link for out of band management of the device.
+
+![image](images/supernode1-hardware-cabinet2.jpg)
+
+## Physical Environment
+
+Roof is accessable through ceiling hatches on the top floor of the building.
+![image](images/supernode1-access-roof.jpg)
+
+The router is installed in a black metal cabinet located on the back wall of the ballast tank room on top of 200 Woolner. This room is accessable only from the roof. The entrance is on the east wall of the elevator hut. The doors are shorter then normal.
 
 Network cables are run through a hole in the east wall.
+
+![image](images/supernode1-access-ballast.jpg)
+![image](images/supernode1-hardware-cabinet.jpg)
+
+## Neighborhood  Testing
+
+Testing was done at several poits that where line of sight to the anteanna. Antenna was hand held not tune precisely. Results are for refrence only.
+
+| Point   | Distance   | Ping   |  Speed RX/TX  | Signal |
+|----------|---------------|--------------|----------|---------------------|----------|
+| a         |   200m      |    4.57   |  86/194Mbps     | -64      |
+| b         |   200m      |    2.86   |  80/194Mbps     | -60      |
+| c         |   237m      |    5.82   |   50/178Mbps    | -58      |
+| d         |   270m      |    5.27   |  103/149Mbps    | -50      |
+| e (1)     |   396m      |     5.11  |  83/172Mbps     | -58      |
+| f         |   2520m     |   4.57    |  8.68/1.6Mbps   | -81      |
+| f (2)     |   2520m     |    4.57   |  64.58/40.79Mbps| -74      |
+
+(1) Used both Loco AC and LiteBeam AC. Both performed the same.
+(2) Second attempt done after corrected issue with sn1a2.
+
+## Additional notes
+
+EdgeRouter X-SFP does not accelerate traffic over tunnels. Due to this, speeds are currently limited to around 400Mbps to exit node.
