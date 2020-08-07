@@ -23,6 +23,5 @@ deploy:
   github-token: $GITHUB_TOKEN
   local-dir: book
   keep-history: false
-  fqdn: docs.tomesh.net
   on:
-    branch: master
+    branch: supernode1
