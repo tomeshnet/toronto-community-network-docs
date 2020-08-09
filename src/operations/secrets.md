@@ -1,11 +1,9 @@
 # Managing Secrets
 
-The purpose of this document is to provide contributors information on how to obtain access to Toronto Community Network assets.
+The purpose of this document is to provide information to contributors on how to store and view the Toronto Community Network's "secrets", such as passwords, keys, credentials, and other information kept private for security reasons.
 
-# Introduction
-The Toronto Community Network uses [Bitwarden](https://bitwarden.com/) to share and manage secrets across the organization.
-
-Bitwarden is a free and open-source password management service that stores sensitive information (such as website credentials) in an encrypted vault.
+## Introduction
+The Toronto Community Network uses [Bitwarden](https://bitwarden.com/) to share and manage secrets across the organization. Bitwarden is a free and open-source password management service that stores sensitive information (such as website credentials) in an encrypted vault.
 
 Bitwarden supports the following clients:
 
@@ -17,14 +15,14 @@ Bitwarden supports the following clients:
 For more information about supported clients, see Bitwarden's [download options](https://bitwarden.com/download/).
 
 
-# Accessing Secrets
-The Toronto Community Network is using the self-hosted version of Bitwarden and URL can be accessed at: [https://tomesh.infectedroot.com](https://tomesh.infectedroot.com).
+## Accessing Secrets
+The Toronto Community Network is using the self-hosted version of Bitwarden, and can be accessed at [https://tomesh.infectedroot.com](https://tomesh.infectedroot.com).
 
 For secrets to be shared, they must exist within the [Toronto Community Network organization](https://tomesh.infectedroot.com/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault).
 
-When using the Bitwarden applications, please make sure to [change the Server URL](https://bitwarden.com/help/article/change-client-environment/#:~:text=On%20the%20home%20screen%20of,com%20for%20the%20Server%20URL) in the Bitwarden settings to the URL [https://tomesh.infectedroot.com](https://tomesh.infectedroot.com).  
+When using the Bitwarden applications, please make sure to [change the Server URL](https://bitwarden.com/help/article/change-client-environment/#:~:text=On%20the%20home%20screen%20of,com%20for%20the%20Server%20URL) in the Bitwarden settings to the `https://tomesh.infectedroot.com`.  
 
-# Obtaining Access
+## Obtaining Access
 Obtaining access to Bitwarden is a 4-step process.
  
 1.  Send an email to operations@tomesh.net with the following information:
