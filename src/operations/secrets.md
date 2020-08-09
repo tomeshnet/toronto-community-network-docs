@@ -52,7 +52,7 @@ In order to maintain integrity of the Toronto Community Network operations, most
 # Storing Secrets
 All secrets must be attached to a [Collection](https://bitwarden.com/help/article/collections/) to faciliate access control. Please be sure to attach the secret to an existing [Toronto Community Network Work Group](https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams). These collection names start with `_OU`.
 
-Additional Collections may be created or utilized to classify the secret such as _Social_, _Service_ _Accounts_, _Website_, and _more_.
+Additional Collections may be created or utilized to classify the secret such as _Social_, _Service_ _Accounts_, _Website_, and more.
 
 When naming your credential, please use the following convention: _System/Function - Identifer_.
 
