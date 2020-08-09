@@ -42,12 +42,12 @@ We recommend that you setup [two-factor authentication](https://bitwarden.com/he
 
 
 ## Access Control
-When storing credentials, you must store them within the [Toronto Community Network organization](https://tomesh.infectedroot.com/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault). Bitwarden organizes secrets in groups called [Collections](https://bitwarden.com/help/article/collections/) and within those [Collections](https://bitwarden.com/help/article/collections/) are four [User Types]( https://bitwarden.com/help/article/user-types-access-control/#user-types): _User_, _Manager_, _Admin_, and _Owner_.
+When storing credentials, you must store them within the [Toronto Community Network organization](https://tomesh.infectedroot.com/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault). Bitwarden organizes secrets in groups called [Collections](https://bitwarden.com/help/article/collections/) and within those Collections are four [User Types]( https://bitwarden.com/help/article/user-types-access-control/#user-types): _User_, _Manager_, _Admin_, and _Owner_.
 
-In order to maintain integrity of the Toronto Community Network operations, most users will be granted only  User or Manager access. The Project Operations team will determine your access based on your use case or requirements.
+In order to maintain integrity of the Toronto Community Network operations, most users will be granted only User or Manager access. The Project Operations team will determine your access based on your use case or requirements.
 
 
-# Storing Secrets
+## Storing Secrets
 All secrets must be attached to a [Collection](https://bitwarden.com/help/article/collections/) to faciliate access control. Please be sure to attach the secret to an existing [Toronto Community Network Work Group](https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams). These collection names start with `_OU`.
 
 Additional Collections may be created or utilized to classify the secret such as _Social_, _Service_ _Accounts_, _Website_, and more.
