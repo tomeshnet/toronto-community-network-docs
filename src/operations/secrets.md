@@ -43,7 +43,7 @@ Obtaining access to Bitwarden is a 4-step process.
 We recommend that you setup [two-factor authentication](https://bitwarden.com/help/article/setup-two-step-login/) on your account to increase the security of your account. 
 
 
-# Access Control
+## Access Control
 When storing credentials, you must store them within the [Toronto Community Network organization](https://tomesh.infectedroot.com/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault). Bitwarden organizes secrets in groups called [Collections](https://bitwarden.com/help/article/collections/) and within those [Collections](https://bitwarden.com/help/article/collections/) are four [User Types]( https://bitwarden.com/help/article/user-types-access-control/#user-types): _User_, _Manager_, _Admin_, and _Owner_.
 
 In order to maintain integrity of the Toronto Community Network operations, most users will be granted only  User or Manager access. The Project Operations team will determine your access based on your use case or requirements.
@@ -61,16 +61,16 @@ When naming your credential, please use the following convention: _System/Functi
 > - A GitHub deployment key may be named _"GitHub - Deploy Key (docs.tomesh.net)"_
 > - A shared login social media may be named _"Twitter - tomeshnet"_
 
-When determining a password or passphrase, please use strong entropy to prevent unauthoized access. For more information, please see our [Recommended Best Practices](#recommended-best-practices) below.
+When determining a password or passphrase, please use strong entropy to prevent unauthorized access. For more information, please see our [Recommended Best Practices](#recommended-best-practices) below.
 
 All public keys and private keys must be saved as _Secured Notes_.
 
-Please be mindful that secrets stored in this system can be accessed by any authorized contributor in the Toronto Community Network. While your connection to the system is secured via SSL, the infrastructure it is hosted on is not PCI-DSS compliant. Please refrain from using the _Card_ and _Identity_ item types for storing any personal information.
+Please be mindful that secrets stored in this system can be accessed by any authorized contributor in the Toronto Community Network. While your connection to the system is secured via TLS, the secrets you choose to store in the group can be seen by others. Please refrain from using the system for storing any personal information.
 
 For more information about managing items, please see Bitwarden's offical documentation on [Managing Items](https://bitwarden.com/help/article/managing-items/).
 
 
-# Data Backup
+## Data Backup
 The VM that hosts the Bitwarden container is backed up on a weekly basis. 
 
 Administrators of the [Toronto Community Network organization](https://tomesh.infectedroot.com/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault) have the ability to export the entire vault to a JSON or CSV file.
@@ -78,9 +78,8 @@ Administrators of the [Toronto Community Network organization](https://tomesh.in
 As the export function provides secrets in clear-text, please secure or encrypt the file immediately.
 
 
-# Recommended Best Practices
+## Recommended Best Practices
 The Government of Canada's [Canadian Centre for Cyber Security](https://cyber.gc.ca/) provides recommendations for organizations to protect networks, systems, and information. By using these best practices, you can protect yourself and the integrity of the Toronto Community Network.
 
 - [Password Managers-Security (ITSAP.30.025)](https://cyber.gc.ca/en/guidance/password-managers-security-itsap30025)
-
 - [Best Practices for Passphrases and Passwords (ITSAP.30.032)](https://www.cyber.gc.ca/en/guidance/best-practices-passphrases-and-passwords-itsap30032)
