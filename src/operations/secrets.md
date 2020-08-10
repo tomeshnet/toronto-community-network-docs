@@ -16,11 +16,11 @@ For more information about supported clients, see Bitwarden's [download options]
 
 
 ## Accessing Secrets
-The Toronto Community Network is using the self-hosted version of Bitwarden, and can be accessed at [https://tomesh.infectedroot.com](https://tomesh.infectedroot.com).
+The Toronto Community Network is using the self-hosted version of Bitwarden, and can be accessed at [https://pass.tomesh.net](https://pass.tomesh.net).
 
-For secrets to be shared, they must exist within the [Toronto Community Network organization](https://tomesh.infectedroot.com/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault).
+For secrets to be shared, they must exist within the [Toronto Community Network organization](https://pass.tomesh.net/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault).
 
-When using the Bitwarden applications, please make sure to [change the Server URL](https://bitwarden.com/help/article/change-client-environment/#:~:text=On%20the%20home%20screen%20of,com%20for%20the%20Server%20URL) in the Bitwarden settings to the `https://tomesh.infectedroot.com`.  
+When using the Bitwarden applications, please make sure to [change the Server URL](https://bitwarden.com/help/article/change-client-environment/#:~:text=On%20the%20home%20screen%20of,com%20for%20the%20Server%20URL) in the Bitwarden settings to the `https://pass.tomesh.net`.  
 
 ## Obtaining Access
 Obtaining access to Bitwarden is a 4-step process.
@@ -42,7 +42,7 @@ We recommend that you setup [two-factor authentication](https://bitwarden.com/he
 
 
 ## Access Control
-When storing credentials, you must store them within the [Toronto Community Network organization](https://tomesh.infectedroot.com/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault). Bitwarden organizes secrets in groups called [Collections](https://bitwarden.com/help/article/collections/) and within those Collections are four [User Types]( https://bitwarden.com/help/article/user-types-access-control/#user-types): _User_, _Manager_, _Admin_, and _Owner_.
+When storing credentials, you must store them within the [Toronto Community Network organization](https://pass.tomesh.net/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault). Bitwarden organizes secrets in groups called [Collections](https://bitwarden.com/help/article/collections/) and within those Collections are four [User Types]( https://bitwarden.com/help/article/user-types-access-control/#user-types): _User_, _Manager_, _Admin_, and _Owner_.
 
 In order to maintain integrity of the Toronto Community Network operations, most users will be granted only User or Manager access. The Project Operations team will determine your access based on your use case or requirements.
 
@@ -71,7 +71,7 @@ For more information about managing items, please see Bitwarden's offical docume
 ## Data Backup
 The VM that hosts the Bitwarden container is backed up on a weekly basis. 
 
-Administrators of the [Toronto Community Network organization](https://tomesh.infectedroot.com/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault) have the ability to export the entire vault to a JSON or CSV file.
+Administrators of the [Toronto Community Network organization](https://pass.tomesh.net/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault) have the ability to export the entire vault to a JSON or CSV file.
 
 As the export function provides secrets in clear-text, please secure or encrypt the file immediately.
 
