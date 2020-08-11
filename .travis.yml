@@ -27,3 +27,7 @@ deploy:
   fqdn: docs.tomesh.net
   on:
     branch: master
+
+notifications:
+  email:
+    on_success: never
