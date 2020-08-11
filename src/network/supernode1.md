@@ -49,7 +49,7 @@ Network cables are run through a hole in the east wall.
 ![image](images/supernode1-access-ballast.jpg)
 ![image](images/supernode1-hardware-cabinet.jpg)
 
-## Neighborhood  Testing
+## Neighbourhood Testing
 
 Testing was done at several points that had line-of-sight to the antenna. The antenna was hand-held, not tuned precisely. Results are for reference only, and do not necessarily represent what a permanent deployment could attain at that distance.
 
