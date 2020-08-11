@@ -61,7 +61,7 @@ Testing was done at several points that had line-of-sight to the antenna. The an
 | f         | 2520         | 4.57      |  8.68/1.6             | -81            |
 | f (2)     | 2520         | 4.57      |  64.58/40.79          | -74            |
 
-(1) Used both Loco AC and LiteBeam AC. Both performed the same.  
+(1) Used both [Nanostation AC (Loco5AC)](https://www.ui.com/airmax/nanostation-ac/) and [LiteBeam AC (LBE‑5AC‑23)](https://www.ui.com/airmax/litebeam-ac/). Both performed the same.  
 (2) Second attempt done after correcting issue with `sn1a2`.
 
 ## Additional Notes
