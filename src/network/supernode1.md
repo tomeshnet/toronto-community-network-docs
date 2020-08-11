@@ -66,6 +66,6 @@ Testing was done at several points that had line-of-sight to the antenna. The an
 (1) Used both Loco AC and LiteBeam AC. Both performed the same.  
 (2) Second attempt done after correcting issue with `sn1a2`.
 
-## Additional notes
+## Additional Notes
 
 EdgeRouter X-SFP does not accelerate traffic over tunnels. Due to this, speeds are currently limited to around 400Mbps to exit node.
