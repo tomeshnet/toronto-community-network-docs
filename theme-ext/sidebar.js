@@ -1,4 +1,4 @@
-// Source: https://github.com/JorelAli/mdBook-pagetoc/blob/master/sidebar.js
+// Source: https://github.com/JorelAli/mdBook-pagetoc/blob/3b9165bca3ceb54119001890d3a7e9356b171a72/sidebar.js
 
 // Un-active everything when you click it
 Array.prototype.forEach.call(document.getElementsByClassName("pagetoc")[0].children, function(el, i) {
