@@ -2,7 +2,7 @@
 
 ![image](images/supernode1-view.jpg)
 
-Supernode 1 is located on top of 200 Woolner Ave, Toronto. The supernode was deployed along side a Cisco deployed infrastructure belonging to the City of Toronto.
+Supernode 1 is located on top of 200 Woolner Ave, Toronto. The supernode was deployed alongside Cisco-deployed infrastructure belonging to the City of Toronto.
 
 ## Network
 
