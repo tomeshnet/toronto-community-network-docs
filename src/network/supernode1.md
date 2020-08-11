@@ -2,7 +2,7 @@
 
 ![image](images/supernode1-view.jpg)
 
-Supernode 1 is located on top of 200 Woolner Ave, Toronto. The supernode was deployed along side a Cisco deployed infrastructure belonging to the City of Toronto.
+Supernode 1 is located on top of 200 Woolner Ave, Toronto. The supernode was deployed alongside Cisco-deployed infrastructure belonging to the City of Toronto.
 
 ## Network
 
@@ -16,8 +16,7 @@ The router acts as a Babel routing device. The antennas are configured in bridge
 
 ### Antenna 1
 
-
-Antenna 1 is an Ubiquiti LAP-120 mounted on the West arm of the building, on the south side of the roof, colocated with Cisco on their mounts. The antenna is facing south.
+Antenna 1 is an [Ubiquiti LAP-120](https://www.ui.com/airmax/liteap-ac/) mounted on the west arm of the building, on the south side of the roof, colocated with Cisco on their mounts. The antenna is facing south.
 
 ![image](images/supernode1-hardware-antenna1.jpg)
 
@@ -29,8 +28,7 @@ Antenna 2 is an Ubiquiti LAP-120 mounted on the south arm of the building, on th
 
 ### Router 1
 
-
-Router 1 is a Ubiquti EdgeRouter X-SFP mounted inside the Cisco cabinet in the ballast room. It is connected to the exit node over a L2TP tunnel using UDP.
+Router 1 is an [Ubiquiti EdgeRouter X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) mounted inside the Cisco cabinet in the ballast room. It is connected to the exit node over a L2TP tunnel using UDP.
 
 Router is configured with a static IP and only routes to the exit node and a secondary VPS server. The secondary VPS is used to provide an OpenVPN tunnel for secure remote management of the device.
 
@@ -49,7 +47,7 @@ Network cables are run through a hole in the east wall.
 ![image](images/supernode1-access-ballast.jpg)
 ![image](images/supernode1-hardware-cabinet.jpg)
 
-## Neighborhood  Testing
+## Neighbourhood Testing
 
 Testing was done at several points that had line-of-sight to the antenna. The antenna was hand-held, not tuned precisely. Results are for reference only, and do not necessarily represent what a permanent deployment could attain at that distance.
 
@@ -64,8 +62,8 @@ Testing was done at several points that had line-of-sight to the antenna. The an
 | f (2)     | 2520         | 4.57      |  64.58/40.79          | -74            |
 
 (1) Used both Loco AC and LiteBeam AC. Both performed the same.  
-(2) Second attempt done after corrected issue with sn1a2.
+(2) Second attempt done after correcting issue with `sn1a2`.
 
-## Additional notes
+## Additional Notes
 
 EdgeRouter X-SFP does not accelerate traffic over tunnels. Due to this, speeds are currently limited to around 400Mbps to exit node.
