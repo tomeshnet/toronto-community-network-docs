@@ -64,7 +64,7 @@ Testing was done at several points that had line-of-sight to the antenna. The an
 | f (2)     | 2520         | 4.57      |  64.58/40.79          | -74            |
 
 (1) Used both Loco AC and LiteBeam AC. Both performed the same.  
-(2) Second attempt done after corrected issue with sn1a2.
+(2) Second attempt done after correcting issue with `sn1a2`.
 
 ## Additional notes
 
