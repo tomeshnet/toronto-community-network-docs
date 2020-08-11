@@ -28,7 +28,7 @@ Obtaining access to Bitwarden is a 4-step process.
 1.  Send an email to operations@tomesh.net with the following information:
 	- Your Name
 	- GitHub Handle
-	- Detailed descripition of your use case or requirement.
+	- Detailed description of your use case or requirement.
 
 2.  A member of our Project Operations team will invite you to Bitwarden.
 	- Bitwarden will send you an email from tomeshnet@gmail.com
