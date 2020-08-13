@@ -30,3 +30,4 @@ github
 ssh
 json
 csv
+colocated
