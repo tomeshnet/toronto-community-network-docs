@@ -1,4 +1,4 @@
-babel
+Babel
 babled
 IPFS
 [Ss]upernode
@@ -31,3 +31,6 @@ SSH
 JSON
 CSV
 colocated
+https
+http
+[cC]yber
