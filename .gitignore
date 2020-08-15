@@ -1,3 +1,7 @@
+ci/vale/styles
+!ci/vale/styles/Vocab/main/accept.txt
+!ci/vale/styles/Vocab/main/reject.txt
+
 book
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows
