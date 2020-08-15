@@ -2,19 +2,23 @@
 
 ## Toronto Community Network
 
-The name of the mesh network initiative started by Toronto Mesh, and what this book is about. MORE NEEDED HERE
+The name of the Toronto-based community mesh network initiative started by Toronto Mesh with its collaborators in 2020.
+
+This book documents the current resources of this initiative. For more information, visit [the project page](https://github.com/tomeshnet/toronto-community-network/).
 
 ## Toronto Mesh
 
-A community group that helps communities create better networks with open source and peer-to-peer technologies that promote digital literacy and privacy. The group that started the Toronto Community Network project, and helps maintain and propel it for the foreseeable future. For more information, visit [tomesh.net](https://tomesh.net)
+A community group that helps communities create better networks with open source and peer-to-peer technologies that promote digital literacy and privacy.
+
+The group that started the Toronto Community Network initiative and its steward for the foreseeable future. For more information, visit [tomesh.net](https://tomesh.net).
 
 ## Point-to-point (PTP)
 
-A **PTP** link is one that only involves only two antennas. These kinds of links are more powerful and can reach longer distances, but only one other antenna can connect to them. They're usually performed using directional antennas.
+A **PTP** link is a connection that only involves two antennas. These kinds of antennas are more powerful and can reach longer distances, but only one other antenna can connect to them. They're usually implemented using highly directional (i.e. high gain) antennas and used to connect two supernodes.
 
 ## Point-to-multipoint (PTMP)
 
-**PTMP** communication supports multiple antennas connecting one specific one -- likely a sector antenna (wide range) up in a high place. These kinds of links are used to connect homes on the ground, because it means that one antenna could connect to up to 100 others on the ground. These kinds of links have less range than PTP.
+**PTMP** antennas support multiple links by allowing many antennas to connect to it. They're usually sector antennas (i.e. moderate gain) installed at a high point. These kinds of links are used to connect homes on the ground, because one antenna may connect to up to hundreds of others pointing to it. These kinds of links are more limited in range than PTP setups.
 
 ## Node
 
@@ -28,7 +32,7 @@ A **supernode** is an actively maintained relaying node that supports high bandw
 
 The **Babel routing protocol** is what we use to create the mesh network. It's the software that allows the "meshing" to happen, by routing packets where they need to go.
 
-[Wikipedia](https://en.wikipedia.org/wiki/Babel_(protocol), [Homepage](https://www.irif.fr/~jch/software/babel/)
+[Wikipedia](https://en.wikipedia.org/wiki/Babel_(protocol)), [Homepage](https://www.irif.fr/~jch/software/babel/)
 
 ## babled
 
