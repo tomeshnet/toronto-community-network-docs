@@ -26,11 +26,11 @@ If you look at that issue (or any others), you will see an initial comment expla
 
 Issues also have assignees, which you can see in the sidebar. These are the users responsible for completing this task. You can assign yourself or other people.
 
-Issues can either be open or closed, which denotes their completion. Issues are closed once they are no longer relevant, or when the original task or bug has been fixed.
+Issues can either be open or closed, which denotes their completion. Issues are closed once they're no longer relevant, or when the original task or bug has been fixed.
 
 ## Labels
 
-You'll notice on the sidebar that issues can have labels, as well as projects and milestones, which we'll get into later. If you click on a label, you can view all the issues with that label. For example, here are all the communications issues:
+You'll notice on the sidebar that issues can have labels, projects, and milestones, which we'll get into later. If you click on a label, you can view all the issues with that label. For example, here are all the communications issues:
 
 ![communications issues](./images/issue_comms_label.png)
 
@@ -49,7 +49,9 @@ If you click that text or click the Projects tab at the top, you'll be able to s
 
 ![project view](./images/project.png)
 
-A GitHub Project is a type of [Kanban](https://en.wikipedia.org/wiki/Kanban_%28development%29) board for organizing issues. Each of the cards are issues, which can be in different columns. We use a standard setup with Todo, Doing (aka "In Progress"), and Completed columns. We also have a Backlog column on the far left for low-priority tasks. Issues can be moved from column to column as needed, to indicate their status. Issues will automatically be moved to Completed when they are closed.
+A GitHub Project is a type of [Kanban](https://en.wikipedia.org/wiki/Kanban_%28development%29) board for organizing issues.
+Each of the cards are issues, which can be in different columns. We use a standard setup with To Do, Doing (aka "In Progress"), and Completed columns.
+We also have a Backlog column on the far left for low-priority tasks. Issues can be moved from column to column as needed, to indicate their status. Issues will automatically be moved to Completed when they're closed.
 
 Issues in the project can also be filtered by label by clicking on a label, for example you can see all the communications issues in the project [here](https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Acommunications).
 

@@ -34,3 +34,6 @@ colocated
 https
 http
 [cC]yber
+[oO]nboarding
+repo
+Kanban
