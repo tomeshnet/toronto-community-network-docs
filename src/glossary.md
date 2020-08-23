@@ -14,11 +14,11 @@ The group that started the Toronto Community Network initiative and its steward 
 
 ## Point-to-point (PTP)
 
-A **PTP** (Point To Point) link is a connection limited to only two devices.  This could be a virtual connection like a VPN or Tunnel, or a physical connection like two routers connected via a fibre optic link, or two antennas configured for P2P.  Although most antennas are capable of doing both PTP and PTMP,  antennas used for PTP usually are high gain by being directional.  This allows them to reach longer distances with less noise.
+A **PTP** (Point To Point) link is a connection limited to only two devices. This could be a virtual connection like a VPN or Tunnel, or a physical connection like two routers connected via a fibre optic link, or two antennas configured for P2P. Although most antennas are capable of doing both PTP and PTMP, antennas used for PTP usually are high gain by being directional. This allows them to reach longer distances with less noise.
 
 ## Point-to-multipoint (PTMP)
 
-**PTMP** antennas support multiple links by allowing many antennas to connect to it. They're usually sector antennas (i.e. moderate gain) installed at a high point. These kinds of links are used to connect homes on the ground, because one antenna may connect to up to hundreds of others pointing to it. These kinds of links are more limited in range than PTP setups.
+**PTMP** antennas support multiple links by allowing many antennas to connect to it. They're usually sector antennas (moderate gain) installed at a high point. These kinds of links are used to connect homes on the ground, because one antenna may connect to up to hundreds of others pointing to it. These kinds of links are more limited in range than PTP setups.
 
 ## Node
 
