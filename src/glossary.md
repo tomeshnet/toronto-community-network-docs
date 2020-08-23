@@ -34,6 +34,6 @@ The **Babel routing protocol** is what we use to create the mesh network. It's t
 
 [Wikipedia](https://en.wikipedia.org/wiki/Babel_(protocol)), [Homepage](https://www.irif.fr/~jch/software/babel/)
 
-## babled
+## babeld
 
 Pronounced "bable-dee", this is a reference implementation of the Bable protocol, and the software used to run Babel on the mesh network. The "d" stands for [daemon](https://en.wikipedia.org/wiki/Daemon_%28computing%29). The code is available [here](https://github.com/jech/babeld).
