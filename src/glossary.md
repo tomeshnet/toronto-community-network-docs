@@ -1,6 +1,6 @@
 # Glossary
 
-## Toronto Community Network
+## Toronto Community Network (TCN)
 
 The name of the Toronto-based community mesh network initiative started by Toronto Mesh with its collaborators in 2020.
 
