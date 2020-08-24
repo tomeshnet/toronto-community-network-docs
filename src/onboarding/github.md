@@ -22,7 +22,7 @@ This tab provides a list of all the issues that have been created for this repos
 
 If you look at that issue (or any others), you will see an initial comment explaining what the issue is for, and a discussion going on below about the issue, with reactions, editing, links, etc. The initial comment will change and get edited by others over time as new information is known.
 
-![issue initial comment](./images/issues_initial.png)
+![issue initial comment](./images/issue_initial.png)
 
 Issues also have assignees, which you can see in the sidebar. These are the users responsible for completing this task. You can assign yourself or other people.
 
