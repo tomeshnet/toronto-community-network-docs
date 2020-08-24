@@ -30,7 +30,7 @@ A **supernode** is an actively maintained relaying node that supports high bandw
 
 ## Babel
 
-The **Babel routing protocol** is what we use to create the mesh network. It's the software that allows the "meshing" to happen, by routing packets where they need to go.
+The **Babel routing protocol** is used to create a mesh network. By running a Babel implementations on the nodes of the network, paths to all other nodes are actively calculated, so that connections can be made to any node on the mesh.
 
 [Wikipedia](https://en.wikipedia.org/wiki/Babel_(protocol)), [Homepage](https://www.irif.fr/~jch/software/babel/)
 
