@@ -19,7 +19,7 @@ jobs:
         unzip write-good.zip -d ci/vale/styles/
 
     - name: Vale
-      uses: makeworld-the-better-one/vale-action@v1
+      uses: makeworld-the-better-one/vale-action@v1.4.0
       with:
         files: src
       env:
