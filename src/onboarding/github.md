@@ -10,7 +10,7 @@ The main repository for the Toronto Community Network can be found on github und
 
 A repository (or "repo") is a collection of files, issues, and project boards grouped uner a name. The name of this one is `toronto-community-network` and that it was created by the [tomeshnet](https://github.com/tomeshnet) organization.
 
-You can see an overview of the files and folders in the middle of screen, and below that you can see what's called the README, which is a file that explains what the repository is for. If you click on `README.md` you'll see it has the same contents as the text on the homepage.
+You can see an overview of the files and folders in the middle of the screen, and below that you can see what's called the README, which is a file that explains what the repository is for. If you click on `README.md` you'll see it has the same contents as the text on the homepage.
 
 ## Issues
 
