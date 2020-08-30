@@ -4,7 +4,7 @@ GitHub is a service that provides code hosting and versioning. We also use it fo
 
 ## Repositories
 
-Here is the homepage for the [toronto-community-network](https://github.com/tomeshnet/toronto-community-network) repository.
+The main repository for the Toronto Community Network can be found on github under [tomeshenet/toronto-community-network](https://github.com/tomeshnet/toronto-community-network).
 
 ![homepage](./images/homepage.png)
 
