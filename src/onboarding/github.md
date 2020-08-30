@@ -4,13 +4,13 @@ GitHub is a service that provides code hosting and versioning. We also use it fo
 
 ## Repositories
 
-The main repository for the Toronto Community Network can be found on github under [tomeshenet/toronto-community-network](https://github.com/tomeshnet/toronto-community-network).
+The main repository for the Toronto Community Network can be found on GitHub under [tomeshnet/toronto-community-network](https://github.com/tomeshnet/toronto-community-network).
 
 ![homepage](./images/homepage.png)
 
-A repository (or "repo") is a collection of files, issues, and project boards grouped uner a name. The name of this one is `toronto-community-network` and that it was created by the [tomeshnet](https://github.com/tomeshnet) organization.
+A repository (or "repo") is a collection of files, issues, and project boards grouped under a name. The name of this one is `toronto-community-network` and that it was created by the [tomeshnet](https://github.com/tomeshnet) organization.
 
-You can see an overview of the files and folders in the middle of the screen, and below that you can see what's called the README, which is a file that explains what the repository is for. If you click on `README.md` you'll see it has the same contents as the text on the homepage.
+An overview of the files and folders is displayed in the middle of the screen, and below that the README is shown, which is a file that explains what the repository is for. If you click on `README.md` you'll see it has the same contents as the text on the homepage.
 
 ## Issues
 
@@ -20,17 +20,17 @@ If you click on `Issues` tab you'll see this:
 
 This tab provides a list of all the issues that have been created for this repository. Issues are similar to the idea of "tickets" or bug reports. It allows us to keep track of tasks or potential plans. All issues have numbers, referenced with a hashtag, such as #32, which can be found [here](https://github.com/tomeshnet/toronto-community-network/issues/32).
 
-If you look at that issue (or any others), you will see an initial comment explaining what the issue is for, and a discussion going on below about the issue, with reactions, editing, links, etc. The initial comment will change and get edited by others over time as new information is known.
+For any issue, there is an initial comment explaining what the issue is for, and a discussion going on below about the issue, with reactions, editing, links, etc. The initial comment will change and get edited by others over time as new information is known.
 
 ![issue initial comment](./images/issue_initial.png)
 
-Issues also have assignees, which you can see in the sidebar. These are the users responsible for completing this task. You can assign yourself or other people.
+Issues also have assignees, which can be seen in the sidebar. These are the users responsible for completing this task. A user can assign themselves or other people.
 
 Issues can either be open or closed, which denotes their completion. Issues are closed once they're no longer relevant, or when the original task or bug has been fixed.
 
 ## Labels
 
-You'll notice on the sidebar that issues can have labels, projects, and milestones, which we'll get into later. If you click on a label, you can view all the issues with that label. For example, here are all the communications issues:
+Issues can have labels, projects, and milestones, which are shown on the sidebar. If a label is clicked, all the issues with that label can be viewed. For example, here are all the communications issues:
 
 ![communications issues](./images/issue_comms_label.png)
 
@@ -53,7 +53,7 @@ A GitHub Project is a type of [Kanban](https://en.wikipedia.org/wiki/Kanban_%28d
 Each of the cards are issues, which can be in different columns. We use a standard setup with To Do, Doing (aka "In Progress"), and Completed columns.
 We also have a Backlog column on the far left for low-priority tasks. Issues can be moved from column to column as needed, to indicate their status. Issues will automatically be moved to Completed when they're closed.
 
-Issues in the project can also be filtered by label by clicking on a label, for example you can see all the communications issues in the project [here](https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Acommunications).
+Issues in the project can also be filtered by label by clicking on a label, for example all the communications issues in the project can be seen [here](https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Acommunications).
 
 
 ## Creating your first issue
