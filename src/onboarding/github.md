@@ -14,7 +14,6 @@ An overview of the files and folders is displayed in the middle of the screen, a
 
 ## Issues
 
-If you click on `Issues` tab you'll see this:
 
 ![issues](./images/issues.png)
 
@@ -34,7 +33,7 @@ Issues can have labels, projects, and milestones, which are shown on the sidebar
 
 ![communications issues](./images/issue_comms_label.png)
 
-Using the sidebar, you can filter by other labels if needed.
+On the sidebar there is a filter for labels if needed.
 
 ![filter labels modal](./images/filter_labels.png)
 
