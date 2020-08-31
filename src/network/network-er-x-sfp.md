@@ -119,7 +119,7 @@ Between the EXIT NODE configuration and the CLIENT node the following values are
 - remote-ip <> local-ip
 ```
 
-`local-ip` MUST be an ip address defined on the router. This means if the device is behind a NAT it will be a local ip not public ip. Also, if using NAT sometimes source-port needs to be added to the port forward.
+`local-ip` MUST be an IP address defined on the router. This means if the device is behind a NAT it will be a local IP not public IP. Also, if using NAT sometimes source-port needs to be added to the port forward.
 
 Configure each port with a unique IPv4 and IPv6 IP address. Use a `/30` subnet for IPv4 and `/126` for IPv6. Check with the exit node you are using to confirm to the numbering selected.
 
@@ -319,7 +319,7 @@ If needed define static route (workaround 2)
 ```
 set protocols static route 199.195.250.208/32 next-hop 192.168.40.1
 ```
-# Appendix A - Babeld - Crosscompile
+# Appendix A - Babeld - Cross-Compile
 
 Babeld can be cross compiled to work on ER-X as follows
 
