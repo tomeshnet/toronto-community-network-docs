@@ -44,11 +44,11 @@ set interfaces ethernet eth4 address fd54:4f4d:5348:400d::1/64
 
 Enable a DHCP subnet for each network you defined in the previous section.
 
-Enable the dhcp server by setting `disabled` as false (double negative. Delete any existing definition).
+Enable the DHCP server by setting `disabled` as false (double negative. Delete any existing definition).
 
 
 `set service dhcp-server shared-network-name XXXXXXXX`  
-Create a DHCP named definition. Use the IP Subnet as the name.
+Create a DHCP named definition. Use the IP subnet as the name.
 
 `set service dhcp-server shared-network-name XXXXXXXX subnet XXX.XXX.XXX.0/24`    
 Create a subnet definition in the named definition. Rest of the command will be prefixed with this command line
@@ -112,10 +112,12 @@ All commands are prefixed with `set interfaces l2tpv3 l2tpeth0` where `l2tpeth0`
 
 Between the EXIT NODE configuration and the CLIENT node the following values are filled 
 
+```
 - destination-port <> source-port
 - session-id <> peer-session-id
 - tunnel-id <> peer-tunnel-id
 - remote-ip <> local-ip
+```
 
 `local-ip` MUST be an ip address defined on the router. This means if the device is behind a NAT it will be a local ip not public ip. Also, if using NAT sometimes source-port needs to be added to the port forward.
 
@@ -145,7 +147,7 @@ Babeld does not come standard on ER-X.  Use the deb package located at  https://
 
 All commands below are to be prefixed with `set protocols babeld`
 
-`denydefault` and `denydefaultlocal` add a "deny all" rules to the end of the configuration. This prevents unwanted ips to be announced such as the local ip address of the gateway network in case of a gateway.
+`denydefault` and `denydefaultlocal` add a "deny all" rules to the end of the configuration. This prevents unwanted IPs to be announced such as the local IP address of the gateway network in case of a gateway.
 
 `local-port` defines the port on the loopback address that will let you interact with babeld. Mainly used for debugging.
 
@@ -157,7 +159,7 @@ filter [name] action allow
 filter [name] if [if]
 filter [name] type redistribute
 ```
-These 3 lines makeup a rule called [name]. This rules will allow redistribution of all ips on the [if] interface.
+These 3 lines makeup a rule called [name]. This rules will allow redistribution of all IPs on the [if] interface.
 
 
 ### Example
@@ -200,7 +202,7 @@ The paradox of the gateway and routing babeld
 
 - DHCP provides the default route to exit to the internet
 - Tunnel is established by using the default route
-- BABELD receives the ip address from the neighbour on the other side of the tunnel
+- BABELD receives the IP address from the neighbour on the other side of the tunnel
 - The default route gets replaced with the EXIT NODE
 - All internet traffic is rerouted through the tunnel
 - Since the tunnel uses internet traffic it is also rerouted
