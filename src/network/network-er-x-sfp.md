@@ -1,10 +1,10 @@
 # EdgeRouter X and EdgeRouter X-SFP
 
-[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both  identified in this document as ER-X.  We use version 1.x. 2.x has NOT been tested however preliminary results seem to indicate no immediate issues.
+[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X.  We use version 1.x. 2.x has NOT been tested however preliminary results seem to indicate no immediate issues.
 
 To enter configuration mode, SSH into the ER-X and enter the command `configuration`.
 
-To apply the config use `commit` and then to save it permanently use `save`.
+To apply the configuration use `commit` and then to save it permanently use `save`.
 
 Configurations can also be entered using the GUI found on port 80. Select `Config Tree` from menu. Tree is a hierarchical representation of the commands below.
 For example `set system hostname XXXX` would be `system` branch, `hostname` field, `XXX` would be the value.
@@ -44,14 +44,14 @@ set interfaces ethernet eth4 address fd54:4f4d:5348:400d::1/64
 
 Enable a DHCP subnet for each network you defined in the previous section.
 
-Enable the dhcp server by setting `disabled` as fales (double negative. Delete any existing defitinion.
+Enable the dhcp server by setting `disabled` as false (double negative. Delete any existing definition).
 
 
 `set service dhcp-server shared-network-name XXXXXXXX`  
 Create a DHCP named definition. Use the IP Subnet as the name.
 
 `set service dhcp-server shared-network-name XXXXXXXX subnet XXX.XXX.XXX.0/24`    
-Create a subnet definition in the the named definition. Rest of the command will be prefixed with this command line
+Create a subnet definition in the named definition. Rest of the command will be prefixed with this command line
 
 Set the following items
 
@@ -106,11 +106,11 @@ set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 st
 
 ## L2TP Tunnel
 
-L2TP Tunnels are used to connect back to the an [exit node](exit-node.md).  
+L2TP Tunnels is used to connect back to the an [exit node](exit-node.md).  
 
 All commands are prefixed with `set interfaces l2tpv3 l2tpeth0` where `l2tpeth0` is a numbered interface starting from 0.
 
-Between the EXIT NODE config and the CLIENT node the following values are filled 
+Between the EXIT NODE configuration and the CLIENT node the following values are filled 
 
 - destination-port <> source-port
 - session-id <> peer-session-id
@@ -141,7 +141,7 @@ set interfaces l2tpv3 l2tpeth0 address fd74:6f6d:7368:7f02::2/126
 
 ## Babeld
 
-Babeld does not come standrad on ER-X.  Use the deb package located at  https://github.com/darkdrgn2k/RouterX-Babeld-Package  and install the deb using `dpkg -i`  on the router. Review the instructions in the repo to allow package to survive firmware upgrades.
+Babeld does not come standard on ER-X.  Use the deb package located at  https://github.com/darkdrgn2k/RouterX-Babeld-Package  and install the deb using `dpkg -i`  on the router. Review the instructions in the repo to allow package to survive firmware upgrades.
 
 All commands below are to be prefixed with `set protocols babeld`
 
@@ -229,7 +229,7 @@ Route tables allow the use of the default route (0.0.0.0) on the node to still p
 set protocols babeld export-table 10
 ```
 
-Append the following lines to /etc/rc.local for each interface that babeld will route though. `-6` indicates it is an IPv6 address.
+Append the following lines to `/etc/rc.local` for each interface that babeld will route though. `-6` indicates it is an IPv6 address.
 
 ```
 ip [-6] rule add iif <INT> table 10
@@ -253,9 +253,9 @@ ip route 100.127.2.252/30 dev l2tpeth63 table 10
 ip -6 route add fd74:6f6d:7368:7f02::fc/126 dev l2tpeth0 table 10
 ```
 
-## Openvpn - Management Tunnel
+## OpenVPN - Management Tunnel
 
-Write certificates (provided by openvpn server)
+Write certificates (provided by OpenVPN server)
 
 ```
 cat <<"EOF">/config/auth/SN1R1.crt
@@ -300,7 +300,7 @@ clmLw8d8Ew==
 EOF
 ```
 
-Configure OPENVPN named vtun99. 
+Configure OpenVPN named vtun99. 
 
 ```
 set interfaces openvpn vtun99 mode client
