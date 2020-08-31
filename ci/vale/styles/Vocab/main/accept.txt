@@ -1,5 +1,5 @@
 Babel
-babled
+[bB]abeld
 IPFS
 [Ss]upernode
 Woolner
@@ -34,3 +34,15 @@ colocated
 https
 http
 [cC]yber
+repo
+config
+[hH]ostname
+subnet
+subnetwork
+DHCP
+IP
+IPs
+IPv4
+IPv6
+loopback
+rc

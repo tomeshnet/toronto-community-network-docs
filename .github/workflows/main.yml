@@ -19,12 +19,8 @@ jobs:
         unzip write-good.zip -d ci/vale/styles/
 
     - name: Vale
-      uses: makeworld-the-better-one/vale-action@v1.3.1
+      uses: makeworld-the-better-one/vale-action@v1.4.0
       with:
-       #styles: |
-          #https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
-          #https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
-
         files: src
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
