@@ -14,10 +14,9 @@ An overview of the files and folders is displayed in the middle of the screen, a
 
 ## Issues
 
-
 ![issues](./images/issues.png)
 
-This tab provides a list of all the issues that have been created for this repository. Issues are similar to the idea of "tickets" or bug reports. It allows us to keep track of tasks or potential plans. All issues have numbers, referenced with a hashtag, such as #32, which can be found [here](https://github.com/tomeshnet/toronto-community-network/issues/32).
+This tab provides a list of all the issues that have been created for this repository. Issues are usually used bug reports or feature requests for a software project, but Toronto Mesh uses them specifically to keep track of tasks or potential plans. All issues have numbers, referenced with a hashtag, such as [#32](https://github.com/tomeshnet/toronto-community-network/issues/32).
 
 For any issue, there is an initial comment explaining what the issue is for, and a discussion going on below about the issue, with reactions, editing, links, etc. The initial comment will change and get edited by others over time as new information is known.
 
@@ -44,7 +43,7 @@ On the sidebar there is a filter for labels if needed.
 
 ![sidebar project](./images/sidebar_project.png)
 
-If you click that text or click the Projects tab at the top, you'll be able to see the project. Repositories can have multiple projects, but in this repository there is just one. Here is what it looks like:
+Click that text or click the Projects tab at the top to see the project. Repositories can have multiple projects, but in this repository there is just one. Here is what it looks like:
 
 ![project view](./images/project.png)
 
