@@ -1,5 +1,5 @@
 Babel
-babled
+babeld
 IPFS
 [Ss]upernode
 Woolner
