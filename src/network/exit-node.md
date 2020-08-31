@@ -1,8 +1,8 @@
 # Exit Node Configuration
 
-Instructions are for the DEBIAN 10 operating system.
+Instructions are for the Debian 10 operating system.
 
-## Babeld Insatllation
+## Babeld Installation
 
 Latest version of babeld can be found currently at 
 https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/
@@ -33,7 +33,7 @@ exit 0
 
 ## L2TP tunnels
 
-Layer 2 tunneling protocol files are used to allow gateways to connect over the internet to the exit node.
+Layer 2 tunneling protocol files is used to allow gateways to connect over the internet to the exit node.
 
 Server side scripts that support DDNS can be found in the [toronto-community-network](https://github.com/tomeshnet/toronto-community-network/tree/master/network/scripts/l2tp-tunnel-endpoint) repository.
 
