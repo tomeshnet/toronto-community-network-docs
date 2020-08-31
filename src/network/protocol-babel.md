@@ -10,7 +10,7 @@ Prototype babeld configuration can be generated at http://node2.e-mesh.net/CONF/
 
 ## When is babeld needed
 
-Babel is only required when your node routes ips or a subnet that was not provided by a remote node.
+Babel is only required when your node routes IPs or a subnet that was not provided by a remote node.
 
 ## Babeld console
 
