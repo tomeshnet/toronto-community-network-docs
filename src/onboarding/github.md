@@ -22,6 +22,8 @@ For any issue, there is an initial comment explaining what the issue is for, and
 
 ![issue initial comment](./images/issue_initial.png)
 
+Toronto Mesh uses issue templates, so some text is filled out already when a user opens an issue. At time of writing there is only one template, used for tasks, which can be seen if you [open an issue](https://github.com/tomeshnet/toronto-community-network/issues/new?template=task_template.md). More templates may be added in the future.
+
 Issues also have assignees, which can be seen in the sidebar. These are the users responsible for completing this task. A user can assign themselves or other people.
 
 Issues can either be open or closed, which denotes their completion. Issues are closed once they're no longer relevant, or when the original task or bug has been fixed.
