@@ -142,11 +142,11 @@ ifconfig eth0 192.168.1.2 up
 
 This will test the interface speed between the `Device` and `Endpoint1`.  
 
-On Endpoint1:
+On `Endpoint1`:
 
 `iperf3 -s`
 
-On Device:
+On `Device`:
 
 - Test Forward speed
 `iperf3 -c 192.168.1.2`
@@ -159,7 +159,7 @@ On Device:
 
 This will test the interface speed over Wireguard. 
 
-On Endpoint1:
+On `Endpoint1`:
 
 `iperf3 -s`
 
@@ -175,11 +175,11 @@ On `Device`:
 
 This test will show how well the `Device` can route packets between subnets.
 
-On Endpoint1:
+On `Endpoint1`:
 
 `iperf3 -s`
 
-On `Device`:
+On `Endpoint12`:
 
 - Test Forward speed
 `iperf3 -c 192.168.1.2`
@@ -194,13 +194,13 @@ This test will show how well the `Device` can route packets between subnets whil
 
 An additional route needs to be added on Endpoint1 to send all packets back over wg0 when doing reverse test.
 
-On Endpoint1:
+On `Endpoint1`:
 
 `ip route add 192.168.2.0/24 dev wg0`
 `iperf3 -s`
 
 
-On `Device`:
+On `Endpoint2`:
 
 - Test Forward speed
 `iperf3 -c 10.254.254.2`
