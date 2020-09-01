@@ -19,7 +19,7 @@ Depending what port the service started on (`local-port` or `-G` options) you ca
 - `nc :: 999`
 - `telnet :: 999`
 
-**NOTE** some distributions `nc` does not support IPv6 and it will not work.
+Note that some versions of `nc` do not support IPv6 so that command will not work.
 
 The command `dump` in the console will list all the currently known data points of babeld.
 
