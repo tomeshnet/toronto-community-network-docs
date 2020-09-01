@@ -27,7 +27,7 @@ ifconfig eth0 192.168.1.1 up
 ifconfig eth1 NETMASK 255.255.255.0
 ifconfig eth1 192.168.2.1 up
 ```
-*Note: You can add other IP addresses to an interface by using the `ethx:x` notation such as `eth0:1`.  This can be used to add your home ip address alongside  the lab's IP address and share the same switch*
+*Note: You can add other IP addresses to an interface by using the `ethx:x` notation such as `eth0:1`.  This can be used to add your home IP address alongside the lab's IP address and share the same switch*
 
 *For example `ifconfig eth0:1 192.168.10.1`*
 
@@ -40,7 +40,7 @@ Most Linux distributions have routing disable. Enable it.
 
 **Wireguard**
 
-Configure a Wireguard server.  Create a config file `wg0.conf` containing a private/public key.
+Configure a Wireguard server. Create a configuration file `wg0.conf` containing a private/public key.
 
 *NOTE: Do not use these keys in production!* 
 
@@ -57,7 +57,7 @@ AllowedIPs = ::/0
 EOF
 ```
 
-Bring up the `wg0` interface using above config.
+Bring up the `wg0` interface using above configuration
 
 ```
 ifconfig wg0 down
@@ -73,7 +73,7 @@ ifconfig wg0 up
 
 **Configure interfaces**
 
-Configure the ip addresses the interface
+Configure the IP addresses the interface
 
 `eth0` Interface on device connected to `Device`
 
@@ -84,7 +84,7 @@ ifconfig eth0 192.168.1.2 up
 
 **WireGuard**
 
-Configure a Wireguard client.  Create a config file `wg0.conf` containing a private/public key.
+Configure a Wireguard client.  Create a configuration file `wg0.conf` containing a private/public key.
 
 *NOTE: Do not use these keys in production!* 
 
@@ -102,7 +102,7 @@ Endpoint = 192.168.1.2:1000
 EOF
 ```
 
-Bring up the `wg0` interface using above config.
+Bring up the `wg0` interface using above configuration.
 
 ```
 ifconfig wg0 down
@@ -190,7 +190,7 @@ On `Endpoint12`:
 
 ### Endpoint2 through Device over WG to Endpoint1
 
-This test will show how well the `Device` can route packets between subnets while encrypting traffic over wg.
+This test will show how well the `Device` can route packets between subnets while encrypting traffic over the `wg0` interface.
 
 An additional route needs to be added on Endpoint1 to send all packets back over wg0 when doing reverse test.
 
