@@ -6,7 +6,7 @@
 
 `Endpoint1`, `Endpoint2` Devices not limited by CPU or network.
 
-![image](images\hardware-benchmark-network.jpg)
+![image](images/hardware-benchmark-network.jpg)
 
 Instructions below are non-persistent. When device is restarted changes will be removed. `wireguard` package must be installed.
 
