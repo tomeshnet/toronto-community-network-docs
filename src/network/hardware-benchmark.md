@@ -73,13 +73,14 @@ ifconfig wg0 up
 
 **Configure interfaces**
 
-Configure the IP addresses the interface
+Configure the IP addresses the interface. Make the default route the `Device`.
 
 `eth0` Interface on device connected to `Device`
 
 ```
 ifconfig eth0 NETMASK 255.255.255.0
 ifconfig eth0 192.168.1.2 up
+ip route add 0.0.0.0/0 via 192.168.1.1
 ```
 
 **WireGuard**
@@ -117,13 +118,14 @@ ifconfig wg0 up
 
 **Configure interfaces**
 
-Configure the ip addresses the interface
+Configure the ip addresses the interface. Make the default route the `Device`.
 
 `eth0` Interface on device connected to `Device`
 
 ```
 ifconfig eth0 NETMASK 255.255.255.0
 ifconfig eth0 192.168.1.2 up
+ip route add 0.0.0.0/0 via 192.168.2.1
 ```
 
 ## Testing
