@@ -1,15 +1,20 @@
 # Exit Node Configuration
 
-Instructions are for the Debian 10 operating system.
+*Note: This is an advanced topic. If you are not familiar with the concepts in this document, please familiarize yourself with them first before proceeding.*
+
+Instructions are for installing an exit node on the Debian 10 operating system. 
+
 
 ## Babeld Installation
 
-Latest version of babeld can be found currently at 
+Install the latest version of babeld on the node.  The latest version can be found currently at 
 https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/
 
-### /etc/babeld.conf
+### Redistribute default gateway
 
-Redistribute default gateway to network
+Redistribute the default gateway to network
+
+Create or append to the `/etc/babeld.conf` file
 
 ```
 redistribute  ip ::/0 le 64 metric 256
@@ -33,7 +38,6 @@ exit 0
 
 ## L2TP tunnels
 
-Layer 2 tunneling protocol files is used to allow gateways to connect over the internet to the exit node.
+Layer 2 tunneling protocol is used to allow gateways to connect over the internet to the exit node.
 
 Server side scripts that support DDNS can be found in the [toronto-community-network](https://github.com/tomeshnet/toronto-community-network/tree/master/network/scripts/l2tp-tunnel-endpoint) repository.
-
