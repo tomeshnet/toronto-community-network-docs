@@ -34,3 +34,10 @@ colocated
 https
 http
 [cC]yber
+subnet
+subnets
+WireGuard
+IP
+IPs
+IPv6
+IPv4
