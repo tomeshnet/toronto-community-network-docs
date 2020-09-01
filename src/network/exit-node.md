@@ -7,7 +7,7 @@ Instructions are for installing an exit node on the Debian 10 operating system.
 
 ## Babeld Installation
 
-Install the latest version of babeld on the node.  The latest version can be found currently at 
+Install the latest version of babeld on the node. The latest version can be found currently at 
 https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/
 
 ### Redistribute default gateway
