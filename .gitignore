@@ -1,3 +1,6 @@
+ci/vale/styles/Microsoft
+ci/vale/styles/write-good
+
 book
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows

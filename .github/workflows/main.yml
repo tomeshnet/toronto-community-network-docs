@@ -10,15 +10,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Vale
-      uses: errata-ai/vale-action@v1.2.0
-      with:
-        styles: |
-          https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
-          https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+    - name: Styles
+      run: |
+        sudo apt install wget unzip
+        wget https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
+        unzip Microsoft.zip -d ci/vale/styles/
+        wget https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+        unzip write-good.zip -d ci/vale/styles/
 
-        # Optional
+    - name: Vale
+      uses: makeworld-the-better-one/vale-action@v1.4.0
+      with:
         files: src
       env:
-        # Required
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

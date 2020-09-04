@@ -7,7 +7,7 @@ The Toronto Community Network uses [Bitwarden](https://bitwarden.com/) to share 
 
 Bitwarden supports the following clients:
 
-- Desktop (Linux/MacOS/Windows)
+- Desktop (Linux/macOS/Windows)
 - Web Browser (Chrome/Safari/Firefox/Vivaldi/Opera/Brave/Edge/Tor Browser)
 - Mobile (Android/iPhone)
 - Command Line (via NPM)
@@ -48,11 +48,11 @@ In order to maintain integrity of the Toronto Community Network operations, most
 
 
 ## Storing Secrets
-All secrets must be attached to a [Collection](https://bitwarden.com/help/article/collections/) to faciliate access control. Please be sure to attach the secret to an existing [Toronto Community Network Work Group](https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams). These collection names start with `_OU`.
+All secrets must be attached to a [Collection](https://bitwarden.com/help/article/collections/) to facilitate access control. Please be sure to attach the secret to an existing [Toronto Community Network Work Group](https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams). These collection names start with `_OU`.
 
 Additional Collections may be created or utilized to classify the secret such as _Social_, _Service_ _Accounts_, _Website_, and more.
 
-When naming your credential, please use the following convention: _System/Function - Identifer_.
+When naming your credential, please use the following convention: _System/Function - Identifier_.
 
 > **For example:**
 > - A public SSH key may be named _"Public Key - Contributor A"_
@@ -65,7 +65,7 @@ All public keys and private keys must be saved as _Secured Notes_.
 
 Please be mindful that secrets stored in this system can be accessed by any authorized contributor in the Toronto Community Network. While your connection to the system is secured via TLS, the secrets you choose to store in the group can be seen by others. Please refrain from using the system for storing any personal information.
 
-For more information about managing items, please see Bitwarden's offical documentation on [Managing Items](https://bitwarden.com/help/article/managing-items/).
+For more information about managing items, please see Bitwarden's official documentation on [Managing Items](https://bitwarden.com/help/article/managing-items/).
 
 
 ## Data Backup
