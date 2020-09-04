@@ -1,6 +1,5 @@
-ci/vale/styles
-!ci/vale/styles/Vocab/main/accept.txt
-!ci/vale/styles/Vocab/main/reject.txt
+ci/vale/styles/Microsoft
+ci/vale/styles/write-good
 
 book
 
