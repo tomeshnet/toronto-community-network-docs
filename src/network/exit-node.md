@@ -27,7 +27,7 @@ Create `/etc/rc.local` and `chmod +x` it
 
 Add the following content to the file
 
-```
+```bash
 #!/bin/bash
 ip6tables -t nat -F POSTROUTING
 iptables -t nat -F POSTROUTING
