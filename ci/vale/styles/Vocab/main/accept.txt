@@ -1,5 +1,5 @@
 Babel
-babeld
+[bB]abeld
 IPFS
 [Ss]upernode
 Woolner
@@ -41,3 +41,4 @@ IP
 IPs
 IPv6
 IPv4
+repo
