@@ -8,7 +8,7 @@ The package for the EdgeRouter X/SFP with UI can be found at https://github.com/
 
 Prototype babeld configuration can be generated at http://node2.e-mesh.net/CONF/ for both OpenWRT and Linux.
 
-## When is babeld needed
+## When is Babel needed?
 
 Babel is only required when your node routes IPs or a subnet that was not provided by a remote node.
 
