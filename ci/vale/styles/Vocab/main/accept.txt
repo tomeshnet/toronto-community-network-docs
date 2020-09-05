@@ -34,4 +34,11 @@ colocated
 https
 http
 [cC]yber
+OpenWRT
+subnet
+subnetwork
+IP
+IPs
+IPv4
+IPv6
 repo
