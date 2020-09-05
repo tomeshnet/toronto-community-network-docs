@@ -41,7 +41,7 @@ Most Linux distributions have routing disable. Enable it.
 
 #### WireGuard
 
-Configure a Wireguard server. Create a configuration file `wg0.conf` containing a private/public key.
+Configure a WireGuard server. Create a configuration file `wg0.conf` containing a private/public key.
 
 *NOTE: Do not use these keys in production!* 
 
@@ -86,7 +86,7 @@ ip route add 0.0.0.0/0 via 192.168.1.1
 
 #### WireGuard
 
-Configure a Wireguard client.  Create a configuration file `wg0.conf` containing a private/public key.
+Configure a WireGuard client. Create a configuration file `wg0.conf` containing a private/public key.
 
 *NOTE: Do not use these keys in production!* 
 
@@ -119,7 +119,7 @@ ifconfig wg0 up
 
 #### Configure interfaces
 
-Configure the ip addresses the interface. Make the default route the `Device`.
+Configure the IP addresses the interface. Make the default route the `Device`.
 
 `eth0` Interface on device connected to `Device`
 
@@ -158,9 +158,9 @@ On `Device`:
 `iperf3 -c 192.168.1.2 -R`
 
 
-### Wireguard to Wireguard
+### WireGuard to WireGuard
 
-This will test the interface speed over Wireguard. 
+This will test the interface speed over WireGuard. 
 
 On `Endpoint1`:
 
