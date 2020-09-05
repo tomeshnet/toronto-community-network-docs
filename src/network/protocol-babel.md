@@ -26,13 +26,17 @@ Note that some versions of `nc` do not support IPv6 so that command will not wor
 
 The command `dump` in the console will list all the currently known data points of babeld.
 
-`add interface <INT> up true ipv6 <IPv6> ipv4 <IPv4>`  
+```
+add interface <INT> up true ipv6 <IPv6> ipv4 <IPv4>
+```
 Indicates that the interfaces `<INT>` will be used to find other babeld nodes. `<IPv6>` and `<IPv4>` are required for routing traffic through the nodes. If one is missing check your interface configuration.
 
-`add interface <INT> up false`
+`add interface <INT> up false`  
 Indicates the interfaces is assigned to babeld, but are currently not functional (cable not plugged in, or simply down)/
 
-`add neighbour f3ecb0 address <IPv6> if <INT> reach ffff ureach 0000 rxcost 96 txcost 96 cost`  
+```
+add neighbour f3ecb0 address <IPv6> if <INT> reach ffff ureach 0000 rxcost 96 txcost 96 cost
+```
 Indicates nodes found directly connected to babeld. `<IPv6>` is the local link IP found on the remote node,  `<INT>` is the interface this link was found on. The combination of the two (`<IPv6>%<INT>`) is used to access the link.
 
 `add xroute...metric 256`  
