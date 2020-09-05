@@ -20,6 +20,7 @@ Configure the IP addresses on each interface
 
 `eth1` Interface on device connected to `Endpoint 2`
 
+If the device has only one port, see Appendex A - Single Port Router to split the single port into two vlans.
 
 ```
 ifconfig eth0 NETMASK 255.255.255.0
@@ -213,3 +214,37 @@ On `Endpoint2`:
 
 On Endpoint1 (once completed test):
 `ip route delete 192.168.2.0/24 dev wg0`
+
+## Appendex A - Single Port Router
+
+If a device only has one port, routing can be accomplished using 2 VLANs and a switch. You may required to use `modprobe 8021q` to enable vlan support.
+
+### Device Vlan Configuration
+
+Split the interface into two vlans creating 2 interfaces called `eth0.10` and `eth0.11`.
+
+```
+apt-get install vlan
+vconfig add eth0 10
+vconfig add eth0 11
+```
+
+### Switch Configuration
+
+When a managed switch is used, port connected to the device should be configured as a `trunk` or `general` mode and vlan 10 and 11 set as `tagged`. Two other ports on the switch should then be configured as access to vlan 10 and vlan 11 respectively. In this setup the vlan is transparent to `Endpoint 1` and `Endpoint 2`.
+
+When an unmanaged switch is used, `Endpoint 1` and `Endpoint 2` must be configured to use access the vlan directly.
+
+### Endpoint 1 Vlan Configuration
+
+```
+apt-get install vlan
+vconfig add eth0 10
+```
+
+### Endpoint 2 Vlan Configuration
+
+```
+apt-get install vlan
+vconfig add eth0 11
+```
