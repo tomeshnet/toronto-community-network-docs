@@ -23,6 +23,6 @@
 |EdgerouteX HW OFFLOAD|  | 913/927 | 217/180 | 180/211  | | |
 |EspressoBin      | :heavy_check_mark: 931 | :x: 335/403 | :x: 213/335 | | |
 |OmniTik POE      | | 900 | | | | |
-|Raspberry Pi 4B  | 950 | | 860 | | | | 
+|Raspberry Pi 4B  | 950 | | 770 | | | | 
 |WRT1900ACV1      |  :heavy_check_mark: 920 | :heavy_check_mark: 879 | :yellow_square:  350/450 | :x: 280/338 |  |  |
 
