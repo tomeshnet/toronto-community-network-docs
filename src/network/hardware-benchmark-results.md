@@ -16,11 +16,13 @@
 
 ## Results
 
-|Devices    | D2E     |  E2E    | WG D2D| WG E2E   | L2TP D2D| L2TP E2E   |
-|-----------|---------|---------|-------|----------|---------|------------|
-|EspressoBin| :heavy_check_mark: 931 | :x: 335/403 | :x: 213/335 | | |
-|AtomicPi   | :heavy_check_mark: 923 | :heavy_check_mark: 837| :heavy_check_mark: 895| :yellow_square:  665 | :heavy_check_mark: 767/863 | :heavy_check_mark: 798/705 |
-|WRT1900ACV1|  :heavy_check_mark: 920 | :heavy_check_mark: 879 | :yellow_square:  350/450 | :x: 280/338 |  |  |
-|EdgerouteX| 356/533| 750/510 | | | | |
+|Devices          | D2E     |  E2E    | WG D2D| WG E2E   | L2TP D2D| L2TP E2E   |
+|-----------------|---------|---------|-------|----------|---------|------------|
+|AtomicPi         | :heavy_check_mark: 923 | :heavy_check_mark: 837| :heavy_check_mark: 895| :yellow_square:  665 | :heavy_check_mark: 767/863 | :heavy_check_mark: 798/705 |
+|EdgerouteX       | 356/533| 750/510 | | | | |
 |EdgerouteX HW OFFLOAD|  | 913/927 | 217/180 | 180/211  | | |
-|OmniTik POE | | 900 | | | | |
+|EspressoBin      | :heavy_check_mark: 931 | :x: 335/403 | :x: 213/335 | | |
+|OmniTik POE      | | 900 | | | | |
+|Raspberry Pi 4B  | 950 | | 860 | | | | 
+|WRT1900ACV1      |  :heavy_check_mark: 920 | :heavy_check_mark: 879 | :yellow_square:  350/450 | :x: 280/338 |  |  |
+
