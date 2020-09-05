@@ -71,7 +71,7 @@ ifconfig wg0 up
 
 ### Endpoint1 Lab Configuration
 
-**Configure interfaces**
+#### Configure interfaces
 
 Configure the IP addresses the interface. Make the default route the `Device`.
 
