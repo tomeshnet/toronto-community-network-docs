@@ -5,4 +5,7 @@
 - [Network](./network/main.md)
     - [Supernode 1](./network/supernode1.md)
     - [Exit Node](./network/exit-node.md)
+- [Hardware](./hardware/main.md)
+    - [Hardware Benchmark](./hardware/benchmark.md)
+    - [Hardware Benchmark Results](./hardware/benchmark-results.md)
 - [Managing Secrets](operations/secrets.md)
