@@ -32,7 +32,7 @@ ifconfig eth1 192.168.2.1 up
 *For example `ifconfig eth0:1 192.168.10.1`*
 
 
-**Enable Routing**
+#### Enable Routing
 
 Most Linux distributions have routing disable. Enable it.
 
