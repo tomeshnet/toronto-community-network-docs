@@ -14,7 +14,7 @@ Babel is only required when your node routes IPs or a subnet that was not provid
 
 ## Babeld console
 
-Depending what port the service started on (`local-port` or `-G` options) you can access babeld's console using on of the following. (assuming 999 is the port)
+Depending what port the service started on (`local-port` or `-G` options) you can access babeld's console using on of the following (assuming 999 is the port).
 
 - `nc :: 999`
 - `telnet :: 999`
