@@ -36,11 +36,13 @@ http
 [cC]yber
 subnet
 subnets
+subnetwork
 WireGuard
+OpenWRT
 IP
 IPs
-IPv6
 IPv4
+IPv6
 repo
 unmanaged
 VLAN
