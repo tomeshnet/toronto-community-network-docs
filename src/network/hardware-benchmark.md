@@ -12,7 +12,7 @@ Instructions below are non-persistent. When device is restarted changes will be 
 
 ### Device Lab Configuration
 
-**Configure interfaces**
+#### Configure interfaces
 
 Configure the IP addresses on each interface
 
