@@ -134,13 +134,14 @@ ip route add 0.0.0.0/0 via 192.168.2.1
 
 `iperf3` package must be installed. During `iperf3` tests there are several things to remember:
 
-- iperf3, when run on device with low CPU resources, can consume CPU power to generate packets. Speed when transmitting will be slower than when receiving since the CPU will be taxed more.
+- iperf3, when run on device with low CPU resources, can consume CPU power to generate packets. Speed when transmitting will be slower than when receiving since the CPU will be taxed more
+  - using the `--repeating-payload` flag can reduce the stress placed on the CPU by not generating random data to transmit
 
 - CPU load can be seen by using the `top` command during the test
 
-- Watching  `/proc/interrupts` can also show where CPU cycles are being spent.
+- Watching  `/proc/interrupts` can also show where CPU cycles are being spent
 
-- Some devices have hardware offloading that can increase performance when routing through the device.
+- Some devices have hardware offloading that can increase performance when routing through the device
 
 ### Interface speed
 
