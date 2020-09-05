@@ -38,7 +38,7 @@ Most Linux distributions have routing disable. Enable it.
 
 `echo 1 > /proc/sys/net/ipv4/ip_forward`
 
-**Wireguard**
+#### WireGuard
 
 Configure a Wireguard server. Create a configuration file `wg0.conf` containing a private/public key.
 
