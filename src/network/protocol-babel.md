@@ -2,7 +2,7 @@
 
 [Babel](https://www.irif.fr/~jch/software/babel/) is a loop-avoiding distance-vector routing protocol. It does link cost estimation and redistribution of routes from other routing protocols. 
 
-The network uses [jech](https://github.com/jech/babeld) implementation of Babel service called babeld. Updated packages for Debian can be found at the tomesh Debian [repository](https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/). These packages are compiled from source and packaged using scripts in the [mesh-packages](https://github.com/tomeshnet/mesh-packages/tree/master/packages/babeld) github repository.
+The network uses the [reference implementation](https://github.com/jech/babeld) of Babel called babeld. Updated packages for Debian can be found at the Toronto Mesh [Debian repository](https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/). These packages are compiled from source and packaged using scripts in the [mesh-packages](https://github.com/tomeshnet/mesh-packages/tree/master/packages/babeld) GitHub repository.
 
 The package for the EdgeRouter X/SFP with UI can be found at https://github.com/darkdrgn2k/RouterX-Babeld-Package .
 
