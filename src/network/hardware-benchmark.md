@@ -83,7 +83,7 @@ ifconfig eth0 192.168.1.2 up
 ip route add 0.0.0.0/0 via 192.168.1.1
 ```
 
-**WireGuard**
+#### WireGuard
 
 Configure a Wireguard client.  Create a configuration file `wg0.conf` containing a private/public key.
 
