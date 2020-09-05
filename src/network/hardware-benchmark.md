@@ -17,6 +17,7 @@ Instructions below are non-persistent. When device is restarted changes will be 
 Configure the IP addresses on each interface
 
 `eth0` Interface on device connected to `Endpoint 1`
+
 `eth1` Interface on device connected to `Endpoint 2`
 
 
