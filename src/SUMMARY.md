@@ -1,5 +1,7 @@
 # Summary
 
+<!-- vale off -->
+
 [Notice](./notice.md)
 
 - [Network](./network/main.md)
