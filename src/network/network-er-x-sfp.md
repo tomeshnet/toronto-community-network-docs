@@ -53,7 +53,7 @@ Create a DHCP named definition. Use the IP subnet as the name.
 `set service dhcp-server shared-network-name XXXXXXXX subnet XXX.XXX.XXX.0/24`    
 Create a subnet definition in the named definition. Rest of the command will be prefixed with this command line
 
-Set the following items
+Set the following items.
 
 `... default-router xxxx.xxxx.xxxx.1`  
 Define the default route that will be used.
