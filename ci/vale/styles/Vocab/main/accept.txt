@@ -34,11 +34,16 @@ colocated
 https
 http
 [cC]yber
-OpenWRT
 subnet
+subnets
 subnetwork
+WireGuard
+OpenWRT
 IP
 IPs
 IPv4
 IPv6
 repo
+unmanaged
+VLAN
+VLANs
