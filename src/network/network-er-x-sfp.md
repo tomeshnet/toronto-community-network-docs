@@ -1,6 +1,6 @@
 # EdgeRouter X and EdgeRouter X-SFP
 
-[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X.  We use version 1.x. 2.x has NOT been tested however preliminary results seem to indicate no immediate issues.
+[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X. Tested on version 1.x of firmware, should work on 2.x as well.
 
 To enter configuration mode, SSH into the ER-X and enter the command `configuration`.
 
