@@ -147,7 +147,7 @@ Babeld does not come standard on ER-X.  Use the deb package located at https://g
 
 All commands below are to be prefixed with `set protocols babeld`
 
-`denydefault` and `denydefaultlocal` add a "deny all" rules to the end of the configuration. This prevents unwanted IPs to be announced such as the local IP address of the gateway network in case of a gateway.
+`denydefault` and `denydefaultlocal` add a "deny all" rules to the end of the configuration. This prevents unwanted IPs from being announced such as the local IP address of the gateway network in case of a gateway.
 
 `local-port` defines the port on the loopback address that will let you interact with babeld. Mainly used for debugging.
 
