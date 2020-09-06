@@ -200,7 +200,7 @@ set protocols babeld filter l2tpeth0 type redistribute
 
 The paradox of the gateway and routing babeld:
 
-- DHCP provides the default route to exit to the internet
+- DHCP provides the default route to exit to the Internet
 - Tunnel is established by using the default route
 - Babeld receives the IP address from the neighbour on the other side of the tunnel
 - The default route gets replaced with the exit node
