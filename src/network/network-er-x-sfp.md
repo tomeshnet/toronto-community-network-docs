@@ -14,6 +14,19 @@ For example `set system hostname XXXX` would be `system` branch, `hostname` fiel
 ```
 set system host-name SN1R1
 ```
+## Configured DNS and NTP Server
+
+```
+set service dns forwarding name-server 10.10.10.10
+delete system ntp
+set system ntp
+set system ntp server 10.10.10.123 prefer
+set system ntp server 206.108.0.131
+set system ntp server 1.ubnt.pool.ntp.org
+set system ntp server 2.ubnt.pool.ntp.org
+set system ntp server 3.ubnt.pool.ntp.org
+set system ntp server 4.ubnt.pool.ntp.org
+```
 
 ## Enable Hardware Acceleration
 
@@ -58,7 +71,7 @@ Set the following items.
 `... default-router xxxx.xxxx.xxxx.1`  
 Define the default route that will be used.
 
-`... dns-server 1.1.1.1`   
+`... dns-server 10.10.10.10`   
 Define the DNS server that will be used.
 
 `... domain-name tcn.tomesh.net`   
@@ -77,29 +90,33 @@ set service dhcp-server disabled false
 delete service dhcp-server shared-network-name
 set service dhcp-server shared-network-name 100.64.10.0 authoritative enable
 set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 default-router 100.64.10.1
-set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 dns-server 1.1.1.1
-set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 domain-name to.mesh
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 dns-server 10.10.10.10
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 domain-name tcn.tomesh.net
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 ntp-server 10.10.10.123
 set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 lease 600
 set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 start 100.64.10.127 stop 100.64.10.254
 
 set service dhcp-server shared-network-name 100.64.11.0 authoritative enable
 set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 default-router 100.64.11.1
-set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 dns-server 1.1.1.1
-set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 domain-name to.mesh
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 dns-server 10.10.10.10
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 domain-name tcn.tomesh.net
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 ntp-server 10.10.10.123
 set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 lease 600
 set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 start 100.64.11.127 stop 100.64.11.254
 
 set service dhcp-server shared-network-name 100.64.12.0 authoritative enable
 set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 default-router 100.64.12.1
-set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 dns-server 1.1.1.1
-set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 domain-name to.mesh
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 dns-server 10.10.10.10
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 domain-name tcn.tomesh.net
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 ntp-server 10.10.10.123
 set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 lease 600
 set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 start 100.64.12.127 stop 100.64.12.254
 
 set service dhcp-server shared-network-name 100.64.13.0 authoritative enable
 set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 default-router 100.64.13.1
-set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 dns-server 1.1.1.1
-set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 domain-name to.mesh
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 dns-server 10.10.10.10
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 domain-name tcn.tomesh.net
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 ntp-server 10.10.10.123
 set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 lease 600
 set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 start 100.64.13.127 stop 100.64.13.254
 ```
