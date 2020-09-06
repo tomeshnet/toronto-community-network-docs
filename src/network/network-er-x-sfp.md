@@ -202,7 +202,7 @@ The paradox of the gateway and routing babeld:
 
 - DHCP provides the default route to exit to the internet
 - Tunnel is established by using the default route
-- BABELD receives the IP address from the neighbour on the other side of the tunnel
+- Babeld receives the IP address from the neighbour on the other side of the tunnel
 - The default route gets replaced with the EXIT NODE
 - All internet traffic is rerouted through the tunnel
 - Since the tunnel uses internet traffic it is also rerouted
