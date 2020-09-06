@@ -110,7 +110,7 @@ L2TP Tunnels is used to connect back to the an [exit node](exit-node.md).
 
 All commands are prefixed with `set interfaces l2tpv3 l2tpeth0` where `l2tpeth0` is a numbered interface starting from 0.
 
-Between the EXIT NODE configuration and the CLIENT node the following values are filled 
+Between the exit node configuration and the client node the following values are filled:
 
 ```
 - destination-port <> source-port
