@@ -314,7 +314,7 @@ set interfaces openvpn vtun99 tls cert-file /config/auth/SN1R1.crt
 set interfaces openvpn vtun99 tls key-file /config/auth/SN1R1.key
 ```
 
-If needed define static route (workaround 2)
+If needed for the babeld workaround 2, a static route can be defined:
 
 ```
 set protocols static route 199.195.250.208/32 next-hop 192.168.40.1
