@@ -119,7 +119,7 @@ Between the EXIT NODE configuration and the CLIENT node the following values are
 - remote-ip <> local-ip
 ```
 
-`local-ip` MUST be an IP address defined on the router. This means if the device is behind a NAT it will be a local IP not public IP. Also, if using NAT sometimes source-port needs to be added to the port forward.
+`local-ip` must be an IP address defined on the router. This means if the device is behind a NAT, this will be a local IP, and not the public IP. Also, if the device is behind NAT, sometimes the `source-port` needs to be added to the router's port forward settings.
 
 Configure each port with a unique IPv4 and IPv6 IP address. Use a `/30` subnet for IPv4 and `/126` for IPv6. Check with the exit node you are using to confirm to the numbering selected.
 
