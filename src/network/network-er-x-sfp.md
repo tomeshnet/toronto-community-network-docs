@@ -51,7 +51,7 @@ Enable the DHCP server by setting `disabled` as false.
 Create a DHCP named definition. Use the IP subnet as the name.
 
 `set service dhcp-server shared-network-name XXXXXXXX subnet XXX.XXX.XXX.0/24`    
-Create a subnet definition in the named definition. Rest of the command will be prefixed with this command line
+Create a subnet definition in the named definition. The rest of the commands must be prefixed with this command line, in place of the `...`.
 
 Set the following items.
 
