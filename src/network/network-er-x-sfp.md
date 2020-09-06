@@ -44,7 +44,7 @@ set interfaces ethernet eth4 address fd54:4f4d:5348:400d::1/64
 
 Enable a DHCP subnet for each network you defined in the previous section.
 
-Enable the DHCP server by setting `disabled` as false (double negative. Delete any existing definition).
+Enable the DHCP server by setting `disabled` as false.
 
 
 `set service dhcp-server shared-network-name XXXXXXXX`  
