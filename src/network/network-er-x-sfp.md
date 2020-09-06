@@ -55,7 +55,7 @@ Create a subnet definition in the named definition. Rest of the command will be 
 
 Set the following items
 
-`.. default-router xxxx.xxxx.xxxx.1`  
+`... default-router xxxx.xxxx.xxxx.1`  
 Define the default route that will be used.
 
 `... dns-server 1.1.1.1`   
