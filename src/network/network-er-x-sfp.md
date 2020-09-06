@@ -205,7 +205,7 @@ The paradox of the gateway and routing babeld:
 - Babeld receives the IP address from the neighbour on the other side of the tunnel
 - The default route gets replaced with the exit node
 - All Internet traffic is rerouted through the tunnel
-- Since the tunnel uses internet traffic it is also rerouted
+- Since the tunnel uses Internet traffic it is also rerouted
 - Tunnel collapses, since it is now feeding into itself
 
 
