@@ -65,7 +65,7 @@ Define the DNS server that will be used.
 Define the domain suffix that will be used. The clients will attempt to add this to the end of any domain names that are used if not found. For example `sn1a1` will try to resolve `sn1a1.tcn.tomesh.net`
 
 `... lease 600`  
-Define the length of the lease. `600` means 5 minutes.
+Define the length of the lease in seconds.
 
 `... start xxx.xxx.xxx.127 stop xxx.xxx.xxx.254`  
 Define the first and last IP address that will be issued.
