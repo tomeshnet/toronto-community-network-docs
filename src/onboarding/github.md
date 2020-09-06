@@ -26,7 +26,7 @@ Toronto Mesh uses issue templates, so some text is filled out already when a use
 
 Issues also have assignees, which can be seen in the sidebar. These are the users responsible for completing this task. A user can assign themselves or other people.
 
-Issues can either be open or closed, which denotes their completion. Issues are closed once they're no longer relevant, or when the original task or bug has been fixed.
+Issues can either be open or closed, which denotes their completion. Issues are closed once they are no longer relevant, or when the original task or bug has been fixed.
 
 ## Labels
 
@@ -51,7 +51,7 @@ Click that text or click the Projects tab at the top to see the project. Reposit
 
 A GitHub Project is a type of [Kanban](https://en.wikipedia.org/wiki/Kanban_%28development%29) board for organizing issues.
 Each of the cards are issues, which can be in different columns. We use a standard setup with To Do, Doing (aka "In Progress"), and Completed columns.
-We also have a Backlog column on the far left for low-priority tasks. Issues can be moved from column to column as needed, to indicate their status. Issues will automatically be moved to Completed when they're closed.
+We also have a Backlog column on the far left for low-priority tasks. Issues can be moved from column to column as needed, to indicate their status. Issues will automatically be moved to Completed when they are closed.
 
 Issues in the project can also be filtered by label by clicking on a label, for example all the communications issues in the project can be seen [here](https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Acommunications).
 
