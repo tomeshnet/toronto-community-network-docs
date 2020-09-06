@@ -225,7 +225,7 @@ set protocols static route 199.195.250.209/32 next-hop 192.168.2.1
 
 ### Workaround 2 - Route Tables
 
-Route tables allow the use of the default route (0.0.0.0) on the node to still point to the local internet connection. Babeld is instructed to place all the installed routes into a new routing table. A rule is installed to use this routing table for all packets coming in from interfaces we use babeld on. Then finally routes for the local node are added manually since babeld will not install them since they are local. Rules and routes must be installed in both the IPv4 and IPv6 stacks.
+Route tables allow the use of the default route (0.0.0.0) on the node to still point to the local Internet connection. Babeld is instructed to place all the installed routes into a new routing table. A rule is installed to use this routing table for all packets coming in from interfaces we use babeld on. Then finally routes for the local node are added manually since babeld will not install them since they are local. Rules and routes must be installed in both the IPv4 and IPv6 stacks.
 
 ```
 set protocols babeld export-table 10
