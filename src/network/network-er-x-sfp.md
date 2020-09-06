@@ -206,7 +206,7 @@ The paradox of the gateway and routing babeld:
 - The default route gets replaced with the EXIT NODE
 - All Internet traffic is rerouted through the tunnel
 - Since the tunnel uses internet traffic it is also rerouted
-- Tunnel collapses  since its now feeding into itself
+- Tunnel collapses, since it is now feeding into itself
 
 
 ### Workaround 1 - Static IP/Route
