@@ -143,7 +143,7 @@ set interfaces l2tpv3 l2tpeth0 address fd74:6f6d:7368:7f02::2/126
 
 ## Babeld
 
-Babeld does not come standard on ER-X.  Use the deb package located at  https://github.com/darkdrgn2k/RouterX-Babeld-Package  and install the deb using `dpkg -i`  on the router. Review the instructions in the repo to allow package to survive firmware upgrades.
+Babeld does not come standard on ER-X.  Use the deb package located at https://github.com/darkdrgn2k/RouterX-Babeld-Package and install it using `dpkg -i` on the router. Review the instructions on [the README](https://github.com/darkdrgn2k/RouterX-Babeld-Package) to allow package to survive firmware upgrades.
 
 All commands below are to be prefixed with `set protocols babeld`
 
