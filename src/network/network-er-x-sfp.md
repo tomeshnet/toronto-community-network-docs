@@ -211,7 +211,7 @@ The paradox of the gateway and routing babeld:
 
 ### Workaround 1 - Static IP/Route
 
-- Define static IP on `ETH0` (WAN FACING PORT)
+- Define static IP on `ETH0` (WAN facing port)
 - Remove default gateway
 - Create route out to the gateway for only the exit node
 
