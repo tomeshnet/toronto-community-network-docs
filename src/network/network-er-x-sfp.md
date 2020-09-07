@@ -274,6 +274,8 @@ ip -6 route add fd74:6f6d:7368:7f02::fc/126 dev l2tpeth0 table 10
 
 ## OpenVPN - Management Tunnel
 
+Management tunnel to allow an alternative means of accessing the router out side of the mesh network, in case the mesh fails.
+
 Write certificates (provided by OpenVPN server)
 
 ```
