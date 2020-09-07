@@ -23,7 +23,7 @@ For example, the Administrators may allocate a budget for training and request f
 Hardware purchase makes up the bulk of the Internet Society grant budget.
 The _Network Planning, Design and Operations_ working group will be responsible for making hardware procurement proposals using the following template, submitted as a pull request to [operations/hardware-budgets](https://github.com/tomeshnet/toronto-community-network/new/master/operations/hardware-budgets/):
 
-```
+```markdown
 # YYYY-MM-DD Hardware Budget for Toronto Community Network
 
 ## Purpose
