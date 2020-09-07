@@ -34,6 +34,9 @@ colocated
 https
 http
 [cC]yber
+[oO]nboarding
+repo
+Kanban
 subnet
 subnets
 subnetwork
@@ -43,7 +46,6 @@ IP
 IPs
 IPv4
 IPv6
-repo
 unmanaged
 VLAN
 VLANs
