@@ -37,3 +37,15 @@ http
 [oO]nboarding
 repo
 Kanban
+subnet
+subnets
+subnetwork
+WireGuard
+OpenWRT
+IP
+IPs
+IPv4
+IPv6
+unmanaged
+VLAN
+VLANs
