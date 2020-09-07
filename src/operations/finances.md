@@ -4,7 +4,7 @@ The purpose of this document is to describe the financial status and processes o
 
 ## Introduction
 The Toronto Community Network is a community project that current does not have its own independent legal entity or bank accounts, and relies on trustees to provide fiscal administration capacity.
-Aside from out-of-pocket spendings from some of our members, our current financing comes from one single grant from the [Internet Society](https://www.internetsociety.org) administering through [Free Geek Toronto](https://www.freegeektoronto.org).
+Aside from out-of-pocket spending from some of our members, our current financing comes from one single grant from the [Internet Society](https://www.internetsociety.org) administering through [Free Geek Toronto](https://www.freegeektoronto.org).
 
 ## Internet Society Grant
 TBA (some information about the grant)
