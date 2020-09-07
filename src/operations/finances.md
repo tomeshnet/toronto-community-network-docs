@@ -15,7 +15,7 @@ We have two-levels of approvals for fund allocations:
 
 1. Four members of Toronto Mesh involved in the grant application are selected as Administrators, and will approve allocations according to whether an expense fits with the spirit of the grant objectives and its proposed budget.
 
-2. Free Geek Toronto will approve allocations according to whether an expense approved by the Administrators contains required documentations for their accounting purposes, and they reserve the right to reject allocations that may put them in a position of legal liability due to violation of grant terms.
+2. Free Geek Toronto will approve allocations according to the Memorandum of Understanding, and they reserve the right to reject allocations that may put them in a position of legal liability due to violation of grant terms.
 
 In the course of administering the grant, Administrators may draft request for proposals (RFPs) or delegate budgets to working groups to allocate as they deem necessary.
 For example, the Administrators may allocate a budget for training and request for member applications, or delegate a small budget for the _Communications and Community Engagement_ working group to spend on an event as they see fit.
