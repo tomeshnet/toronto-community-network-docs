@@ -62,6 +62,8 @@ Members of Network Planning, Design and Operations:
 Grant Administrators:
 - Administrator 1
 - Administrator 2
+- Administrator 3
+- Administrator 4
 ```
 
 For budget allocations above CAD 1,000, approval by 3 of 4 Administrators are needed. For amounts below that, only 2 of 4 approvals are necessary.
