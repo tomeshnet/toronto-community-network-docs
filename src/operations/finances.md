@@ -7,15 +7,35 @@ The Toronto Community Network is a community project that current does not have 
 Aside from out-of-pocket spending from some of our members, our current financing comes from one single grant from the [Internet Society](https://www.internetsociety.org) administering through [Free Geek Toronto](https://www.freegeektoronto.org).
 
 ## Internet Society Grant
-TBA (some information about the grant)
+Internet Society was involved in discussions since ideation phases of the Toronto Community Network, and that is reflected in our [Proposal to Establish a Toronto Community Network](https://github.com/tomeshnet/toronto-community-network/blob/master/operations/published-documents/proposal-draft-v003.pdf).
+This eventually led to a grant focused on deployment of high-capacity supernodes, which will establish an initial backbone from which to grow and sustain the Toronto Community Network.
+The initial supernodes span several major neighborhoods across the City of Toronto, selected and scheduled according to opportunities presented by the City of Toronto and our other collaborators through the [Digital Canopy project](https://newsroom.cisco.com/press-release-content?type=webcontent&articleId=2095927).
+
+The grant totals CAD 13,525 with the following budget:
+- $10,428.00 for hardware, covering 4 supernode deployments
+- $1,744.50 for operational expenses, including data centre colocation and internet transit
+- $1,352.00 for grant administration, a 10% fee retained by our fiscal host [Free Geek Toronto](https://freegeektoronto.org)
+
+The funds are payable to Free Geek Toronto in two installments, CAD 7,000 followed by CAD 6,525 upon completion of the milestone where 2 supernodes have been deployed.
+Toronto Mesh estimated a contribution of 1630 member hours of volunteer labour to the project.
+
+Toronto Mesh and Free Geek Toronto are expected to deliver 3 reports by the following dates:
+- 1st report: September 30, 2020
+- 2nd report: November 15, 2020
+- Final report: January 31, 2020 (summarizing all the work done until December 31, 2020)
+
+Four core members of Toronto Mesh, who will serve as Administrators for this grant (explained below), have signed a Memorandum of Understanding (MoU) with Free Geek Toronto to formalize the fiscal hosting relationship.
+The full Internet Society Partnership Agreement and MoU are [archived on our trusted drive](https://cloud.tomesh.net/apps/files/?dir=/tomeshnet-trusted/ISOC), accessible only to core members due to confidentiality requirements from our partners.
 
 ### Administration
-Free Geek Toronto currently holds the full amount of the grant, and the balance of X (after 10% of administrative fees) is to be distributed for the project according to the budget set out in the grant proposal.
+The first of two installments in the amount of CAD 7,000 is paid to Free Geek Toronto in September of 2020, and the balance of CAD 6,300 (after 10% of administrative fees) is to be distributed for the project according to the budget set out in the grant proposal.
 We have two-levels of approvals for fund allocations:
 
 1. Four members of Toronto Mesh involved in the grant application are selected as Administrators, and will approve allocations according to whether an expense fits with the spirit of the grant objectives and its proposed budget.
 
-2. Free Geek Toronto will approve allocations according to the Memorandum of Understanding, and they reserve the right to reject allocations that may put them in a position of legal liability due to violation of grant terms.
+2. Free Geek Toronto will approve allocations according to the MoU, and they reserve the right to reject allocations that may put them in a position of legal liability due to violation of grant terms.
+
+Expenses generally require pre-approval and receipt copies, [archive and tracked in a spreadsheet on our trusted drive](https://cloud.tomesh.net/apps/files/?dir=/tomeshnet-trusted/ISOC).
 
 In the course of administering the grant, Administrators may draft request for proposals (RFPs) or delegate budgets to working groups to allocate as they deem necessary.
 For example, the Administrators may allocate a budget for training and request for member applications, or delegate a small budget for the _Communications and Community Engagement_ working group to spend on an event as they see fit.
@@ -53,7 +73,7 @@ _The Administrators acknowledge that final reimbursement amounts may differ due 
 
 ## Sign-off
 
-_The sign-off should include at least one experienced member in the _Network Planning, Design and Operations_ working group._
+_The sign-off should include at least one experienced member in the Network Planning, Design and Operations working group._
 
 Members of Network Planning, Design and Operations:
 - Member 1
