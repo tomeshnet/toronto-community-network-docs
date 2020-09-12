@@ -5,7 +5,7 @@
 
 `E2E` Endpoint to Endpoint - Device connected to two endpoints on different subnets. `iperf3` between two endpoints through device.
 
-`WG D2D` Device to Endpoint over WG - Device connected to endpoint with `wg` tunnel and `iperf3` over `wg`.
+`WG D2E` Device to Endpoint over WG - Device connected to endpoint with `wg` tunnel and `iperf3` over `wg`.
 
 `WG E2E`  Endpoint to Endpoint over WG - Device connected to two endpoints on different subnets. `wg` between device and one endpoint. `iperf3` between two endpoints through device over WG
 
