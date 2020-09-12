@@ -6,7 +6,7 @@ The purpose of this document is to describe the financial status and processes o
 The Toronto Community Network is a community project that current does not have its own independent legal entity or bank accounts, and relies on trustees to provide fiscal administration capacity.
 Aside from out-of-pocket spending from some of our members, our current financing comes from one single grant from the [Internet Society](https://www.internetsociety.org) administering through [Free Geek Toronto](https://www.freegeektoronto.org).
 
-## Internet Society Grant
+## Internet Society Grant for Supernodes (2020)
 Internet Society was involved in discussions since ideation phases of the Toronto Community Network, and that is reflected in our [Proposal to Establish a Toronto Community Network](https://github.com/tomeshnet/toronto-community-network/blob/master/operations/published-documents/proposal-draft-v003.pdf).
 This eventually led to a grant focused on deployment of high-capacity supernodes, which will establish an initial backbone from which to grow and sustain the Toronto Community Network.
 The initial supernodes span several major neighborhoods across the City of Toronto, selected and scheduled according to opportunities presented by the City of Toronto and our other collaborators through the [Digital Canopy project](https://newsroom.cisco.com/press-release-content?type=webcontent&articleId=2095927).
@@ -25,7 +25,7 @@ Toronto Mesh and Free Geek Toronto are expected to deliver 3 reports by the foll
 - Final report: January 31, 2020 (summarizing all the work done until December 31, 2020)
 
 Four core members of Toronto Mesh, who will serve as Administrators for this grant (explained below), have signed a Memorandum of Understanding (MoU) with Free Geek Toronto to formalize the fiscal hosting relationship.
-The full Internet Society Partnership Agreement and MoU are [archived on our trusted drive](https://cloud.tomesh.net/apps/files/?dir=/tomeshnet-trusted/ISOC), accessible only to core members due to confidentiality requirements from our partners.
+The full Internet Society Partnership Agreement and MoU are [archived on our trusted drive](https://cloud.tomesh.net/apps/files/?dir=/tomeshnet-trusted/Internet%20Society/2020%20TCN%20ISOC%20Grant%20for%20Supernodes&fileid=4935), accessible only to core members due to confidentiality requirements from our partners.
 
 ### Administration
 The first of two installments in the amount of CAD 7,000 is paid to Free Geek Toronto in September of 2020, and the balance of CAD 6,300 (after 10% of administrative fees) is to be distributed for the project according to the budget set out in the grant proposal.
@@ -35,7 +35,7 @@ We have two-levels of approvals for fund allocations:
 
 2. Free Geek Toronto will approve allocations according to the MoU, and they reserve the right to reject allocations that may put them in a position of legal liability due to violation of grant terms.
 
-Expenses generally require pre-approval and receipt copies, [archive and tracked in a spreadsheet on our trusted drive](https://cloud.tomesh.net/apps/files/?dir=/tomeshnet-trusted/ISOC).
+Expenses generally require pre-approval and receipt copies, [archive and tracked in a spreadsheet on our trusted drive](https://cloud.tomesh.net/apps/files/?dir=/tomeshnet-trusted/Internet%20Society/2020%20TCN%20ISOC%20Grant%20for%20Supernodes&fileid=4935).
 
 In the course of administering the grant, Administrators may draft request for proposals (RFPs) or delegate budgets to working groups to allocate as they deem necessary.
 For example, the Administrators may allocate a budget for training and request for member applications, or delegate a small budget for the _Communications and Community Engagement_ working group to spend on an event as they see fit.
@@ -87,3 +87,8 @@ Grant Administrators:
 ```
 
 For budget allocations above CAD 1,000, approval by 3 of 4 Administrators are needed. For amounts below that, only 2 of 4 approvals are necessary.
+The four Toronto Mesh Administrators are:
+[@darkdrgn2k](https://github.com/darkdrgn2k),
+[@TimTor](https://github.com/TimTor),
+[@Shrinks99](https://github.com/Shrinks99),
+and [@benhylau](https://github.com/benhylau).
