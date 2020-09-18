@@ -73,7 +73,7 @@ _The Administrators acknowledge that final reimbursement amounts may differ due 
 
 ## Sign-off
 
-_The sign-off should include at least one experienced member in the Network Planning, Design and Operations working group._
+_The sign-off should include at least one experienced member in the Network working group._
 
 Members of Network Planning, Design and Operations:
 - Member 1
