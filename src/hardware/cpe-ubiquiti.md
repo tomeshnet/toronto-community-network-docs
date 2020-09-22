@@ -23,7 +23,7 @@ The following information you will need to collect before beginning  the configu
 
 ![image](./images/hardware-cpe-management-wifi.jpg)
 
-**NOTE** The Managment Radio only is on for a short period of time after boot. If you do not see your device, power cycle it by unplugging it from the POE injector, wait 10 seconds, and plug it in again.
+**NOTE** The Management Radio only is on for a short period of time after boot. If you do not see your device, power cycle it by unplugging it from the POE injector, wait 10 seconds, and plug it in again.
 
 2. Once the WiFi connection is establish, open the browser and visit `https://192.168.172.1/`
 
@@ -71,17 +71,17 @@ The following information you will need to collect before beginning  the configu
 
 ![image](./images/hardware-cpe-network-menu-item.jpg)
 
-2. Set the `ip address` to the address assigned to your node
+2. Set the `IP ADDRESS` to the address assigned to your node
 
-3. Set the `netmask` if needed. The default of `255.255.255.0` should be used unless otherwise assigned
+3. Set the `NETMASK` if needed. The default of `255.255.255.0` should be used unless otherwise assigned
 
-4. Enter the `gateway` assigned to your node. Usually same as your `ip address` but ending in 1
+4. Enter the `GATEWAY` assigned to your node. Usually same as your `IP ADDRESS` but ending in `1`
 
 5. Set the DNS to `10.10.10.10`
 
 6. Set `IPV6` address to `STATIC`
 
-7. Enter `IPV6 ADDRESS`, `IPV6 NETAMSK` and `IPV6 GATEWAY` to values provided
+7. Enter `IPV6 ADDRESS`, `IPV6 NETAMSK` and `IPV6 GATEWAY` to values provided. `IPV6 NETAMSK` is usualy `64`
 
 ![image](./images/hardware-cpe-config-network.jpg)
 
@@ -95,22 +95,24 @@ The following information you will need to collect before beginning  the configu
 
 ![image](./images/hardware-cpe-system-menu-item.jpg)
 
-2. Toggle `NTP CLIENT` on
+2. Set `DEVICE NAME` to your assigned node name
 
-3. Set `NTP SERVER` to `10.10.10.123`
+3. Toggle `NTP CLIENT` on
 
-4. Set `TIMEZONE` to `(GMT -05.00) Eastern`
+4. Set `NTP SERVER` to `10.10.10.123`
 
-5. Toggle `READ-ONLY ACCOUNT` on
+5. Set `TIMEZONE` to `(GMT -05.00) Eastern`
 
-6. Set `READ-ONLY ACCOUNT NAME` to `tomeshnet`
+6. Toggle `READ-ONLY ACCOUNT` on
 
-7. Click `CHANGE` next to `Change Read Only User Password` and set the password to `tomeshnet`
+7. Set `READ-ONLY ACCOUNT NAME` to `tomeshnet`
 
-8. Fill out the location section.
+8. Click `CHANGE` next to `Change Read Only User Password` and set the password to `tomeshnet`
+
+9. Fill out the location section.
 
 ![image](./images/hardware-cpe-config-system.jpg)
 
-9. Select `Save Changes`.
+10. Select `Save Changes`
 
 
