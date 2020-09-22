@@ -11,6 +11,7 @@
 - [Hardware](./hardware/main.md)
     - [Hardware Benchmark](./hardware/benchmark.md)
     - [Hardware Benchmark Results](./hardware/benchmark-results.md)
+    - [CPE - Ubiquiti](./hardware/cpe-ubiquiti.md)
 - [Operations](./operations/main.md)
     - [Managing Secrets](./operations/secrets.md)
     - [Finances](./operations/finances.md)
