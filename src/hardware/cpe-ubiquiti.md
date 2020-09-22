@@ -81,7 +81,7 @@ The following information you will need to collect before beginning  the configu
 
 6. Set `IPV6` address to `STATIC`
 
-7. Enter `IPV6 ADDRESS`, `IPV6 NETAMSK` and `IPV6 GATEWAY` to values provided. `IPV6 NETAMSK` is usualy `64`
+7. Enter `IPV6 ADDRESS`, `IPV6 NETAMSK` and `IPV6 GATEWAY` to values provided. `IPV6 NETAMSK` is usually `64`
 
 ![image](./images/hardware-cpe-config-network.jpg)
 
@@ -114,5 +114,4 @@ The following information you will need to collect before beginning  the configu
 ![image](./images/hardware-cpe-config-system.jpg)
 
 10. Select `Save Changes`
-
 
