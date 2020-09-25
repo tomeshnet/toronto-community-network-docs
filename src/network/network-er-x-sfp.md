@@ -340,7 +340,7 @@ set protocols static route 199.195.250.208/32 next-hop 192.168.40.1
 ```
 # Appendix A - Babeld - Cross-Compile
 
-Babeld can be cross compiled to work on ER-X as follows
+Babeld can be cross compiled to work on ER-X as follows:
 
 ```
 sudo apt-get install gcc-mipsel-linux-gnu
