@@ -276,7 +276,7 @@ ip -6 route add fd74:6f6d:7368:7f02::fc/126 dev l2tpeth0 table 10
 
 We use OpenVPN to set up a management tunnel to allow an alternative means of accessing the router from outside of the mesh network, in case the mesh fails.
 
-Write certificates (provided by OpenVPN server)
+Write certificates (provided by OpenVPN server). For example:
 
 ```
 cat <<"EOF">/config/auth/SN1R1.crt
