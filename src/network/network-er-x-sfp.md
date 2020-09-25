@@ -281,7 +281,7 @@ Write certificates (provided by OpenVPN server). For example:
 ```
 cat <<"EOF">/config/auth/SN1R1.crt
 -----BEGIN CERTIFICATE-----
-<<SANITIZED>>
+[REDACTED]
 -----END CERTIFICATE-----
 EOF
 cat <<"EOF">/config/auth/SN1R1.key
