@@ -321,7 +321,7 @@ clmLw8d8Ew==
 EOF
 ```
 
-Configure OpenVPN named vtun99. 
+Configure OpenVPN tunnel named vtun99. 
 
 ```
 set interfaces openvpn vtun99 mode client
