@@ -59,7 +59,7 @@ You will need to collect the following information:
 
 3. Enter the `WPA2 PRESHARED KEY`. TCN standard key is `torontocommunitynetwork`
 
-4. Select Save
+4. Select `Save Changes`
 
 ![image](./images/hardware-cpe-config-wireless.jpg)
 
