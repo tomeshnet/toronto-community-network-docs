@@ -26,6 +26,12 @@ Antenna 2 is a Ubiquiti LAP-120 mounted on the south arm of the building, on the
 
 ![image](images/supernode1-hardware-antenna2.jpg)
 
+### Antenna 3 and 4
+
+Antenna 3 and 4 are Ubiquiti LAP-120 mounted on the north east arm of the building. Antenna 3 is facing north east and antenna 4 is facing north.
+
+![image](images/supernode1-hardware-antenna3and4.jpg)
+
 ### Router 1
 
 Router 1 is a [Ubiquiti EdgeRouter X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) mounted inside the Cisco cabinet in the ballast room. It is connected to the exit node over a L2TP tunnel using UDP.
