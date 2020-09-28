@@ -53,7 +53,7 @@ You will need to collect the following information:
 
 1. Select the `Wireless` icon from the left menu
 
-![image](./images/hardware-cpe-wireless-menu-item.jpg)
+ ![image](./images/hardware-cpe-wireless-menu-item.jpg)
 
 2. Enter the remote antennas SSID under `SSID`
 
