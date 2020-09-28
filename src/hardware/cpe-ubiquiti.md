@@ -90,7 +90,7 @@ You will need to collect the following information:
 
 1. Select the `System` icon from the left menu
 
-![image](./images/hardware-cpe-system-menu-item.jpg)
+ ![image](./images/hardware-cpe-system-menu-item.jpg)
 
 2. Set `DEVICE NAME` to your assigned node name
 
