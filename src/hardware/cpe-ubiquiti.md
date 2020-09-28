@@ -7,7 +7,7 @@ This document covers setup for the following devices. Other devices may be simil
 
 ## What you will need
 
-The following information you will need to collect before beginning  the configuration.
+You will need to collect the following information:
 
 - SSID of the supernode antenna you wish to connect to
 - Your assigned node name
