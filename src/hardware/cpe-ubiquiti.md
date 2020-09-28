@@ -102,7 +102,7 @@ You will need to collect the following information:
 
 6. Toggle `READ-ONLY ACCOUNT` on
 
-7. Set `READ-ONLY ACCOUNT NAME` to `tomeshnet`
+7. Set `READ-ONLY ACCOUNT NAME` to `ubnt`
 
 8. Click `CHANGE` next to `Change Read Only User Password` and set the password to `tomeshnet`
 
