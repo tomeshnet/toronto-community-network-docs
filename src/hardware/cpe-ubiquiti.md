@@ -61,7 +61,7 @@ You will need to collect the following information:
 
 4. Select `Save Changes`
 
-![image](./images/hardware-cpe-config-wireless.jpg)
+ ![image](./images/hardware-cpe-config-wireless.jpg)
 
 5. Select `Save Changes`
 
