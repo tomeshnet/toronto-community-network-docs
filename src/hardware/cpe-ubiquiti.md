@@ -9,7 +9,7 @@ This document covers setup for the following devices. Other devices may be simil
 
 The following information you will need to collect before beginning  the configuration.
 
-- SSID of the Supernode antenna you wish to connect to
+- SSID of the supernode antenna you wish to connect to
 - Your assigned node name
 - Your assigned IP address, Netmask, Gateway
 - A computer with WiFi for management radio method or a computer with a network port for cable method.
@@ -114,4 +114,3 @@ The following information you will need to collect before beginning  the configu
 ![image](./images/hardware-cpe-config-system.jpg)
 
 10. Select `Save Changes`
-
