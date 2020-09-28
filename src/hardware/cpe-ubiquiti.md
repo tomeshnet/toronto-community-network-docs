@@ -21,7 +21,7 @@ You will need to collect the following information:
 
 1. Connect to the Management Radio access point of the device. It should be a combination of the name of the unit and the `MAC` address.
 
-![image](./images/hardware-cpe-management-wifi.jpg)
+  ![image](./images/hardware-cpe-management-wifi.jpg)
 
 **NOTE** The Management Radio only is on for a short period of time after boot. If you do not see your device, power cycle it by unplugging it from the POE injector, wait 10 seconds, and plug it in again.
 
@@ -66,7 +66,7 @@ You will need to collect the following information:
 
 1. Select the `Network` icon from the left menu
 
-![image](./images/hardware-cpe-network-menu-item.jpg)
+ ![image](./images/hardware-cpe-network-menu-item.jpg)
 
 2. Set the `IP ADDRESS` to the address assigned to your node
 
@@ -80,7 +80,7 @@ You will need to collect the following information:
 
 7. Enter `IPV6 ADDRESS`, `IPV6 NETAMSK` and `IPV6 GATEWAY` to values provided. `IPV6 NETAMSK` is usually `64`
 
-![image](./images/hardware-cpe-config-network.jpg)
+ ![image](./images/hardware-cpe-config-network.jpg)
 
 8. Select `Save Changes`
 
@@ -108,6 +108,6 @@ You will need to collect the following information:
 
 9. Fill out the location section.
 
-![image](./images/hardware-cpe-config-system.jpg)
+  ![image](./images/hardware-cpe-config-system.jpg)
 
 10. Select `Save Changes`
