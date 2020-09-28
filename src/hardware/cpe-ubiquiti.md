@@ -62,7 +62,7 @@ You will need to collect the following information:
 
  ![image](./images/hardware-cpe-config-wireless.jpg)
 
-5. Select `Save Changes`
+4. Select `Save Changes`
 
 ### Configure Network
 
