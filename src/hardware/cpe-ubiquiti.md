@@ -58,8 +58,6 @@ You will need to collect the following information:
 2. Enter the remote antennas SSID under `SSID`
 
 3. Enter the `WPA2 PRESHARED KEY`. TCN standard key is `torontocommunitynetwork`
-
-
  ![image](./images/hardware-cpe-config-wireless.jpg)
 
 4. Select `Save Changes`
