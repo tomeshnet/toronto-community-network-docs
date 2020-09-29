@@ -12,10 +12,10 @@ You will need to collect the following information:
 - SSID of the supernode antenna you wish to connect to
 - Your assigned node name
 - Your assigned IP address, Netmask, Gateway
-- A computer with WiFi for management radio method or a computer with a network port for cable method.
+- A computer with WiFi for use with the [management radio](#connect-using-the-management-radio) method or a computer with a network port for the [Ethernet cable](#connection-using-an-ethernet-cable)  method.
 
 
-## Connecting to the CPE for the first time.
+## Connecting to the CPE for the first time
 
 ### If the device has a management radio: Over WiFi
 
@@ -70,7 +70,7 @@ You will need to collect the following information:
 
 2. Set the `IP ADDRESS` to the address assigned to your node
 
-3. Set the `NETMASK` if needed. The default of `255.255.255.0` should be used unless otherwise assigned
+3. Set the `NETMASK` if needed. The default is `255.255.255.0` and used in most instances
 
 4. Enter the `GATEWAY` assigned to your node. Usually same as your `IP ADDRESS` but ending in `1`
 
