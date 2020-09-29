@@ -28,7 +28,7 @@ Antenna 2 is a Ubiquiti LAP-120 mounted on the south arm of the building, on the
 
 ### Antenna 3 and 4
 
-Antenna 3 and 4 are Ubiquiti LAP-120 mounted on the north east arm of the building. Antenna 3 is facing north east and antenna 4 is facing north.
+Antenna 3 and 4 are Ubiquiti LAP-120 devices mounted on the north-east arm of the building. Antenna 3 is facing north-east and antenna 4 is facing north.
 
 ![image](images/supernode1-hardware-antenna3and4.jpg)
 
