@@ -60,6 +60,7 @@ Device can be connected to using an Ethernet cable. This method requires the kno
 2. Enter the remote antennas SSID under `SSID`
 
 3. Enter the `WPA2 PRESHARED KEY`. TCN standard key is `torontocommunitynetwork`
+
  ![image](./images/hardware-cpe-config-wireless.jpg)
 
 4. Select `Save Changes`
