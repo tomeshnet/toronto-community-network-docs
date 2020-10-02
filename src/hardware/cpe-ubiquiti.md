@@ -23,7 +23,7 @@ Most devices come with a second `Management Radio` that is active for a short pe
 
   ![image](./images/hardware-cpe-management-wifi.jpg)
 
-**NOTE** The Management Radio only is only on for a short period of time after boot. If you do not see your device, power cycle it by unplugging it from the POE injector, wait 10 seconds, and plug it in again.
+**NOTE** The Management Radio only is only on for a short period of time after boot. If the device cannot be found power cycle it by unplugging the device from the POE injector, wait 10 seconds, and plug it in again.
 
 2. Once the WiFi connection is establish, open the browser and visit `https://192.168.172.1/`
 
