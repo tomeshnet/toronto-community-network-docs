@@ -49,7 +49,7 @@ Device can be connected to using an Ethernet cable. This method requires the kno
 
 4. Click `Continue`
 
-5. Choose Your username and password for the device. TCN Standard username is `admin`
+5. Choose Your username and password for the device. TCN Standard username is `tomesh`
 
 ### Configure Wireless
 
