@@ -11,7 +11,7 @@ You will need to collect the following information:
 
 - SSID of the supernode antenna you wish to connect to
 - Your assigned node name
-- Your assigned IP address, Netmask, Gateway
+- Your assigned `IP Address`, `Netmask` and `Gateway`
 - A computer with WiFi for use with the [management radio](#connect-using-the-management-radio) method or a computer with a network port for the [Ethernet cable](#connection-using-an-ethernet-cable)  method.
 
 
