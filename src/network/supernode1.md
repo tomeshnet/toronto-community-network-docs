@@ -55,14 +55,17 @@ Testing was done at several points that had line-of-sight to the antenna. The an
 |-----------|--------------|-----------|-----------------------|----------------|
 | a         | 200          | 4.57      |  86/194               | -64            |
 | b         | 200          | 2.86      |  80/194               | -60            |
-| c         | 237          | 5.82      |  50/178                | -58            |
-| d         | 270          | 5.27      |  103/149               | -50            |
+| c         | 237          | 5.82      |  50/178               | -58            |
+| d         | 270          | 5.27      |  103/149              | -50            |
 | e (1)     | 396          | 5.11      |  83/172               | -58            |
 | f         | 2520         | 4.57      |  8.68/1.6             | -81            |
 | f (2)     | 2520         | 4.57      |  64.58/40.79          | -74            |
+| g         | 2660         |           |  82/123               | -62            |
+| g (3)     | 2660         |           |  118.44               | -66            |
 
 (1) Used both [Nanostation AC (Loco5AC)](https://www.ui.com/airmax/nanostation-ac/) and [LiteBeam AC (LBE‑5AC‑23)](https://www.ui.com/airmax/litebeam-ac/). Both performed the same.  
 (2) Second attempt done after correcting issue with `sn1a2`.
+(3) Used [Nanostation AC (Loco5AC)](https://www.ui.com/airmax/nanostation-ac/) but could not adjust elevation.
 
 ## Additional Notes
 
