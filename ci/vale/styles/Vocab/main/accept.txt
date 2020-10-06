@@ -48,3 +48,5 @@ https
 macOS
 tomesh\.net
 tomeshnet
+hostname
+backhaul

@@ -15,13 +15,13 @@ For example a FQDN (fully qualified domain name) will be `sn1a1.core.tcn.tomesh.
 ## SSID
 
 ### Public SSID 
-Public SSID will not extend the babel protocol. They are standard access points connections for the users to access the mesh.
+Public SSID will not extend the Babel protocol. They are standard access points connections for the users to access the mesh.
 
 **Format**
 `tomesh.net`
 
 ### Mesh SSID 
-Mesh SSID are used to extend the mesh network. They have will have babel running on them.
+Mesh SSID are used to extend the mesh network. They have will have Babel running on them.
 
 **Format**
 
@@ -37,8 +37,8 @@ Mesh SSID are used to extend the mesh network. They have will have babel running
 
 **Example** 
 
-a tomesh node with hostname of sn1a1 running airmax-ac protocol would be
+a Toronto Mesh node with hostname of sn1a1 running airmax-ac protocol would be
 `tomesh-airmaxac-sn1a1`
 
-a tomesh node with running 80211s would be
+a Toronto Mesh node with running 80211s would be
 `tomesh-80211s`

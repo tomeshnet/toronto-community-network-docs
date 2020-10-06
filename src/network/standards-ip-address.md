@@ -4,13 +4,16 @@ The mesh runs a dual stack IPv4 and IPv6 networking. Each device is be assigned 
 
 ## IPv4 Subnet CIDR
 
-For IPv4 the following netmasks are used
+For IPv4 the following CIDR definition
+
 - /32 - Single Host
 - /30 - PtP L2TP etc
 - /29 - PtP Antenna links where antennas are in bridge mode but require an IP for administration
 - /24 - Antenna Subnets
 
 ## IPv6 Subnet CIDR
+
+For IPv6 the following CIDR definition
 
 - /128 - Single Host
 - /127 - PtP L2TP etc
@@ -55,4 +58,4 @@ HostMax:   10.255.255.254        00001010 .11111111.11111111.11111110
 Hosts/Net: 16777214              (Private Internet)
 ```
 
-**Fun Fact:** IPv6 Address is in the `fd::/8 range`. The bytes of `74 6F 6D 73 86`  converted into ASCII spell TOMSH (lowe case for backhaul range)
+**Fun Fact:** IPv6 Address is in the `fd::/8 range`. The bytes of `74 6F 6D 73 86`  converted into ASCII spell TOMSH (lower case for backhaul range)
