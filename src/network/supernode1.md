@@ -64,7 +64,7 @@ Testing was done at several points that had line-of-sight to the antenna. The an
 | g (3)     | 2660         |           |  118/44               | -66            |
 
 (1) Used both [Nanostation AC (Loco5AC)](https://www.ui.com/airmax/nanostation-ac/) and [LiteBeam AC (LBE‑5AC‑23)](https://www.ui.com/airmax/litebeam-ac/). Both performed the same.  
-(2) Second attempt done after correcting issue with `sn1a2`.
+(2) Second attempt done after correcting issue with `sn1a2`.  
 (3) Used [Nanostation AC (Loco5AC)](https://www.ui.com/airmax/nanostation-ac/) but could not adjust elevation.
 
 ## Additional Notes
