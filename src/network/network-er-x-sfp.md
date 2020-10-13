@@ -18,6 +18,7 @@ set system host-name SN1R1
 
 ```
 set service dns forwarding name-server 10.10.10.10
+set service dns forwarding listen-on 53
 delete system ntp
 set system ntp
 set system ntp server 10.10.10.123 prefer
@@ -286,7 +287,7 @@ cat <<"EOF">/config/auth/SN1R1.crt
 EOF
 cat <<"EOF">/config/auth/SN1R1.key
 -----BEGIN PRIVATE KEY-----
-<<SANITIZED>>
+[REDACTED]
 -----END PRIVATE KEY-----
 EOF
 cat <<"EOF"> /config/auth/ca.crt
