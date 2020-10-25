@@ -214,6 +214,37 @@ set protocols babeld filter l2tpeth0 if l2tpeth0
 set protocols babeld filter l2tpeth0 type redistribute
 ```
 
+## DDNS for L2TP Gateway Nodes
+
+L2TP Tunnels require known static points `ip` addresses to connect to. Many internet providers provide dynamic `ip` addresses. Although `ip` addresses do not change often, if they do the connection to the mesh may be lost.
+
+To solve this issue `ddns` is used to update a hostname anytime the ip changes. Due to the way dns works, there may be up to a 5 min delay in re-establishing the links. 
+
+The `ddns` server that is being used is Hurricane Electric's `dns.he.net`. Hostname, login and password are set in the `dns.he.net` control panel and are unique per device. Access to DNS cannot be guaranteed when the link is down, IP addresses are resolved and hard coded.
+
+Example below is for `sn1r1`. 
+
+Bypass default route pointing at the mesh exit node, and send traffic directly over the local internet connection for the two services.
+```
+set protocols static route 184.105.242.3/32 next-hop 192.168.2.1
+set protocols static route 184.105.242.4/32 next-hop 192.168.2.1
+```
+
+Configure the `ddns` service.
+```
+set service dns dynamic interface eth0 service dyndns host-name sn1r1.pub.tcn.tomesh.net
+set service dns dynamic interface eth0 service dyndns login sn1r1.pub.tcn.tomesh.net
+set service dns dynamic interface eth0 service dyndns password <PASSWORD>
+set service dns dynamic interface eth0 service dyndns server 184.105.242.3
+```
+
+By default `ddns` will use the IP address of `eth0` which will be the internal IP address. Configure `ddns` to use Hurricane Electric's `checkip.dns.he.net` get the public IP address.
+
+```
+set service dns dynamic interface eth0 web 184.105.242.4
+set service dns dynamic interface eth0 web-skip "Your IP address is : "
+```             
+
 ## Gateway Loop issues
 
 The paradox of the gateway and routing babeld:
