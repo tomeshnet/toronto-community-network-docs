@@ -12,13 +12,16 @@ https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/
 
 ### Redistribute default gateway
 
-Redistribute the default gateway to network
+Redistribute the default gateway to network, and prevent other exit node announcements from being accepted.
 
 Create or append to the `/etc/babeld.conf` file
 
 ```
-redistribute  ip ::/0 le 64 metric 256
-redistribute  ip 0.0.0.0/0 le 24 metric 256
+redistribute ip ::/0 le 64 metric 256
+redistribute ip 0.0.0.0/0 le 24 metric 256
+in ip 0.0.0.0/0 le 0 deny
+in ip ::/0 le 0 deny
+
 ```
 
 ## Enable NAT
