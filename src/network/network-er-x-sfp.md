@@ -370,7 +370,7 @@ set interfaces openvpn vtun99 tls key-file /config/auth/SN1R1.key
 If needed for the babeld workaround 2, a static route can be defined:
 
 ```
-set protocols static route 199.195.250.208/32 next-hop 192.168.40.1
+set protocols static route 198.98.49.249/32 next-hop 192.168.2.1
 ```
 # Appendix A - Babeld - Cross-Compile
 
