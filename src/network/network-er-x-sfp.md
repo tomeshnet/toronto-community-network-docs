@@ -43,6 +43,8 @@ Configure each port with a unique IPv4 and IPv6 IP address. Use a `/24` subnet f
 
 ### Example
 ```
+delete interfaces ethernet eth0
+set interfaces ethernet eth0 address 192.168.2.254/24
 delete interfaces ethernet eth1 address dhcp
 set interfaces ethernet eth1 address 100.64.10.1/24
 set interfaces ethernet eth1 address fd54:4f4d:5348:400a::1/64
@@ -265,8 +267,8 @@ The paradox of the gateway and routing babeld:
 - Create route out to the gateway for only the exit node
 
 ```
-delete interfaces ethernet eth0 address dhcp
-set interfaces ethernet eth1 address 192.168.2.254/24    
+delete interfaces ethernet eth0
+set interfaces ethernet eth0 address 192.168.2.254/24
 
 delete protocols static route 0.0.0.0/0
 set protocols static route 199.195.250.209/32 next-hop 192.168.2.1
