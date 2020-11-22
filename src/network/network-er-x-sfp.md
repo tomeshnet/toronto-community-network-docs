@@ -143,6 +143,8 @@ Between the exit node configuration and the client node the following values are
 
 Configure each port with a unique IPv4 and IPv6 address. Use a `/30` subnet for IPv4 and `/126` for IPv6. Check with the exit node you are using to confirm to the numbering selected.
 
+Please note that the target ip must be reachable before the config can be saved. This means if a workaround is being used, implement it first.
+
 ### Example
 
 ```
