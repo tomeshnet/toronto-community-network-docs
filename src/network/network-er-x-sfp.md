@@ -328,12 +328,12 @@ We use OpenVPN to set up a management tunnel to allow an alternative means of ac
 Write certificates (provided by OpenVPN server). For example:
 
 ```
-cat <<"EOF">/config/auth/SN1R1.crt
+cat <<"EOF">/config/auth/VPN1.crt
 -----BEGIN CERTIFICATE-----
 [REDACTED]
 -----END CERTIFICATE-----
 EOF
-cat <<"EOF">/config/auth/SN1R1.key
+cat <<"EOF">/config/auth/VPN1.key
 -----BEGIN PRIVATE KEY-----
 [REDACTED]
 -----END PRIVATE KEY-----
@@ -378,8 +378,8 @@ set interfaces openvpn vtun99 protocol udp
 set interfaces openvpn vtun99 remote-host 198.98.49.249
 set interfaces openvpn vtun99 remote-port 4141
 set interfaces openvpn vtun99 tls ca-cert-file /config/auth/ca.crt
-set interfaces openvpn vtun99 tls cert-file /config/auth/SN1R1.crt
-set interfaces openvpn vtun99 tls key-file /config/auth/SN1R1.key
+set interfaces openvpn vtun99 tls cert-file /config/auth/VPN1.crt
+set interfaces openvpn vtun99 tls key-file /config/auth/VPN1.key
 ```
 
 If needed for the babeld workaround 2, a static route can be defined:
