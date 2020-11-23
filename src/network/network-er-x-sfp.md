@@ -55,6 +55,19 @@ set interfaces ethernet eth3 address fd54:4f4d:5348:400c::1/64
 set interfaces ethernet eth4 address 100.64.13.1/24
 set interfaces ethernet eth4 address fd54:4f4d:5348:400d::1/64
 ```
+## Enable POE
+
+Enable POE on the ports that will have an antenna attached to it. 
+**NOTE** Avoid pluging in any device not meant to receive passive POE while it is one to avoid damage to your device
+
+Turn on POE on a port using
+```
+set interfaces ethernet eth1 poe output 24v 
+```
+Turn OFF POE on a port using
+```
+set interfaces ethernet eth1 poe output off
+```
 
 ## Add DHCP
 
