@@ -17,6 +17,10 @@ set system host-name SN1R1
 ## Configured DNS and NTP Server
 
 ```
+set system analytics-handler send-analytics-report false
+set system crash-handler send-crash-report false
+set system time-zone America/Toronto
+
 set service dns forwarding name-server 10.10.10.10
 set service dns forwarding listen-on 53
 delete system ntp
