@@ -1,5 +1,5 @@
 # Working Groups
-We use [Teams](https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams) to manage membership of working groups and [Projects](https://github.com/tomeshnet/toronto-community-network/projects/1) to track task status on a public project board.
+We use [GitHub Teams](https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams) to manage membership of working groups and [GitHub Projects](https://github.com/tomeshnet/toronto-community-network/projects/1) to track task status on a public project board.
 These are our current [working groups](https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams).
 
 ## Communications and Community Engagement
