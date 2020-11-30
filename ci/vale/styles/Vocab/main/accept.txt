@@ -18,6 +18,7 @@ LiteBeam
 Loco
 Mbps
 Nanostation
+Nextcloud
 OpenVPN
 OpenWRT
 RX
