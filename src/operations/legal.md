@@ -8,7 +8,15 @@ Since neither Toronto Mesh or the Toronto Community Network has its own independ
 
 In order to work with many institutional collaborators, it is necessary for Toronto Mesh or the Toronto Community Network to engage into contractual agreements.
 Depending on the nature of the collaboration, our [Organizational and Program Governance Working Group](./working-groups.html#organizational-and-program-governance) will designate appropriate signatories to sign the agreement on behalf of Toronto Mesh or the Toronto Community Network on a case-by-case basis.
-On occasions where there must be a legal entity signing the agreement, such agreement shall be made with one of our supporting organizations instead.
+
+We understand that some organizations can only work with legally registered entities.
+If a contract must be made with a legal entity, we suggest a contract covering a specific project scope be made with one of our institutional collaborators.
+This way, you can indirectly work with the Toronto Community Network through this institutional collaborator.
+It is important to note that this contract will not bind Toronto Mesh or the Toronto Community Network as a whole, as collaborators do not individually represent the entire multi-stakeholder project.
+
+### Deciding Appropriate Signatories
+
+TBD
 
 ## Collaborators and Supporters
 

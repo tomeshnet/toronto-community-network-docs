@@ -35,3 +35,7 @@ This is a choice of the facilitator/presenter of the session.
 Where possible, we will publish to a platform with closed captioning for accessibility.
 
 In general, we have recorded sessions at [our recorded BigBlueButton room](https://link.tomesh.net/recorded), where a disclaimer is presented when someone enters the room.
+
+## Network Data
+
+TBD
