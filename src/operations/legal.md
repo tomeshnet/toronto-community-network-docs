@@ -6,7 +6,7 @@ It is not an independent legal entity.
 The Toronto Community Network is a project led by the Toronto Mesh community, and adopts a multi-stakeholder model to its project governance.
 Since neither Toronto Mesh or the Toronto Community Network has its own independent legal entity or bank accounts, it relies on trustees to provide fiscal administration capacity.
 
-In order to work with many institutional collaborators, it is necessary for Toronto Mesh or the Toronto Community Network to engage into contractual agreements.
+It is necessary for Toronto Mesh or the Toronto Community Network to engage into contractual agreements to work with many institutional collaborators.
 Depending on the nature of the collaboration, our [Organizational and Program Governance Working Group](./working-groups.html#organizational-and-program-governance) will designate appropriate signatories to sign the agreement on behalf of Toronto Mesh or the Toronto Community Network on a case-by-case basis.
 
 We understand that some organizations can only work with legally registered entities.

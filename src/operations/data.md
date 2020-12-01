@@ -16,19 +16,19 @@ We store our documents on two main platforms:
 ## Communication Policy
 
 In general, we copy email and other communication to a working group address, for reasons of transparency and information redundancy.
-However, there are times when we seek to contain communication to a small group (e.g. engaging new prospective collaborators, handling Code of Conduct violations).
+However, there are times when we seek to contain communication to a small group (for example, engaging new prospective collaborators, handling Code of Conduct violations).
 In these instances, we seek to keep groups to at least 3 members--one as lead, two copied, and have these roles listed on our contact sheet.
-So our communication policy is, in order of preference:
+Here is our communication policy in order of preference:
 1. Copied to appropriate working group.
 2. Copied to two others.
 3. Temporarily individual, but move to high redundancy as soon as possible.
 
 ## Meeting Recording
 
-In general, we don't record our meetings, but for workshops/interviews we have three options in order of preference:
+In general, we do not record our meetings, but for workshops/interviews we have three options in order of preference:
 
-1. **Public recorded session** with unrecorded discussion in the end (e.g. publish on "YouTube").
-2. **Private recorded session** with unrecorded discussion in the end (e.g. archive to our member Nextcloud).
+1. **Public recorded session** with unrecorded discussion in the end (for example, publish on "YouTube").
+2. **Private recorded session** with unrecorded discussion in the end (for example, archive to our member Nextcloud).
 3. **Unrecorded session**.
 
 This is a choice of the facilitator/presenter of the session.
