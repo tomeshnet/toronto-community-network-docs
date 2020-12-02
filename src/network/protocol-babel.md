@@ -4,7 +4,7 @@
 
 The network uses the [reference implementation](https://github.com/jech/babeld) of Babel called babeld. Updated packages for Debian can be found at the Toronto Mesh [Debian repository](https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/). These packages are compiled from source and packaged using scripts in the [mesh-packages](https://github.com/tomeshnet/mesh-packages/tree/master/packages/babeld) GitHub repository.
 
-The package for the EdgeRouter X/SFP with UI can be found at https://github.com/darkdrgn2k/RouterX-Babeld-Package .
+The package for the EdgeRouter X/SFP with UI support is managed by Toronto Mesh and can be found at https://github.com/tomeshnet/RouterX-Babeld-Package.
 
 Prototype babeld configuration can be generated at http://node2.e-mesh.net/CONF/ for both OpenWRT and Linux.
 
