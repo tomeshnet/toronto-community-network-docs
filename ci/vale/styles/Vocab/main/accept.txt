@@ -18,8 +18,10 @@ LiteBeam
 Loco
 Mbps
 Nanostation
+Nextcloud
 OpenVPN
 OpenWRT
+Ostrom
 RX
 SSH
 TX
@@ -32,6 +34,7 @@ WireGuard
 Woolner
 X-SFP
 Yggdrasil
+Zenzeleni
 [Bb]abeld
 [Cc]olocated
 [Cc]olocation

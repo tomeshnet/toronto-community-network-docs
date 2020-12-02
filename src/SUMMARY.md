@@ -12,5 +12,11 @@
     - [Hardware Benchmark](./hardware/benchmark.md)
     - [Hardware Benchmark Results](./hardware/benchmark-results.md)
 - [Operations](./operations/main.md)
-    - [Managing Secrets](./operations/secrets.md)
+    - [Working Groups](./operations/working-groups.md)
+    - [Learning Group](./operations/learning-group.md)
+    - [Legal](./operations/legal.md)
     - [Finances](./operations/finances.md)
+    - [Data](./operations/data.md)
+    - [Managing Secrets](./operations/secrets.md)
+    
+    
