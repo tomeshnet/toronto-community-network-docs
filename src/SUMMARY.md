@@ -5,6 +5,8 @@
 [Notice](./notice.md)
 
 - [Network](./network/main.md)
+    - [IP Address Standard](./network/standards-ip-address.md)
+    - [Hostname Standard](./network/standards-hostname.md)
     - [Supernode 1](./network/supernode1.md)
     - [Exit Node](./network/exit-node.md)
     - [Babel](./network/protocol-babel.md)
