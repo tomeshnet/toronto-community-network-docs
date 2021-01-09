@@ -281,6 +281,21 @@ The paradox of the gateway and routing babeld:
 
 ### Workaround 1 - Static IP/Route
 
+**Description**
+The default route to the internet is removed, and a static route for the destination IP Addresses created.
+
+**Pro**
+- Easy to understand
+- Easy to implement
+- Access to mesh from local device
+- Cannot use DHCP for LAN configuration (Must be static)
+
+**Con**
+- When mesh is offline, only manually routed IP addresses are available
+- Manually routed IP Addresses always exit out the local internet and not will not be available from the mesh if routing passes through device
+
+**Process*
+
 - Define static IP on `ETH0` (WAN facing port)
 - Remove default gateway
 - Create route out to the gateway for only the exit node
@@ -295,36 +310,61 @@ set protocols static route 199.195.250.209/32 next-hop 192.168.2.1
 
 ### Workaround 2 - Route Tables
 
-Route tables allow the use of the default route (0.0.0.0) on the node to still point to the local Internet connection. Babeld is instructed to place all the installed routes into a new routing table. A rule is installed to use this routing table for all packets coming in from interfaces we use babeld on. Then finally routes for the local node are added manually since babeld will not install them since they are local. Rules and routes must be installed in both the IPv4 and IPv6 stacks.
+**Description**
 
+Multiple route tables are used to store the two networks. Local internet's default route (0.0.0.0) remains in the global route table. Babeld is instructed to place all the installed routes into a new separate routing table including the mesh's default route. A rule is used to route all packets coming in from mesh facing interfaces through this new route table. Routes for the local node's IP addresses are added manually since Babeld will not install these. Rules and routes must be installed in both the IPv4 and IPv6 stacks.
+
+**Pro**
+- Static routes to the Internet are not required
+- Access to Internet form local node is available when mesh is not online
+- Does not break routing for individual IP addresses
+
+**Con**
+- Harder to understand
+- Harder to setup
+- No way to access mesh network from local device
+
+**Process**
+
+Configure Babeld to place all mesh routes into seperate route table.
 ```
 set protocols babeld export-table 10
 ```
 
-Append the following lines to `/etc/rc.local` for each interface that babeld will route though. `-6` indicates it is an IPv6 address.
+Append the following lines to `/etc/rc.local` for each interface that Babeld will route though. `-6` indicates it is an IPv6 address.
+*Note: `/config/scripts/post-config.d/` May be a better place then rc.local*
 
 ```
 ip [-6] rule add iif <INT> table 10
 ```
 
-Append the following lines for each IP address range your node is responsible for. `-6` indicates it is an IPv6 address.
-```
-ip [-6] route add <IPv4>/<CDIR> dev <INT> table 10
-```
+Configure interface based routes in table 10 for each interface and ip that the above interfaces are responsible for. 
+````
+set protocols static table 10 interface-route <IPv4>/<CDIR> next-hop-interface <INT>
+set protocols static table 10 interface-route6 <IPv6>/<CDIR> next-hop-interface <INT>
+````
+
+*Reference: The above configuration lines are the equivalent of `ip [-6] route add <IPv4>/<CDIR> dev <INT> table 10`*
 
 #### Example
+
+Append to `/etc/rc.local`
+
 ```
 ip rule add iif eth4 table 10
 ip -6 rule add iif eth4 table 10
 ip rule add iif l2tpeth63 table 10
 ip -6 rule add iif l2tpeth63 table 10
-
-ip route add 100.64.20.0/24 dev eth4 table 10
-ip -6 route add fd54:4f00::/24 dev eth4 table 10
-ip route 100.127.2.252/30 dev l2tpeth63 table 10
-ip -6 route add fd74:6f6d:7368:7f02::fc/126 dev l2tpeth0 table 10
 ```
-
+Configuration
+```
+set protocols babeld export-table 10
+set protocols static table 10 interface-route 100.64.20.0/24 next-hop-interface eth4
+set protocols static table 10 interface-route fd54:4f00::/24 next-hop-interface eth4
+set protocols static table 10 interface-route 100.127.2.252/30 next-hop-interface l2tpeth63
+set protocols static table 10 interface-route fd74:6f6d:7368:7f02::fc/126 next-hop-interface l2tpeth63
+```
+  
 ## OpenVPN - Management Tunnel
 
 OpenVPN is used to set up a management tunnel to allow an alternative means of accessing the router from outside of the mesh network, in case the mesh fails.
