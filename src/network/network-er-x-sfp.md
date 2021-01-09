@@ -75,16 +75,16 @@ set interfaces ethernet eth1 poe output off
 
 ## Add DHCP
 
+Enable the DHCP server by setting `disabled` as false.
+`set service dhcp-server disabled false`
+
 Enable a DHCP subnet for each network you defined in the previous section.
 
-Enable the DHCP server by setting `disabled` as false.
-
-
-`set service dhcp-server shared-network-name XXXXXXXX`  
 Create a DHCP named definition. Use the IP subnet as the name.
-
 `set service dhcp-server shared-network-name XXXXXXXX subnet XXX.XXX.XXX.0/24`    
+
 Create a subnet definition in the named definition. The rest of the commands must be prefixed with this command line, in place of the `...`.
+`set service dhcp-server shared-network-name XXXXXXXX`  
 
 Set the following items.
 
@@ -331,8 +331,13 @@ Configure Babeld to place all mesh routes into seperate route table.
 set protocols babeld export-table 10
 ```
 
-Append the following lines to `/etc/rc.local` for each interface that Babeld will route though. `-6` indicates it is an IPv6 address.
-*Note: `/config/scripts/post-config.d/` May be a better place then rc.local*
+Create a  shell script at `/config/scripts/post-config.d/mesh.sh` and mark it executable 
+```
+echo "#!/bin/bash" >  /config/scripts/post-config.d/mesh.sh
+chmod +x /config/scripts/post-config.d/mesh.sh
+```
+
+Populate the script with the following for each interface that Babeld will route though. `-6` indicates it is an IPv6 address.
 
 ```
 ip [-6] rule add iif <INT> table 10
@@ -348,14 +353,15 @@ set protocols static table 10 interface-route6 <IPv6>/<CDIR> next-hop-interface 
 
 #### Example
 
-Append to `/etc/rc.local`
-
+Create `/config/scripts/post-config.d/mesh.sh`
 ```
+#!/bin/sh
 ip rule add iif eth4 table 10
 ip -6 rule add iif eth4 table 10
 ip rule add iif l2tpeth63 table 10
 ip -6 rule add iif l2tpeth63 table 10
 ```
+
 Configuration
 ```
 set protocols babeld export-table 10
