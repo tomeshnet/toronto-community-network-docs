@@ -1,19 +1,19 @@
 # EdgeRouter X and EdgeRouter X-SFP
 
-[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X. Tested on version 1.x of firmware, should work on 2.x as well.
+[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X. Firmware 2.x was used.
 
 To enter configuration mode, SSH into the ER-X and enter the command `configuration`.
 
 To apply the configuration use `commit` and then to save it permanently use `save`.
 
-Configurations can also be entered using the GUI found on port 80. Select `Config Tree` from menu. Tree is a hierarchical representation of the commands below.
-For example `set system hostname XXXX` would be `system` branch, `hostname` field, `XXX` would be the value.
+Configurations can also be entered using the GUI found on port 80. Select `Config Tree` from menu. Tree is a hierarchical representation of the commands below. For example `set system hostname XXXX` would be `system` branch, `hostname` field, `XXX` would be the value.
 
 ## Configure hostname
 
 ```
 set system host-name SN1R1
 ```
+
 ## Configured DNS and NTP Server
 
 ```
@@ -41,11 +41,19 @@ set system offload hwnat enable
 
 ## Ethernet ports
 
-Delete the default DHCP configuration on `ETH1`.
+Delete the default DHCP configuration on `eth1`.
+```
+delete interfaces ethernet eth1 address dhcp
+```
 
 Configure each port with a unique IPv4 and IPv6 IP address. Use a `/24` subnet for IPv4 and `/64` for IPv6.
+```
+set interfaces ethernet eth1 address 100.64.10.1/24
+set interfaces ethernet eth1 address fd54:4f4d:5348:400a::1/64
+```
 
 ### Example
+
 ```
 delete interfaces ethernet eth0
 set interfaces ethernet eth0 address 192.168.2.254/24
@@ -59,15 +67,17 @@ set interfaces ethernet eth3 address fd54:4f4d:5348:400c::1/64
 set interfaces ethernet eth4 address 100.64.13.1/24
 set interfaces ethernet eth4 address fd54:4f4d:5348:400d::1/64
 ```
+
 ## Enable POE
 
 Enable POE on the ports that will have an antenna attached to it. 
-**NOTE** Avoid pluging in any device not meant to receive passive POE while it is one to avoid damage to your device
+**NOTE** Avoid pluging in any device not meant to receive passive POE while it is one to avoid damage to your device.
 
-Turn on POE on a port using
+Turn on POE on a port 
 ```
 set interfaces ethernet eth1 poe output 24v 
 ```
+
 Turn OFF POE on a port using
 ```
 set interfaces ethernet eth1 poe output off
@@ -76,32 +86,35 @@ set interfaces ethernet eth1 poe output off
 ## Add DHCP
 
 Enable the DHCP server by setting `disabled` as false.
-`set service dhcp-server disabled false`
+```
+set service dhcp-server disabled false
+```
 
 Enable a DHCP subnet for each network you defined in the previous section.
 
 Create a DHCP named definition. Use the IP subnet as the name.
-`set service dhcp-server shared-network-name XXXXXXXX subnet XXX.XXX.XXX.0/24`    
+```
+set service dhcp-server shared-network-name <IPv4 Network> subnet <IPv4 Network>/<CIDR>
+```
 
-Create a subnet definition in the named definition. The rest of the commands must be prefixed with this command line, in place of the `...`.
-`set service dhcp-server shared-network-name XXXXXXXX`  
+The next series of config will be repeated per DHCP shared-network-name instance defined above. The following commands should be prefixed with `set service dhcp-server shared-network-name <IPv4 Network>` in place of  `...`.
 
 Set the following items.
 
-`... default-router xxxx.xxxx.xxxx.1`  
 Define the default route that will be used.
+`... default-router xxxx.xxxx.xxxx.1`  
 
-`... dns-server 10.10.10.10`   
 Define the DNS server that will be used.
+`... dns-server 10.10.10.10`   
 
-`... domain-name tcn.tomesh.net`   
-Define the domain suffix that will be used. The clients will attempt to add this to the end of any domain names that are used if not found. For example `sn1a1` will try to resolve `sn1a1.tcn.tomesh.net`
+Define the domain suffix that will be used. The clients will attempt to add this to the end of any domain names that are used if not found. For example `sn1a1` will try to resolve `sn1a1.core.tcn.tomesh.net`
+`... domain-name core.tcn.tomesh.net`   
 
-`... lease 600`  
 Define the length of the lease in seconds.
+`... lease 600`  
 
-`... start xxx.xxx.xxx.127 stop xxx.xxx.xxx.254`  
 Define the first and last IP address that will be issued.
+`... start xxx.xxx.xxx.127 stop xxx.xxx.xxx.254`  
 
 ### Example
 
