@@ -18,7 +18,7 @@ set system host-name SN1R1
 ```
 
 ## Disable analytic reports
-Disable sending crash reports to Ubiquti
+Disable sending crash reports to Ubiquiti
 
 ```
 set system analytics-handler send-analytics-report false
@@ -66,7 +66,7 @@ set interfaces ethernet eth1 address fd54:4f4d:5348:400a::1/64
 ```
 
 ### Example
-*Note: eth0 should be configured independantly since it is the port that is being used for configuration.*
+*Note: eth0 should be configured independently since it is the port that is being used for configuration.*
 ```
 delete interfaces ethernet eth0
 delete interfaces ethernet eth1 address dhcp
@@ -190,7 +190,7 @@ Between the exit node configuration and the client node the following values are
 
 Configure each port with a unique IPv4 and IPv6 address. Use a `/30` subnet for IPv4 and `/126` for IPv6. Check with the exit node you are using to confirm to the numbering selected.
 
-Please note that the target ip must be reachable before the config can be saved. This means if a workaround is being used, implement it first.
+Please note that the target IP must be reachable before the config can be saved. This means if a workaround is being used, implement it first.
 
 ### Example
 
@@ -269,7 +269,7 @@ set protocols babeld filter l2tpeth0 type redistribute
 
 L2TP Tunnels require known static points `ip` addresses to connect to. Many internet providers provide dynamic `ip` addresses. Although `ip` addresses do not change often, if they do the connection to the mesh may be lost.
 
-To solve this issue `ddns` is used to update a hostname anytime the ip changes. Due to the way dns works, there may be up to a 5 min delay in re-establishing the links. 
+To solve this issue `ddns` is used to update a hostname anytime the IP changes. Due to the way DNS works, there may be up to a 5 min delay in re-establishing the links. 
 
 The `ddns` server that is being used is Hurricane Electric's `dns.he.net`. Hostname, login and password are set in the `dns.he.net` control panel and are unique per device. Access to DNS cannot be guaranteed when the link is down, IP addresses are resolved and hard coded.
 
@@ -356,7 +356,7 @@ Multiple route tables are used to store the two networks. Local internet's defau
 
 **Process**
 
-Configure Babeld to place all mesh routes into seperate route table.
+Configure Babeld to place all mesh routes into separate route table.
 ```
 set protocols babeld export-table 10
 ```
@@ -373,7 +373,7 @@ Populate the script with the following for each interface that Babeld will route
 ip [-6] rule add iif <INT> table 10
 ```
 
-Configure interface based routes in table 10 for each interface and ip that the above interfaces are responsible for. 
+Configure interface based routes in table 10 for each interface and IP that the above interfaces are responsible for. 
 ````
 set protocols static table 10 interface-route <IPv4>/<CDIR> next-hop-interface <INT>
 set protocols static table 10 interface-route6 <IPv6>/<CDIR> next-hop-interface <INT>
