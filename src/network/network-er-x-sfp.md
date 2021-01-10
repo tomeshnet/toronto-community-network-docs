@@ -1,28 +1,38 @@
 # EdgeRouter X and EdgeRouter X-SFP
 
-[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X. Firmware 2.x was used.
+[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X. Document is writte for Firmware 2.x.
 
-To enter configuration mode, SSH into the ER-X and enter the command `configuration`.
+## Device Specific Instructions
+
+In shell to enter configuration mode, enter the command `configuration`.
 
 To apply the configuration use `commit` and then to save it permanently use `save`.
 
 Configurations can also be entered using the GUI found on port 80. Select `Config Tree` from menu. Tree is a hierarchical representation of the commands below. For example `set system hostname XXXX` would be `system` branch, `hostname` field, `XXX` would be the value.
 
 ## Configure hostname
+*NOTE:  Hostname of device should follow the appropriate syntax defined in the TCN Standards*
 
 ```
 set system host-name SN1R1
 ```
 
-## Configured DNS and NTP Server
+## Disable analytic reports
+Disable sending crash reports to Ubiquti
 
 ```
 set system analytics-handler send-analytics-report false
 set system crash-handler send-crash-report false
+```
+
+## Configured DNS and NTP Server
+Configure Date,Time, DNS and NTP services required for basic operations of the ER-X.
+```
 set system time-zone America/Toronto
 
 set service dns forwarding name-server 10.10.10.10
 set service dns forwarding listen-on 53
+
 delete system ntp
 set system ntp
 set system ntp server 10.10.10.123 prefer
@@ -32,6 +42,9 @@ set system ntp server 2.ubnt.pool.ntp.org
 set system ntp server 3.ubnt.pool.ntp.org
 set system ntp server 4.ubnt.pool.ntp.org
 ```
+ER-X does not have an internal clock so if working offline you must set the date and time manually to something recent otherwise there will be issues with date related things like certificates.
+
+`date --set="1 Jan 2021 18:00:00"`
 
 ## Enable Hardware Acceleration
 
@@ -39,7 +52,7 @@ set system ntp server 4.ubnt.pool.ntp.org
 set system offload hwnat enable
 ```
 
-## Ethernet ports
+## Configure ethernet ports
 
 Delete the default DHCP configuration on `eth1`.
 ```
@@ -53,11 +66,12 @@ set interfaces ethernet eth1 address fd54:4f4d:5348:400a::1/64
 ```
 
 ### Example
-
+*Note: eth0 should be configured independantly since it is the port that is being used for configuration.*
 ```
 delete interfaces ethernet eth0
-set interfaces ethernet eth0 address 192.168.2.254/24
 delete interfaces ethernet eth1 address dhcp
+
+set interfaces ethernet eth0 address 192.168.2.254/24
 set interfaces ethernet eth1 address 100.64.10.1/24
 set interfaces ethernet eth1 address fd54:4f4d:5348:400a::1/64
 set interfaces ethernet eth2 address 100.64.11.1/24
@@ -71,41 +85,44 @@ set interfaces ethernet eth4 address fd54:4f4d:5348:400d::1/64
 ## Enable POE
 
 Enable POE on the ports that will have an antenna attached to it. 
-**NOTE** Avoid pluging in any device not meant to receive passive POE while it is one to avoid damage to your device.
+*Note: Avoid plugging in any device not meant to receive passive POE while it is one to avoid damage to your device. This step can be defer until the antennas are ready for use*
 
 Turn on POE on a port 
 ```
 set interfaces ethernet eth1 poe output 24v 
 ```
 
-Turn OFF POE on a port using
+Turn off POE on a port
 ```
 set interfaces ethernet eth1 poe output off
 ```
 
-## Add DHCP
+## Add DHCP (IPv4)
 
 Enable the DHCP server by setting `disabled` as false.
 ```
 set service dhcp-server disabled false
 ```
 
-Enable a DHCP subnet for each network you defined in the previous section.
-
-Create a DHCP named definition. Use the IP subnet as the name.
+Create a DHCP named definition. Use the IP network subnet as the name.
 ```
 set service dhcp-server shared-network-name <IPv4 Network> subnet <IPv4 Network>/<CIDR>
 ```
 
-The next series of config will be repeated per DHCP shared-network-name instance defined above. The following commands should be prefixed with `set service dhcp-server shared-network-name <IPv4 Network>` in place of  `...`.
+Set as authoritative for the subnet
+`set service dhcp-server shared-network-name <IPv4 Network> authoritative enable`
 
-Set the following items.
+The next series of command will be repeated per DHCP `shared-network-name` instance defined above. These commands should be prefixed with `set service dhcp-server shared-network-name <IPv4 Network> subnet <IPv4 Network>/<CIDR>` in place of  `...`.
+
 
 Define the default route that will be used.
 `... default-router xxxx.xxxx.xxxx.1`  
 
 Define the DNS server that will be used.
-`... dns-server 10.10.10.10`   
+`... dns-server 10.10.10.10` 
+
+Define the NTP server that will be used
+`...ntp-server 10.10.10.123`
 
 Define the domain suffix that will be used. The clients will attempt to add this to the end of any domain names that are used if not found. For example `sn1a1` will try to resolve `sn1a1.core.tcn.tomesh.net`
 `... domain-name core.tcn.tomesh.net`   
@@ -195,7 +212,7 @@ set interfaces l2tpv3 l2tpeth0 address fd74:6f6d:7368:7f02::2/126
 
 ## Babeld
 
-Babeld does not come standard on ER-X.  Use the deb package located at https://github.com/darkdrgn2k/RouterX-Babeld-Package and install it using `dpkg -i` on the router. Review the instructions on [the README](https://github.com/darkdrgn2k/RouterX-Babeld-Package) to allow package to survive firmware upgrades.
+Babeld does not come standard on ER-X.  Use the deb package located at https://github.com/tomeshnet/RouterX-Babeld-Package and install it using `dpkg -i` on the router. Review the instructions on [the README](https://github.com/tomeshnet/RouterX-Babeld-Package) to allow package to survive firmware upgrades.
 
 All commands below must be prefixed with `set protocols babeld`.
 
