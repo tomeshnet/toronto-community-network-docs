@@ -4,6 +4,21 @@ See [this repo](https://github.com/tomeshnet/toronto-community-network) for more
 
 These docs are available as an online handbook at [docs.tomesh.net](https://docs.tomesh.net/). They are built using [mdBook](https://github.com/rust-lang/mdBook).
 
+
+## Contributing Guidelines
+
+### Alt text
+For information on writing good alt text reference [this page](https://www.w3.org/WAI/tutorials/images/). If you add an image please add alt text using the following syntax:
+
+**Markdown**
+```markdown
+![Alt text goes here!](sourceurl.filetype)
+```
+**HTML**
+```html
+<img alt="Alt text goes here!" src="sourceurl.filetype"/>
+```
+
 **Any commits to master will automatically appear on the site. Please make a PR for your changes.**
 
 ## License

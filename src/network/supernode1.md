@@ -1,6 +1,6 @@
 # Supernode 1
 
-![image](images/supernode1-view.jpg)
+![areal view of 3 apartment buildings and a low density neighbourhood taken from the rooftop of supernode 1](images/supernode1-view.jpg)
 
 Supernode 1 is located on top of 200 Woolner Ave, Toronto, alongside Cisco-deployed infrastructure belonging to the City of Toronto.
 
@@ -10,7 +10,7 @@ The supernode consists of 2 antennas and a router. The router is connected to th
 
 The router acts as a Babel routing device. The antennas are configured in bridge mode.
 
-![image](images/supernode1-network-layout.png)
+![network diagram consisting of 4 antennas connected to a switch, connected to the internet through Bell's Homehub 2000 router](images/supernode1-network-layout.png)
 
 ## Hardware
 
@@ -18,19 +18,19 @@ The router acts as a Babel routing device. The antennas are configured in bridge
 
 Antenna 1 is a [Ubiquiti LAP-120](https://www.ui.com/airmax/liteap-ac/) mounted on the west arm of the building, on the south side of the roof, colocated with Cisco on their mounts. The antenna is facing south.
 
-![image](images/supernode1-hardware-antenna1.jpg)
+![A non-penetrating mount with wireless mesh antennas affixed sitting on an apartment rooftop](images/supernode1-hardware-antenna1.jpg)
 
 ### Antenna 2
 
 Antenna 2 is a Ubiquiti LAP-120 mounted on the south arm of the building, on the east side of the roof, colocated with Cisco on their mounts. The antenna is facing east.
 
-![image](images/supernode1-hardware-antenna2.jpg)
+![A non-penetrating mount with wireless mesh antennas affixed sitting on an apartment rooftop](images/supernode1-hardware-antenna2.jpg)
 
 ### Antenna 3 and 4
 
 Antenna 3 and 4 are Ubiquiti LAP-120 devices mounted on the north-east arm of the building. Antenna 3 is facing north-east and antenna 4 is facing north.
 
-![image](images/supernode1-hardware-antenna3and4.jpg)
+![A non-penetrating mount with wireless mesh antennas affixed sitting on an apartment rooftop](images/supernode1-hardware-antenna3and4.jpg)
 
 ### Router 1
 
@@ -38,20 +38,20 @@ Router 1 is a [Ubiquiti EdgeRouter X-SFP](https://www.ui.com/edgemax/edgerouter-
 
 Router is configured with a static IP and only routes to the exit node and a secondary VPS server. The secondary VPS is used to provide an OpenVPN tunnel for secure remote management of the device.
 
-![image](images/supernode1-hardware-cabinet2.jpg)
+![A metal cabinet in a small dimly well lit concrete space, the door is open with networking hardware inside](images/supernode1-hardware-cabinet2.jpg)
 
 ## Physical Environment
 
 The roof is accessible through ceiling hatches on the top floor of the building.
 
-![image](images/supernode1-access-roof.jpg)
+![Roof access hatch](images/supernode1-access-roof.jpg)
 
 The router is installed in a black metal cabinet, located on the back wall of the ballast tank room on the roof. This room is accessible only from the roof. The entrance is on the east wall of the elevator hut. The doors are shorter than normal.
 
 Network cables are run through a hole in the east wall.
 
-![image](images/supernode1-access-ballast.jpg)
-![image](images/supernode1-hardware-cabinet.jpg)
+![Roof access hole](images/supernode1-access-ballast.jpg)
+![A metal cabinet in a small dimly well lit concrete space, the door is closed](images/supernode1-hardware-cabinet.jpg)
 
 ## Neighbourhood Testing
 
