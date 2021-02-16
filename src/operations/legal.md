@@ -22,13 +22,13 @@ TBD
 
 <div style="display:flex; flex-wrap:wrap; margin-top:-20px;">
   <a href="https://www.freegeektoronto.org" target="_blank">
-    <img src="images/logo-fgt.svg" alt="Free Geek Toronto logo" style="height:100px; margin-top:20px; margin-right:20px;">
+    <img src="images/logo-fgt.svg" alt="Free Geek Toronto logo" style="height:100px; margin-top:20px; margin-right:40px;">
   </a>
   <a href="https://hypha.coop" target="_blank">
-    <img src="images/logo-hypha.png" alt="HYPHA Worker Co-operative logo" style="height:100px; margin-top:20px; margin-right:20px;">
+    <img src="images/logo-hypha.svg" alt="HYPHA Worker Co-operative logo" style="height:100px; margin-top:20px; margin-right:40px;">
   </a>
   <a href="https://www.torontopubliclibrary.ca/" target="_blank">
-    <img src="images/logo-tpl.svg" alt="Toronto Public Library logo" style="height:100px; padding-top:20px; margin-right:20px;">
+    <img src="images/logo-tpl.svg" alt="Toronto Public Library logo" style="height:100px; padding-top:20px; margin-right:40px;">
   </a>
 </div>
 
