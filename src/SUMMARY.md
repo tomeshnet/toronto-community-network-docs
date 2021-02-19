@@ -10,6 +10,7 @@
     - [Supernode 1](./network/supernode1.md)
     - [Exit Node](./network/exit-node.md)
     - [Babel](./network/protocol-babel.md)
+    - [ER-X-SFP](./network/network-er-x-sfp.md)
 - [Hardware](./hardware/main.md)
     - [Hardware Benchmark](./hardware/benchmark.md)
     - [Hardware Benchmark Results](./hardware/benchmark-results.md)
