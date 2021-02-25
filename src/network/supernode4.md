@@ -2,7 +2,7 @@
 
 ![image](images/supernode4-view.jpg)
 
-Supernode 4 is located on top of 4000 Lawrance Ave, Toronto, alongside Cisco-deployed infrastructure belonging to the City of Toronto.
+Supernode 4 is located on top of 4000 Lawrence Ave, Toronto, alongside Cisco-deployed infrastructure belonging to the City of Toronto.
 
 ## Network
 
@@ -14,29 +14,20 @@ The router acts as a Babel routing device. The antennas are configured in bridge
 
 ## Hardware
 
-### Antenna 1
+### Antenna 1, 2 and Point to Point Antenna 1
 
-Antenna 1 is a [Ubiquiti LAP-120](https://www.ui.com/airmax/liteap-ac/) mounted on the north arm of the building, on the west side of the roof. The antenna is facing south south-west.
+Antenna 1 and 2 are [Ubiquiti LAP-120](https://www.ui.com/airmax/liteap-ac/) mounted on the north arm of the building, on the west side of the roof. Antenna 1 is facing south-west. Antenna 2 if facing north.
 
-![image](images/supernode4-hardware-antenna1.jpg)
+Point to Point Antenna 1 is a [Ubiquiti PowerBeam AC Gen2](https://www.ui.com/airmax/powerbeam-ac-gen2/) mounted on the north arm of the building, on the west side of the roof. The antenna is facing south-west pointing to 25 Cougar in Supernode 3.
 
-### Antenna 2
-
-Antenna 2 is a [Ubiquiti LAP-120](https://www.ui.com/airmax/liteap-ac/) mounted on the north arm of the building, on the west side of the roof. The antenna is facing north-west.
-
-![image](images/supernode4-hardware-antenna2.jpg)
+![image](images/supernode4-hardware-antenna1-2and4.jpg)
 
 ### Antenna 3
 
-Antenna 3 is a [Ubiquiti LAP-120](https://www.ui.com/airmax/liteap-ac/) mounted on the sout-east arm of the building, colocated with Cisco on their mount. The antenna if facing south-east.
+Antenna 3 is a [Ubiquiti LAP-120](https://www.ui.com/airmax/liteap-ac/) mounted on the south-east arm of the building, colocated with Cisco on their mount. The antenna if facing south-east.
 
 ![image](images/supernode4-hardware-antenna3.jpg)
 
-### Antenna 4
-
-Antenna 4 is a [Ubiquiti PowerBeam AC Gen2](hhttps://www.ui.com/airmax/powerbeam-ac-gen2/) mounted on the north arm of the building, on the west side of the roof. The antenna is facing south south-west pointing to 25 Cougar in Supernode 3 in point to point mode.
-
-![image](images/supernode4-hardware-antenna4.jpg)
 
 ### Router 1
 
