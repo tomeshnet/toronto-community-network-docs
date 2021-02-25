@@ -1,4 +1,4 @@
-# Supernode 1
+# Supernode 4
 
 ![image](images/supernode4-view.jpg)
 
