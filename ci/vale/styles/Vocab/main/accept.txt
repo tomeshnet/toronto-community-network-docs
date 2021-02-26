@@ -52,5 +52,5 @@ https
 macOS
 tomesh\.net
 tomeshnet
-hostname
-backhaul
+[Hh]ostname
+[Bb]ackhaul
