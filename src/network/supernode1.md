@@ -38,7 +38,7 @@ Router 1 is a [Ubiquiti EdgeRouter X-SFP](https://www.ui.com/edgemax/edgerouter-
 
 Router is configured with a static IP and only routes to the exit node and a secondary VPS server. The secondary VPS is used to provide an OpenVPN tunnel for secure remote management of the device.
 
-![A metal cabinet in a small dimly well lit concrete space, the door is open with networking hardware inside](images/supernode1-hardware-cabinet2.jpg)
+![A metal cabinet in a small concrete room, the door is open with the edgerouter inside](images/supernode1-hardware-cabinet2.jpg)
 
 ## Physical Environment
 
@@ -51,7 +51,7 @@ The router is installed in a black metal cabinet, located on the back wall of th
 Network cables are run through a hole in the east wall.
 
 ![Roof access hole](images/supernode1-access-ballast.jpg)
-![A metal cabinet in a small dimly well lit concrete space, the door is closed](images/supernode1-hardware-cabinet.jpg)
+![A metal cabinet in a small concrete room, the door is closed](images/supernode1-hardware-cabinet.jpg)
 
 ## Neighbourhood Testing
 
