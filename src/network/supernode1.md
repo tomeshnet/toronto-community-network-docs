@@ -10,7 +10,7 @@ The supernode consists of 2 antennas and a router. The router is connected to th
 
 The router acts as a Babel routing device. The antennas are configured in bridge mode.
 
-![network diagram consisting of 4 antennas connected to a switch, connected to the internet through Bell's Homehub 2000 router](images/supernode1-network-layout.png)
+![network diagram consisting of 4 antennas connected to a switch, connected to the internet through a bell router](images/supernode1-network-layout.png)
 
 ## Hardware
 
