@@ -1,6 +1,6 @@
 # Supernode 4
 
-![view from the roof of supernode4 building](images/supernode4-view.jpg)
+![view from the roof of supernode 4 building](images/supernode4-view.jpg)
 
 Supernode 4 is located on top of 4000 Lawrence Ave, Toronto, alongside Cisco-deployed infrastructure belonging to the City of Toronto.
 
@@ -35,7 +35,7 @@ Router 1 is a [Ubiquiti EdgeRouter X-SFP](https://www.ui.com/edgemax/edgerouter-
 
 Router is configured with a static IP and only routes to the exit node and a secondary VPS server. The secondary VPS is used to provide an OpenVPN tunnel for secure remote management of the device.
 
-![cabinate with router and other networking gear](images/supernode4-hardware-cabinet1.jpg)
+![cabinet with router and other networking gear](images/supernode4-hardware-cabinet1.jpg)
 
 ## Physical Environment
 
