@@ -4,6 +4,7 @@ CJDNS
 CSV
 Cisco
 Debian
+Eglington
 EdgeRouter
 Firefox
 Git[hH]ub
@@ -63,5 +64,5 @@ rc
 macOS
 tomesh\.net
 tomeshnet
-hostname
-backhaul
+[Hh]ostname
+[Bb]ackhaul

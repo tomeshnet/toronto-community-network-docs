@@ -25,7 +25,7 @@ Mesh SSID are used to extend the mesh network. They have will have Babel running
 
 **Format**
 
-`tomesh`-`(protocol)`[-`(meshid)`] 
+`tomesh`-`(protocol)`-`(meshid)` 
 
 **parameters**
 
@@ -37,8 +37,8 @@ Mesh SSID are used to extend the mesh network. They have will have Babel running
 
 **Example** 
 
-a Toronto Mesh node with hostname of sn1a1 running airmax-ac protocol would be
+A network node with hostname of sn1a1 running airmax-ac protocol would be
 `tomesh-airmaxac-sn1a1`
 
-a Toronto Mesh node with running 80211s would be
+A network node with running 80211s would be
 `tomesh-80211s`

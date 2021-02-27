@@ -22,7 +22,7 @@ Plan, design, implement and maintain a well-functioning community network.
 | Group Email | network@tomesh.net |
 | Chat        | [#network:tomesh.net](https://chat.tomesh.net/#/room/#network:tomesh.net) |
 | Tasks       | [`network`](https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Anetwork) label |
-| Membership  | [network-planning-design-and-operations)](https://github.com/orgs/tomeshnet/teams/network-planning-design-and-operations) team |
+| Membership  | [network-planning-design-and-operations](https://github.com/orgs/tomeshnet/teams/network-planning-design-and-operations) team |
 
 ## Organizational and Program Governance
 Develop administrative processes ensuring Toronto Mesh meets their commitments.

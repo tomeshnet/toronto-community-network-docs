@@ -8,6 +8,7 @@
     - [IP Address Standard](./network/standards-ip-address.md)
     - [Hostname Standard](./network/standards-hostname.md)
     - [Supernode 1](./network/supernode1.md)
+    - [Supernode 4](./network/supernode4.md)
     - [Exit Node](./network/exit-node.md)
     - [Babel](./network/protocol-babel.md)
     - [ER-X-SFP](./network/network-er-x-sfp.md)
@@ -21,5 +22,3 @@
     - [Finances](./operations/finances.md)
     - [Data](./operations/data.md)
     - [Managing Secrets](./operations/secrets.md)
-    
-    

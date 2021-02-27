@@ -6,7 +6,7 @@ Supernode 1 is located on top of 200 Woolner Ave, Toronto, alongside Cisco-deplo
 
 ## Network
 
-The supernode consists of 2 antennas and a router. The router is connected to the Cisco switch which is connected to the Bell 2000 modem that offers internet access for use as a gateway path.
+The supernode consists of 4 antennas and a router. The router is connected to the Cisco switch which is connected to the Bell 2000 modem that offers internet access for use as a gateway path.
 
 The router acts as a Babel routing device. The antennas are configured in bridge mode.
 
