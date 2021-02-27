@@ -1,6 +1,6 @@
 # Supernode 1
 
-![areal view of 3 apartment buildings and a low density neighbourhood taken from the rooftop of supernode 1](images/supernode1-view.jpg)
+![areal view of 3 apartment buildings and a low density neighbourhood taken from the rooftop of Supernode 1](images/supernode1-view.jpg)
 
 Supernode 1 is located on top of 200 Woolner Ave, Toronto, alongside Cisco-deployed infrastructure belonging to the City of Toronto.
 
@@ -10,7 +10,7 @@ The supernode consists of 4 antennas and a router. The router is connected to th
 
 The router acts as a Babel routing device. The antennas are configured in bridge mode.
 
-![network diagram consisting of 4 antennas connected to a switch, connected to the internet through a bell router](images/supernode1-network-layout.png)
+![network diagram consisting of 4 antennas connected to a switch, connected to the internet through a Bell router](images/supernode1-network-layout.png)
 
 ## Hardware
 
@@ -38,7 +38,7 @@ Router 1 is a [Ubiquiti EdgeRouter X-SFP](https://www.ui.com/edgemax/edgerouter-
 
 Router is configured with a static IP and only routes to the exit node and a secondary VPS server. The secondary VPS is used to provide an OpenVPN tunnel for secure remote management of the device.
 
-![A metal cabinet in a small concrete room, the door is open with the edgerouter inside](images/supernode1-hardware-cabinet2.jpg)
+![A metal cabinet in a small concrete room, the door is open with the EdgeRouter inside](images/supernode1-hardware-cabinet2.jpg)
 
 ## Physical Environment
 
