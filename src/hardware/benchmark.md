@@ -6,7 +6,7 @@
 
 `Endpoint1`, `Endpoint2` Devices not limited by CPU or network.
 
-![image](images/hardware-benchmark-network.jpg)
+![Network diagram of device, endpoint1, and endpoint2. Both endpoints are connected to the device but not to each-other.](images/hardware-benchmark-network.jpg)
 
 Instructions below are non-persistent. When device is restarted changes will be removed. `wireguard` package must be installed.
 
@@ -44,7 +44,7 @@ Most Linux distributions have routing disable. Enable it.
 
 Configure a WireGuard server. Create a configuration file `wg0.conf` containing a private/public key.
 
-*NOTE: Do not use these keys in production!* 
+*NOTE: Do not use these keys in production!*
 
 ```
 cat <<"EOF"> wg0.conf
@@ -89,7 +89,7 @@ ip route add 0.0.0.0/0 via 192.168.1.1
 
 Configure a WireGuard client. Create a configuration file `wg0.conf` containing a private/public key.
 
-*NOTE: Do not use these keys in production!* 
+*NOTE: Do not use these keys in production!*
 
 ```
 cat <<"EOF"> wg0.conf
@@ -162,7 +162,7 @@ On `Device`:
 
 ### WireGuard to WireGuard
 
-This will test the interface speed over WireGuard. 
+This will test the interface speed over WireGuard.
 
 On `Endpoint1`:
 
