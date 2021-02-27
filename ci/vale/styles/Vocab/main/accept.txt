@@ -61,6 +61,7 @@ IPv4
 IPv6
 loopback
 rc
+ethernet
 macOS
 tomesh\.net
 tomeshnet
