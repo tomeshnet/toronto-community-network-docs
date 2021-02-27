@@ -88,7 +88,7 @@ Grant Administrators:
 
 For budget allocations above CAD 1,000, approval by 3 of 4 Administrators are needed. For amounts below that, only 2 of 4 approvals are necessary.
 The four Toronto Mesh Administrators are:
-[@darkdrgn2k](https://github.com/darkdrgn2k),
+[@yurkowashere](https://github.com/yurkowashere),
 [@TimTor](https://github.com/TimTor),
 [@Shrinks99](https://github.com/Shrinks99),
 and [@benhylau](https://github.com/benhylau).
