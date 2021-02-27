@@ -1,6 +1,6 @@
 # EdgeRouter X and EdgeRouter X-SFP
 
-[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X. Document is writte for Firmware 2.x.
+[EdgeRouter X](https://www.ui.com/edgemax/edgerouter-x/) and [EdgeRoute X-SFP](https://www.ui.com/edgemax/edgerouter-x-sfp/) will be both identified in this document as ER-X. Document is written for Firmware 2.x.
 
 ## Device Specific Instructions
 
