@@ -17,7 +17,7 @@ You will need to collect the following information:
 
 ### Connect using the Management Radio
 
-Most devices come with a second `Management Radio` that is active for a short period of time after the device is powered on.  While active it creates a wireless access point dedicated to configuration of the device. This access point can be used to connect a laptop or phone to it over Wi-Fi. The IP address of this interface static and will never change.
+Most devices come with a second `Management Radio` that is active for a short period of time after the device is powered on. While active it creates a wireless access point dedicated to configuration of the device. This access point can be used to connect a laptop or phone to it over Wi-Fi. The IP address of this interface static and will never change.
 
 1. Connect to the Management Radio access point of the device. It should be a combination of the name of the unit and the `MAC` address.
 
