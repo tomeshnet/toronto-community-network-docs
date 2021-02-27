@@ -228,7 +228,7 @@ filter [name] action allow
 filter [name] if [if]
 filter [name] type redistribute
 ```
-These 3 lines makeup a rule called [name]. This rules will allow redistribution of all IPs on the [if] interface.
+These 3 lines makeup a rule called `name`. This rules will allow redistribution of all IPs on the `if` interface.
 
 
 ### Example
