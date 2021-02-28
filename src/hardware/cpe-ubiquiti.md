@@ -5,7 +5,7 @@ This document covers setup for the following devices. Other devices may be simil
 - [Loco5AC](https://www.ui.com/airmax/nanostation-ac/)
 - [LBE‑5AC‑23](https://www.ui.com/airmax/litebeam-ac/)
 
-## What you will need
+## What You Will Need
 
 You will need to collect the following information:
 
@@ -13,9 +13,10 @@ You will need to collect the following information:
 - Your assigned node name
 - Your assigned `IP Address`, `Netmask` and `Gateway`
 - A computer with WiFi for use with the [management radio](#connect-using-the-management-radio) method or a computer with a network port for the [ethernet cable](#connection-using-an-ethernet-cable) method.
-## Connecting to the CPE for the first time
 
-### Connect using the management radio
+## Connecting to the CPE for the First Time
+
+### Connect Using the Management Radio
 
 Most devices come with a second `Management Radio` that is active for a short period of time after the device is powered on. While active it creates a wireless access point dedicated to configuration of the device. This access point can be used to connect a laptop or phone to it over Wi-Fi. The IP address of this interface static and will never change.
 
@@ -27,7 +28,7 @@ Most devices come with a second `Management Radio` that is active for a short pe
 
 2. Once the WiFi connection is establish, open the browser and visit `https://192.168.172.1/`
 
-### Connect using an ethernet cable
+### Connect Using an Ethernet Cable
 
 Device can be connected to using an ethernet cable. This method requires the knowledge of the device's IP address. If the device has been previously configured, and the IP address is known, adjust the steps below accordingly. If the IP address is not known, a factory reset can be performed by pressing the reset button for 30 seconds. This will erase all settings on the device and set the default IP address of 192.168.1.20 again.
 
@@ -37,7 +38,7 @@ Device can be connected to using an ethernet cable. This method requires the kno
 
 3. Open the browser and visit `https://192.168.1.20/`
 
-### First time configuration
+### First Time Configuration
 
 1. If there is a warning about a certificate, process anyway.
     - Firefox: Press Advanced, then `Accept the Risk and continue`
