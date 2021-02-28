@@ -173,7 +173,7 @@ set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 st
 
 ## L2TP Tunnel
 
-L2TP Tunnels is used to connect back to the an [exit node](exit-node.md).  
+L2TP Tunnels is used to connect back to the an [exit node](../network/exit-node.md).  
 
 All commands are prefixed with `set interfaces l2tpv3 l2tpeth0` where `l2tpeth0` is a numbered interface starting from 0.
 
