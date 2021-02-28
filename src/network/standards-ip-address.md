@@ -58,4 +58,4 @@ HostMax:   10.255.255.254        00001010 .11111111.11111111.11111110
 Hosts/Net: 16777214              (Private Internet)
 ```
 
-**Fun Fact:** IPv6 Address is in the `fd::/8 range`. The bytes of `74 6F 6D 73 86`  converted into ASCII spell TOMSH (lower case for backhaul range)
+**Fun Fact:** IPv6 Address is in the `fd::/8 range`. The bytes of `74 6F 6D 73 86` converted into ASCII spell TOMSH (lower case for backhaul range)
