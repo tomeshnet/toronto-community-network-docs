@@ -14,7 +14,7 @@
 - [Hardware](./hardware/main.md)
     - [Hardware Benchmark](./hardware/benchmark.md)
     - [Hardware Benchmark Results](./hardware/benchmark-results.md)
-    - [ER-X-SFP](./network/network-er-x-sfp.md)
+    - [ER-X-SFP](./hardware/router-er-x-sfp.md)
     - [CPE - Ubiquiti](./hardware/cpe-ubiquiti.md)
 - [Operations](./operations/main.md)
     - [Working Groups](./operations/working-groups.md)
