@@ -2,7 +2,7 @@
 
 The mesh runs a dual stack IPv4 and IPv6 networking. Each device is be assigned a minimum of 2 IP addresses, one of each type.
 
-## IPv4 subnet CIDR
+## IPv4 Subnet CIDR
 
 For IPv4 the following CIDR definition
 
