@@ -10,14 +10,14 @@ To apply the configuration use `commit` and then to save it permanently use `sav
 
 Configurations can also be entered using the GUI found on port 80. Select `Config Tree` from menu. Tree is a hierarchical representation of the commands below. For example `set system hostname XXXX` would be `system` branch, `hostname` field, `XXX` would be the value.
 
-## Configure hostname
+## Configure Hostname
 *NOTE:  Hostname of device should follow the appropriate syntax defined in the TCN Standards*
 
 ```
 set system host-name SN1R1
 ```
 
-## Disable analytic reports
+## Disable Analytic Reports
 Disable sending crash reports to Ubiquiti
 
 ```
@@ -52,7 +52,7 @@ ER-X does not have an internal clock so if working offline you must set the date
 set system offload hwnat enable
 ```
 
-## Configure ethernet ports
+## Configure Ethernet Ports
 
 Delete the default DHCP configuration on `eth1`.
 ```
@@ -296,7 +296,7 @@ set service dns dynamic interface eth0 web 184.105.242.4
 set service dns dynamic interface eth0 web-skip "Your IP address is : "
 ```             
 
-## Gateway Loop issues
+## Gateway Loop Issues
 
 The paradox of the gateway and routing babeld:
 
