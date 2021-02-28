@@ -2,7 +2,7 @@
 
 The mesh runs a dual stack IPv4 and IPv6 networking. Each device is be assigned a minimum of 2 IP addresses, one of each type.
 
-## IPv4 Subnet CIDR
+## IPv4 subnet CIDR
 
 For IPv4 the following CIDR definition
 
@@ -11,7 +11,7 @@ For IPv4 the following CIDR definition
 - /29 - PtP Antenna links where antennas are in bridge mode but require an IP for administration
 - /24 - Antenna Subnets
 
-## IPv6 Subnet CIDR
+## IPv6 subnet CIDR
 
 For IPv6 the following CIDR definition
 
