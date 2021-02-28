@@ -30,7 +30,7 @@ Most devices come with a second `Management Radio` that is active for a short pe
 
 ### Connect Using an Ethernet Cable
 
-Device can be connected to using an ethernet cable. This method requires the knowledge of the device's IP address. If the device has been previously configured, and the IP address is known, adjust the steps below accordingly. If the IP address is not known, a factory reset can be performed by pressing the reset button for 30 seconds. This will erase all settings on the device and set the default IP address of 192.168.1.20 again.
+Device can be connected to using an Ethernet cable. This method requires the knowledge of the device's IP address. If the device has been previously configured, and the IP address is known, adjust the steps below accordingly. If the IP address is not known, a factory reset can be performed by pressing the reset button for 30 seconds. This will erase all settings on the device and set the default IP address of 192.168.1.20 again.
 
 1. Plug a network cable into your computer and into the `Network` port of your `POE injector`
 
