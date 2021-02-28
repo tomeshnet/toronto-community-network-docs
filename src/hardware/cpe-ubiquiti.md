@@ -12,7 +12,7 @@ You will need to collect the following information:
 - SSID of the supernode antenna you wish to connect to
 - Your assigned node name
 - Your assigned `IP Address`, `Netmask` and `Gateway`
-- A computer with WiFi for use with the [management radio](#connect-using-the-management-radio) method or a computer with a network port for the [Ethernet cable](#connection-using-an-ethernet-cable) method.
+- A computer with WiFi for use with the [management radio](#connect-using-the-management-radio) method or a computer with a network port for the [ethernet cable](#connection-using-an-ethernet-cable) method.
 ## Connecting to the CPE for the first time
 
 ### Connect using the Management Radio
@@ -27,9 +27,9 @@ Most devices come with a second `Management Radio` that is active for a short pe
 
 2. Once the WiFi connection is establish, open the browser and visit `https://192.168.172.1/`
 
-### Connect using an Ethernet Cable
+### Connect using an ethernet Cable
 
-Device can be connected to using an Ethernet cable. This method requires the knowledge of the device's IP address. If the device has been previously configured, and the IP address is known, adjust the steps below accordingly. If the IP address is not known, a factory reset can be performed by pressing the reset button for 30 seconds. This will erase all settings on the device and set the default IP address of 192.168.1.20 again.
+Device can be connected to using an ethernet cable. This method requires the knowledge of the device's IP address. If the device has been previously configured, and the IP address is known, adjust the steps below accordingly. If the IP address is not known, a factory reset can be performed by pressing the reset button for 30 seconds. This will erase all settings on the device and set the default IP address of 192.168.1.20 again.
 
 1. Plug a network cable into your computer and into the `Network` port of your `POE injector`
 
