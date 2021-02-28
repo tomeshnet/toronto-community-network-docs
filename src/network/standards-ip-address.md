@@ -11,7 +11,7 @@ For IPv4 the following CIDR definition
 - /29 - PtP Antenna links where antennas are in bridge mode but require an IP for administration
 - /24 - Antenna Subnets
 
-## IPv6 subnet CIDR
+## IPv6 Subnet CIDR
 
 For IPv6 the following CIDR definition
 
