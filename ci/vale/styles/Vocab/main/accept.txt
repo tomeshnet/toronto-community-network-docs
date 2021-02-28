@@ -52,8 +52,8 @@ http
 repo
 config
 [hH]ostname
-subnet
-subnetwork
+[Ss]ubnet
+[Ss]ubnetwork
 DHCP
 IP
 IPs
@@ -61,7 +61,7 @@ IPv4
 IPv6
 loopback
 rc
-ethernet
+[Ee]thernet
 macOS
 tomesh\.net
 tomeshnet
