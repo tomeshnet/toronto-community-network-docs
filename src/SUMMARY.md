@@ -4,6 +4,7 @@
 
 [Notice](./notice.md)
 
+- [Glossary](glossary.md)
 - [Network](./network/main.md)
     - [IP Address Standard](./network/standards-ip-address.md)
     - [Hostname Standard](./network/standards-hostname.md)
