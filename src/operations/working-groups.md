@@ -16,9 +16,11 @@ Connect with people living and working in the areas served by the network(s), in
 ## Network Planning, Design and Operations
 Plan, design, implement and maintain a well-functioning community network.
 
+**NOTE** Regular meetings for this working group have been suspended. If there is interest in restarting a regular meetup time please let us know. Otherwise please direct any questions to the Email or Chat below
+
 | Spaces      |   |
 |:------------|:--|
-| Meetings    | Thursday 5 PM ET weekly ([`calendar`][calendar] [`iCal`][iCal] [`time poll`](https://www.when2meet.com/?9397732-hLOdX)) |
+| Meetings    | Regular meetings suspended until further notice ([`calendar`][calendar] [`iCal`][iCal] [`time poll`](https://www.when2meet.com/?9397732-hLOdX)) |
 | Group Email | network@tomesh.net |
 | Chat        | [#network:tomesh.net](https://chat.tomesh.net/#/room/#network:tomesh.net) |
 | Tasks       | [`network`](https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Anetwork) label |
