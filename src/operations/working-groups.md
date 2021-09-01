@@ -16,7 +16,7 @@ Connect with people living and working in the areas served by the network(s), in
 ## Network Planning, Design and Operations
 Plan, design, implement and maintain a well-functioning community network.
 
-**NOTE** Regular meetings for this workgroup have been suspended. If there is interest in restarting a regular meetup time please let us know. Otherwise please direct any questions to the Email or Chat below
+**NOTE** Regular meetings for this working group have been suspended. If there is interest in restarting a regular meetup time please let us know. Otherwise please direct any questions to the Email or Chat below
 
 | Spaces      |   |
 |:------------|:--|
