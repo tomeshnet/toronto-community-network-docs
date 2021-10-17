@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CPE - Ubiquiti - Toronto Community Network</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme-ext/style.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../notice.html">Notice</a></li><li class="chapter-item expanded "><a href="../network/main.html"><strong aria-hidden="true">1.</strong> Network</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../network/standards-ip-address.html"><strong aria-hidden="true">1.1.</strong> IP Address Standard</a></li><li class="chapter-item expanded "><a href="../network/standards-hostname.html"><strong aria-hidden="true">1.2.</strong> Hostname Standard</a></li><li class="chapter-item expanded "><a href="../network/supernode1.html"><strong aria-hidden="true">1.3.</strong> Supernode 1</a></li><li class="chapter-item expanded "><a href="../network/supernode4.html"><strong aria-hidden="true">1.4.</strong> Supernode 4</a></li><li class="chapter-item expanded "><a href="../network/exit-node.html"><strong aria-hidden="true">1.5.</strong> Exit Node</a></li><li class="chapter-item expanded "><a href="../network/protocol-babel.html"><strong aria-hidden="true">1.6.</strong> Babel</a></li></ol></li><li class="chapter-item expanded "><a href="../hardware/main.html"><strong aria-hidden="true">2.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hardware/benchmark.html"><strong aria-hidden="true">2.1.</strong> Hardware Benchmark</a></li><li class="chapter-item expanded "><a href="../hardware/benchmark-results.html"><strong aria-hidden="true">2.2.</strong> Hardware Benchmark Results</a></li><li class="chapter-item expanded "><a href="../hardware/router-er-x-sfp.html"><strong aria-hidden="true">2.3.</strong> ER-X-SFP</a></li><li class="chapter-item expanded "><a href="../hardware/cpe-ubiquiti.html" class="active"><strong aria-hidden="true">2.4.</strong> CPE - Ubiquiti</a></li></ol></li><li class="chapter-item expanded "><a href="../operations/main.html"><strong aria-hidden="true">3.</strong> Operations</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operations/working-groups.html"><strong aria-hidden="true">3.1.</strong> Working Groups</a></li><li class="chapter-item expanded "><a href="../operations/learning-group.html"><strong aria-hidden="true">3.2.</strong> Learning Group</a></li><li class="chapter-item expanded "><a href="../operations/legal.html"><strong aria-hidden="true">3.3.</strong> Legal</a></li><li class="chapter-item expanded "><a href="../operations/finances.html"><strong aria-hidden="true">3.4.</strong> Finances</a></li><li class="chapter-item expanded "><a href="../operations/data.html"><strong aria-hidden="true">3.5.</strong> Data</a></li><li class="chapter-item expanded "><a href="../operations/secrets.html"><strong aria-hidden="true">3.6.</strong> Managing Secrets</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Toronto Community Network</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!--
+                        Page table of contents 
+                        Source: https://github.com/JorelAli/mdBook-pagetoc/blob/3b9165bca3ceb54119001890d3a7e9356b171a72/README.md
+                        -->
+                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        
+                        <h1 id="cpe---ubiquiti"><a class="header" href="#cpe---ubiquiti">CPE - Ubiquiti</a></h1>
+<p>This document covers setup for the following devices. Other devices may be similar.</p>
+<ul>
+<li><a href="https://www.ui.com/airmax/nanostation-ac/">Loco5AC</a></li>
+<li><a href="https://www.ui.com/airmax/litebeam-ac/">LBE‑5AC‑23</a></li>
+</ul>
+<h2 id="what-you-will-need"><a class="header" href="#what-you-will-need">What You Will Need</a></h2>
+<p>You will need to collect the following information:</p>
+<ul>
+<li>SSID of the supernode antenna you wish to connect to</li>
+<li>Your assigned node name</li>
+<li>Your assigned <code>IP Address</code>, <code>Netmask</code> and <code>Gateway</code></li>
+<li>A computer with WiFi for use with the <a href="#connect-using-the-management-radio">management radio</a> method or a computer with a network port for the <a href="#connection-using-an-ethernet-cable">ethernet cable</a> method.</li>
+</ul>
+<h2 id="connecting-to-the-cpe-for-the-first-time"><a class="header" href="#connecting-to-the-cpe-for-the-first-time">Connecting to the CPE for the First Time</a></h2>
+<h3 id="connect-using-the-management-radio"><a class="header" href="#connect-using-the-management-radio">Connect Using the Management Radio</a></h3>
+<p>Most devices come with a second <code>Management Radio</code> that is active for a short period of time after the device is powered on. While active it creates a wireless access point dedicated to configuration of the device. This access point can be used to connect a laptop or phone to it over Wi-Fi. The IP address of this interface static and will never change.</p>
+<ol>
+<li>Connect to the Management Radio access point of the device. It should be a combination of the name of the unit and the <code>MAC</code> address.</li>
+</ol>
+<p><img src="./images/hardware-cpe-management-wifi.jpg" alt="image" /></p>
+<p><strong>NOTE</strong> The Management Radio only is only on for a short period of time after boot. If the device cannot be found power cycle it by unplugging the device from the POE injector, wait 10 seconds, and plug it in again.</p>
+<ol start="2">
+<li>Once the WiFi connection is establish, open the browser and visit <code>https://192.168.172.1/</code></li>
+</ol>
+<h3 id="connect-using-an-ethernet-cable"><a class="header" href="#connect-using-an-ethernet-cable">Connect Using an Ethernet Cable</a></h3>
+<p>Device can be connected to using an Ethernet cable. This method requires the knowledge of the device's IP address. If the device has been previously configured, and the IP address is known, adjust the steps below accordingly. If the IP address is not known, a factory reset can be performed by pressing the reset button for 30 seconds. This will erase all settings on the device and set the default IP address of 192.168.1.20 again.</p>
+<ol>
+<li>
+<p>Plug a network cable into your computer and into the <code>Network</code> port of your <code>POE injector</code></p>
+</li>
+<li>
+<p>Configure your laptop's network interface to <code>192.168.1.50</code>.</p>
+</li>
+<li>
+<p>Open the browser and visit <code>https://192.168.1.20/</code></p>
+</li>
+</ol>
+<h3 id="first-time-configuration"><a class="header" href="#first-time-configuration">First Time Configuration</a></h3>
+<ol>
+<li>
+<p>If there is a warning about a certificate, process anyway.</p>
+<ul>
+<li>Firefox: Press Advanced, then <code>Accept the Risk and continue</code></li>
+<li>Chrome: Press Advanced, then <code>Proceed to xxx.xxx.xxx.xxx (unsafe)</code></li>
+</ul>
+</li>
+<li>
+<p>Select the country as <code>Canada</code></p>
+</li>
+<li>
+<p>Accept the user <code>EULA</code></p>
+</li>
+<li>
+<p>Click <code>Continue</code></p>
+</li>
+<li>
+<p>Choose Your username and password for the device. TCN Standard username is <code>tomesh</code></p>
+</li>
+</ol>
+<h3 id="configure-wireless"><a class="header" href="#configure-wireless">Configure Wireless</a></h3>
+<ol>
+<li>Select the <code>Wireless</code> icon from the left menu</li>
+</ol>
+<p><img src="./images/hardware-cpe-wireless-menu-item.jpg" alt="image" /></p>
+<ol start="2">
+<li>
+<p>Enter the remote antennas SSID under <code>SSID</code></p>
+</li>
+<li>
+<p>Enter the <code>WPA2 PRESHARED KEY</code>. TCN standard key is <code>torontocommunitynetwork</code></p>
+</li>
+</ol>
+<p><img src="./images/hardware-cpe-config-wireless.jpg" alt="image" /></p>
+<ol start="4">
+<li>Select <code>Save Changes</code></li>
+</ol>
+<h3 id="configure-network"><a class="header" href="#configure-network">Configure Network</a></h3>
+<ol>
+<li>Select the <code>Network</code> icon from the left menu</li>
+</ol>
+<p><img src="./images/hardware-cpe-network-menu-item.jpg" alt="image" /></p>
+<ol start="2">
+<li>
+<p>Set the <code>IP ADDRESS</code> to the address assigned to your node</p>
+</li>
+<li>
+<p>Set the <code>NETMASK</code> if needed. The default is <code>255.255.255.0</code> and used in most instances</p>
+</li>
+<li>
+<p>Enter the <code>GATEWAY</code> assigned to your node. Usually same as your <code>IP ADDRESS</code> but ending in <code>1</code></p>
+</li>
+<li>
+<p>Set the DNS to <code>10.10.10.10</code></p>
+</li>
+<li>
+<p>Set <code>IPV6</code> address to <code>STATIC</code></p>
+</li>
+<li>
+<p>Enter <code>IPV6 ADDRESS</code>, <code>IPV6 NETAMSK</code> and <code>IPV6 GATEWAY</code> to values provided. <code>IPV6 NETAMSK</code> is usually <code>64</code></p>
+</li>
+</ol>
+<p><img src="./images/hardware-cpe-config-network.jpg" alt="image" /></p>
+<ol start="8">
+<li>Select <code>Save Changes</code></li>
+</ol>
+<p><strong>NOTE</strong> If you are using a network cable method of connecting to the device, you will need to change your IP address of your computer to the same network as you entered in the <code>IP ADDRESS</code> field. Simply select a different at the end. For example, if your assigned IP address is <code>100.64.10.55</code> set your computer to <code>100.65.10.200</code>. You will have to use your browser to visit https://<code>YOUR ASSIGNED IP</code> for example <code>https://100.64.10.55</code></p>
+<h3 id="configure-system"><a class="header" href="#configure-system">Configure System</a></h3>
+<ol>
+<li>Select the <code>System</code> icon from the left menu</li>
+</ol>
+<p><img src="./images/hardware-cpe-system-menu-item.jpg" alt="image" /></p>
+<ol start="2">
+<li>
+<p>Set <code>DEVICE NAME</code> to your assigned node name</p>
+</li>
+<li>
+<p>Toggle <code>NTP CLIENT</code> on</p>
+</li>
+<li>
+<p>Set <code>NTP SERVER</code> to <code>10.10.10.123</code></p>
+</li>
+<li>
+<p>Set <code>TIMEZONE</code> to <code>(GMT -05.00) Eastern</code></p>
+</li>
+<li>
+<p>Toggle <code>READ-ONLY ACCOUNT</code> on</p>
+</li>
+<li>
+<p>Set <code>READ-ONLY ACCOUNT NAME</code> to <code>ubnt</code></p>
+</li>
+<li>
+<p>Click <code>CHANGE</code> next to <code>Change Read Only User Password</code> and set the password to <code>tomeshnet</code></p>
+</li>
+<li>
+<p>Fill out the location section.</p>
+</li>
+</ol>
+<p><img src="./images/hardware-cpe-config-system.jpg" alt="image" /></p>
+<ol start="10">
+<li>Select <code>Save Changes</code></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../hardware/router-er-x-sfp.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../operations/main.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../hardware/router-er-x-sfp.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../operations/main.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme-ext/sidebar.js"></script>
+    </body>
+</html>

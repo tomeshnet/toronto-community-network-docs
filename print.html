@@ -1,0 +1,1397 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Toronto Community Network</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme-ext/style.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="notice.html">Notice</a></li><li class="chapter-item expanded "><a href="network/main.html"><strong aria-hidden="true">1.</strong> Network</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="network/standards-ip-address.html"><strong aria-hidden="true">1.1.</strong> IP Address Standard</a></li><li class="chapter-item expanded "><a href="network/standards-hostname.html"><strong aria-hidden="true">1.2.</strong> Hostname Standard</a></li><li class="chapter-item expanded "><a href="network/supernode1.html"><strong aria-hidden="true">1.3.</strong> Supernode 1</a></li><li class="chapter-item expanded "><a href="network/supernode4.html"><strong aria-hidden="true">1.4.</strong> Supernode 4</a></li><li class="chapter-item expanded "><a href="network/exit-node.html"><strong aria-hidden="true">1.5.</strong> Exit Node</a></li><li class="chapter-item expanded "><a href="network/protocol-babel.html"><strong aria-hidden="true">1.6.</strong> Babel</a></li></ol></li><li class="chapter-item expanded "><a href="hardware/main.html"><strong aria-hidden="true">2.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="hardware/benchmark.html"><strong aria-hidden="true">2.1.</strong> Hardware Benchmark</a></li><li class="chapter-item expanded "><a href="hardware/benchmark-results.html"><strong aria-hidden="true">2.2.</strong> Hardware Benchmark Results</a></li><li class="chapter-item expanded "><a href="hardware/router-er-x-sfp.html"><strong aria-hidden="true">2.3.</strong> ER-X-SFP</a></li><li class="chapter-item expanded "><a href="hardware/cpe-ubiquiti.html"><strong aria-hidden="true">2.4.</strong> CPE - Ubiquiti</a></li></ol></li><li class="chapter-item expanded "><a href="operations/main.html"><strong aria-hidden="true">3.</strong> Operations</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="operations/working-groups.html"><strong aria-hidden="true">3.1.</strong> Working Groups</a></li><li class="chapter-item expanded "><a href="operations/learning-group.html"><strong aria-hidden="true">3.2.</strong> Learning Group</a></li><li class="chapter-item expanded "><a href="operations/legal.html"><strong aria-hidden="true">3.3.</strong> Legal</a></li><li class="chapter-item expanded "><a href="operations/finances.html"><strong aria-hidden="true">3.4.</strong> Finances</a></li><li class="chapter-item expanded "><a href="operations/data.html"><strong aria-hidden="true">3.5.</strong> Data</a></li><li class="chapter-item expanded "><a href="operations/secrets.html"><strong aria-hidden="true">3.6.</strong> Managing Secrets</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Toronto Community Network</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!--
+                        Page table of contents 
+                        Source: https://github.com/JorelAli/mdBook-pagetoc/blob/3b9165bca3ceb54119001890d3a7e9356b171a72/README.md
+                        -->
+                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        
+                        <h1 id="notice"><a class="header" href="#notice">Notice</a></h1>
+<p>This documentation is still in progress. Come help <a href="https://github.com/tomeshnet/toronto-community-network-docs">here</a>!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="network"><a class="header" href="#network">Network</a></h1>
+<p>This section documents the network and its nodes.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ip-standard"><a class="header" href="#ip-standard">IP Standard</a></h1>
+<p>The mesh runs a dual stack IPv4 and IPv6 networking. Each device is be assigned a minimum of 2 IP addresses, one of each type.</p>
+<h2 id="ipv4-subnet-cidr"><a class="header" href="#ipv4-subnet-cidr">IPv4 Subnet CIDR</a></h2>
+<p>For IPv4 the following CIDR definition</p>
+<ul>
+<li>/32 - Single Host</li>
+<li>/30 - PtP L2TP etc</li>
+<li>/29 - PtP Antenna links where antennas are in bridge mode but require an IP for administration</li>
+<li>/24 - Antenna Subnets</li>
+</ul>
+<h2 id="ipv6-subnet-cidr"><a class="header" href="#ipv6-subnet-cidr">IPv6 Subnet CIDR</a></h2>
+<p>For IPv6 the following CIDR definition</p>
+<ul>
+<li>/128 - Single Host</li>
+<li>/127 - PtP L2TP etc</li>
+<li>/126 - PtP Antenna links where antennas are in bridge mode but require an IP for administration</li>
+<li>/64 - Antenna Subnets</li>
+</ul>
+<h2 id="backhaul-network"><a class="header" href="#backhaul-network">Backhaul network</a></h2>
+<p>Used for super nodes and core infrastructure</p>
+<p><strong>IPv4 range:</strong> 100.64.0.0/10 </p>
+<pre><code>Address:   100.64.0.0            01100100.01 000000.00000000.00000000
+Netmask:   255.192.0.0 = 10      11111111.11 000000.00000000.00000000
+Wildcard:  0.63.255.255          00000000.00 111111.11111111.11111111
+=&gt;
+Network:   100.64.0.0/10         01100100.01 000000.00000000.00000000 (Class A)
+Broadcast: 100.127.255.255       01100100.01 111111.11111111.11111111
+HostMin:   100.64.0.1            01100100.01 000000.00000000.00000001
+HostMax:   100.127.255.254       01100100.01 111111.11111111.11111110
+Hosts/Net: 4194302 
+</code></pre>
+<p><strong>IPv6:</strong> FD54:4f4d:5348::/48</p>
+<h2 id="node-network"><a class="header" href="#node-network">Node Network</a></h2>
+<p>Used for community hubs and non-core devices</p>
+<p><strong>IPv4:</strong> 10.0.0.0/8
+<strong>IPv6:</strong> FD74:6F6D:73:86::/48</p>
+<pre><code>Address:   10.0.0.0              00001010 .00000000.00000000.00000000
+Netmask:   255.0.0.0 = 8         11111111 .00000000.00000000.00000000
+Wildcard:  0.255.255.255         00000000 .11111111.11111111.11111111
+=&gt;
+Network:   10.0.0.0/8            00001010 .00000000.00000000.00000000 (Class A)
+Broadcast: 10.255.255.255        00001010 .11111111.11111111.11111111
+HostMin:   10.0.0.1              00001010 .00000000.00000000.00000001
+HostMax:   10.255.255.254        00001010 .11111111.11111111.11111110
+Hosts/Net: 16777214              (Private Internet)
+</code></pre>
+<p><strong>Fun Fact:</strong> IPv6 Address is in the <code>fd::/8 range</code>. The bytes of <code>74 6F 6D 73 86</code> converted into ASCII spell TOMSH (lower case for backhaul range)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hostname-naming-standards"><a class="header" href="#hostname-naming-standards">Hostname Naming Standards</a></h1>
+<p>This is the decided upon official naming convention for all devices and SSID in the network</p>
+<h2 id="supernode-name-standards"><a class="header" href="#supernode-name-standards">Supernode Name Standards</a></h2>
+<p>The supernode hostname is <code>snXyY</code> and where <code>X</code> is assigned by the Network Planning, Design and Operations working group, and <code>yY</code> is chosen by the node operator to identify network components within the node. For example <code>a1</code> for antenna 1 and <code>r1</code> for router 1.</p>
+<p>All hostnames will be unique across the mesh.</p>
+<p>The supernode devices will use the domain format <code>operator.tcn.tomesh.net</code>.  A DNS and reverse DNS entry will be made for each device with such a domain name. For simplicity the devices will also carry an entry with the domain of <code>tcn.tomesh.net</code> </p>
+<p>For example a FQDN (fully qualified domain name) will be <code>sn1a1.core.tcn.tomesh.net</code> for a device operated by the core team at Toronto Community Network. The node will also answer as <code>sn1a1.tcn.tomesh.net</code></p>
+<h2 id="ssid"><a class="header" href="#ssid">SSID</a></h2>
+<h3 id="public-ssid"><a class="header" href="#public-ssid">Public SSID</a></h3>
+<p>Public SSID will not extend the Babel protocol. They are standard access points connections for the users to access the mesh.</p>
+<p><strong>Format</strong>
+<code>tomesh.net</code></p>
+<h3 id="mesh-ssid"><a class="header" href="#mesh-ssid">Mesh SSID</a></h3>
+<p>Mesh SSID are used to extend the mesh network. They have will have Babel running on them.</p>
+<p><strong>Format</strong></p>
+<p><code>tomesh</code>-<code>(protocol)</code>-<code>(meshid)</code> </p>
+<p><strong>parameters</strong></p>
+<p><code>tomesh-</code> is a constant and never changes</p>
+<p><code>(protocol)</code>  is the protocol name the SSID is running. This could be for example <code>airmaxac</code>,<code>80211s</code>,<code>adhoc</code></p>
+<p><code>(meshid)</code> optional, part of the string when SSIDs need to be isolated. PtP and PtMP antennas will use their hostnames</p>
+<p><strong>Example</strong> </p>
+<p>A network node with hostname of sn1a1 running airmax-ac protocol would be
+<code>tomesh-airmaxac-sn1a1</code></p>
+<p>A network node with running 80211s would be
+<code>tomesh-80211s</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="supernode-1"><a class="header" href="#supernode-1">Supernode 1</a></h1>
+<p><img src="network/images/supernode1-view.jpg" alt="areal view of 3 apartment buildings and a low density neighbourhood taken from the rooftop of Supernode 1" /></p>
+<p>Supernode 1 is located on top of 200 Woolner Ave, Toronto, alongside Cisco-deployed infrastructure belonging to the City of Toronto.</p>
+<h2 id="network-1"><a class="header" href="#network-1">Network</a></h2>
+<p>The supernode consists of 4 antennas and a router. The router is connected to the Cisco switch which is connected to the Bell 2000 modem that offers internet access for use as a gateway path.</p>
+<p>The router acts as a Babel routing device. The antennas are configured in bridge mode.</p>
+<p><img src="network/images/supernode1-network-layout.png" alt="network diagram consisting of 4 antennas connected to a switch, connected to the internet through a Bell router" /></p>
+<h2 id="hardware"><a class="header" href="#hardware">Hardware</a></h2>
+<h3 id="antenna-1"><a class="header" href="#antenna-1">Antenna 1</a></h3>
+<p>Antenna 1 is a <a href="https://www.ui.com/airmax/liteap-ac/">Ubiquiti LAP-120</a> mounted on the west arm of the building, on the south side of the roof, colocated with Cisco on their mounts. The antenna is facing south.</p>
+<p><img src="network/images/supernode1-hardware-antenna1.jpg" alt="A non-penetrating mount with wireless mesh antennas affixed sitting on an apartment rooftop" /></p>
+<h3 id="antenna-2"><a class="header" href="#antenna-2">Antenna 2</a></h3>
+<p>Antenna 2 is a Ubiquiti LAP-120 mounted on the south arm of the building, on the east side of the roof, colocated with Cisco on their mounts. The antenna is facing east.</p>
+<p><img src="network/images/supernode1-hardware-antenna2.jpg" alt="A non-penetrating mount with wireless mesh antennas affixed sitting on an apartment rooftop" /></p>
+<h3 id="antenna-3-and-4"><a class="header" href="#antenna-3-and-4">Antenna 3 and 4</a></h3>
+<p>Antenna 3 and 4 are Ubiquiti LAP-120 devices mounted on the north-east arm of the building. Antenna 3 is facing north-east and antenna 4 is facing north.</p>
+<p><img src="network/images/supernode1-hardware-antenna3and4.jpg" alt="A non-penetrating mount with wireless mesh antennas affixed sitting on an apartment rooftop" /></p>
+<h3 id="router-1"><a class="header" href="#router-1">Router 1</a></h3>
+<p>Router 1 is a <a href="https://www.ui.com/edgemax/edgerouter-x-sfp/">Ubiquiti EdgeRouter X-SFP</a> mounted inside the Cisco cabinet in the ballast room. It is connected to the exit node over a L2TP tunnel using UDP.</p>
+<p>Router is configured with a static IP and only routes to the exit node and a secondary VPS server. The secondary VPS is used to provide an OpenVPN tunnel for secure remote management of the device.</p>
+<p><img src="network/images/supernode1-hardware-cabinet2.jpg" alt="A metal cabinet in a small concrete room, the door is open with the EdgeRouter inside" /></p>
+<h2 id="physical-environment"><a class="header" href="#physical-environment">Physical Environment</a></h2>
+<p>The roof is accessible through ceiling hatches on the top floor of the building.</p>
+<p><img src="network/images/supernode1-access-roof.jpg" alt="Roof access hatch" /></p>
+<p>The router is installed in a black metal cabinet, located on the back wall of the ballast tank room on the roof. This room is accessible only from the roof. The entrance is on the east wall of the elevator hut. The doors are shorter than normal.</p>
+<p>Network cables are run through a hole in the east wall.</p>
+<p><img src="network/images/supernode1-access-ballast.jpg" alt="Roof access hole" />
+<img src="network/images/supernode1-hardware-cabinet.jpg" alt="A metal cabinet in a small concrete room, the door is closed" /></p>
+<h2 id="neighbourhood-testing"><a class="header" href="#neighbourhood-testing">Neighbourhood Testing</a></h2>
+<p>Testing was done at several points that had line-of-sight to the antenna. The antenna was hand-held, not tuned precisely. Results are for reference only, and do not necessarily represent what a permanent deployment could attain at that distance.</p>
+<table><thead><tr><th>Point</th><th>Distance (m)</th><th>Ping</th><th>Speed RX/TX (Mbps)</th><th>Signal (dBm)</th></tr></thead><tbody>
+<tr><td>a</td><td>200</td><td>4.57</td><td>86/194</td><td>-64</td></tr>
+<tr><td>b</td><td>200</td><td>2.86</td><td>80/194</td><td>-60</td></tr>
+<tr><td>c</td><td>237</td><td>5.82</td><td>50/178</td><td>-58</td></tr>
+<tr><td>d</td><td>270</td><td>5.27</td><td>103/149</td><td>-50</td></tr>
+<tr><td>e (1)</td><td>396</td><td>5.11</td><td>83/172</td><td>-58</td></tr>
+<tr><td>f</td><td>2520</td><td>4.57</td><td>8.68/1.6</td><td>-81</td></tr>
+<tr><td>f (2)</td><td>2520</td><td>4.57</td><td>64.58/40.79</td><td>-74</td></tr>
+<tr><td>g</td><td>2660</td><td></td><td>82/123</td><td>-62</td></tr>
+<tr><td>g (3)</td><td>2660</td><td></td><td>118/44</td><td>-66</td></tr>
+</tbody></table>
+<p>(1) Used both <a href="https://www.ui.com/airmax/nanostation-ac/">Nanostation AC (Loco5AC)</a> and <a href="https://www.ui.com/airmax/litebeam-ac/">LiteBeam AC (LBE‑5AC‑23)</a>. Both performed the same.<br />
+(2) Second attempt done after correcting issue with <code>sn1a2</code>.<br />
+(3) Used <a href="https://www.ui.com/airmax/nanostation-ac/">Nanostation AC (Loco5AC)</a> but could not adjust elevation.</p>
+<h2 id="additional-notes"><a class="header" href="#additional-notes">Additional Notes</a></h2>
+<p>EdgeRouter X-SFP does not accelerate traffic over tunnels. Due to this, speeds are currently limited to around 400Mbps to exit node.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="supernode-4"><a class="header" href="#supernode-4">Supernode 4</a></h1>
+<p><img src="network/images/supernode4-view.jpg" alt="view from the roof of supernode 4 building" /></p>
+<p>Supernode 4 is located on top of 4000 Lawrence Ave, Toronto, alongside Cisco-deployed infrastructure belonging to the City of Toronto.</p>
+<h2 id="network-2"><a class="header" href="#network-2">Network</a></h2>
+<p>The supernode consists of 4 antennas and a router. The router is connected to the Cisco switch. The switch is connected via a city owned bridged Power Beam to 3434 Eglington Ave West that offers internet access for use as a gateway path.</p>
+<p>The router acts as a Babel routing device. The antennas are configured in bridge mode.</p>
+<p><img src="network/images/supernode4-network-layout.png" alt="network map of the antennas and routers for supernode4" /></p>
+<h2 id="hardware-1"><a class="header" href="#hardware-1">Hardware</a></h2>
+<h3 id="antenna-1-2-and-point-to-point-antenna-1"><a class="header" href="#antenna-1-2-and-point-to-point-antenna-1">Antenna 1, 2 and Point to Point Antenna 1</a></h3>
+<p>Antenna 1 and 2 are <a href="https://www.ui.com/airmax/liteap-ac/">Ubiquiti LAP-120</a> mounted on the north arm of the building, on the west side of the roof. Antenna 1 is facing south-west. Antenna 2 if facing north.</p>
+<p>Point to Point Antenna 1 is a <a href="https://www.ui.com/airmax/powerbeam-ac-gen2/">Ubiquiti PowerBeam AC Gen2</a> mounted on the north arm of the building, on the west side of the roof. The antenna is facing south-west pointing to 25 Cougar in Supernode 3.</p>
+<p><img src="network/images/supernode4-hardware-antenna1-2and4.jpg" alt="non-penetrating mount with antennas attached to it" /></p>
+<h3 id="antenna-3"><a class="header" href="#antenna-3">Antenna 3</a></h3>
+<p>Antenna 3 is a <a href="https://www.ui.com/airmax/liteap-ac/">Ubiquiti LAP-120</a> mounted on the south-east arm of the building, colocated with Cisco on their mount. The antenna if facing south-east.</p>
+<p><img src="network/images/supernode4-hardware-antenna3.jpg" alt="non-penetrating mount with antennas attached to it" /></p>
+<h3 id="router-1-1"><a class="header" href="#router-1-1">Router 1</a></h3>
+<p>Router 1 is a <a href="https://www.ui.com/edgemax/edgerouter-x-sfp/">Ubiquiti EdgeRouter X-SFP</a> mounted inside the Cisco cabinet inside the main room on the roof. It is connected to the exit node over a L2TP tunnel using UDP.</p>
+<p>Router is configured with a static IP and only routes to the exit node and a secondary VPS server. The secondary VPS is used to provide an OpenVPN tunnel for secure remote management of the device.</p>
+<p><img src="network/images/supernode4-hardware-cabinet1.jpg" alt="cabinet with router and other networking gear" /></p>
+<h2 id="physical-environment-1"><a class="header" href="#physical-environment-1">Physical Environment</a></h2>
+<p>The roof is accessible by using the stairs located on the east end of the building. </p>
+<p>The router is installed in a white NEMA cabinet, located on the left wall of the roof top room. This room is accessible only from the roof across the walkway from the roof entrance.</p>
+<p>Network cables are run through a hole in the south and north walls.</p>
+<h2 id="additional-notes-1"><a class="header" href="#additional-notes-1">Additional Notes</a></h2>
+<ul>
+<li>EdgeRouter X-SFP does not accelerate traffic over tunnels. Due to this, speeds are currently limited to around 400Mbps to exit node.</li>
+<li>Layer 2 point to point link over city owned power beam provides gateway exit traffic from 3434 Eglington ave.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exit-node-configuration"><a class="header" href="#exit-node-configuration">Exit Node Configuration</a></h1>
+<p><em>Note: This is an advanced topic. If you are not familiar with the concepts in this document, please familiarize yourself with them first before proceeding.</em></p>
+<p>Instructions are for installing an exit node on the Debian 10 operating system. </p>
+<h2 id="babeld-installation"><a class="header" href="#babeld-installation">Babeld Installation</a></h2>
+<p>Install the latest version of babeld on the node. The latest version can be found currently at 
+https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/</p>
+<h3 id="redistribute-default-gateway"><a class="header" href="#redistribute-default-gateway">Redistribute default gateway</a></h3>
+<p>Redistribute the default gateway to network, and prevent other exit node announcements from being accepted.</p>
+<p>Create or append to the <code>/etc/babeld.conf</code> file</p>
+<pre><code>redistribute ip ::/0 le 64 metric 256
+redistribute ip 0.0.0.0/0 le 24 metric 256
+in ip 0.0.0.0/0 le 0 deny
+in ip ::/0 le 0 deny
+
+</code></pre>
+<h2 id="enable-nat"><a class="header" href="#enable-nat">Enable NAT</a></h2>
+<p>Create <code>/etc/rc.local</code> and <code>chmod +x</code> it</p>
+<p>Add the following content to the file</p>
+<pre><code class="language-bash">#!/bin/bash
+ip6tables -t nat -F POSTROUTING
+iptables -t nat -F POSTROUTING
+ip6tables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+exit 0
+</code></pre>
+<h2 id="l2tp-tunnels"><a class="header" href="#l2tp-tunnels">L2TP tunnels</a></h2>
+<p>Layer 2 tunneling protocol is used to allow gateways to connect over the internet to the exit node.</p>
+<p>Server side scripts that support DDNS can be found in the <a href="https://github.com/tomeshnet/toronto-community-network/tree/master/network/scripts/l2tp-tunnel-endpoint">toronto-community-network</a> repository.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="babel"><a class="header" href="#babel">Babel</a></h1>
+<p><a href="https://www.irif.fr/%7Ejch/software/babel/">Babel</a> is a loop-avoiding distance-vector routing protocol. It does link cost estimation and redistribution of routes from other routing protocols. </p>
+<p>The network uses the <a href="https://github.com/jech/babeld">reference implementation</a> of Babel called babeld. Updated packages for Debian can be found at the Toronto Mesh <a href="https://repo.tomesh.net/repos/apt/debian/pool/main/b/babeld/">Debian repository</a>. These packages are compiled from source and packaged using scripts in the <a href="https://github.com/tomeshnet/mesh-packages/tree/master/packages/babeld">mesh-packages</a> GitHub repository.</p>
+<p>The package for the EdgeRouter X/SFP with UI support is managed by Toronto Mesh and can be found at https://github.com/tomeshnet/RouterX-Babeld-Package.</p>
+<p>Prototype babeld configuration can be generated at http://node2.e-mesh.net/CONF/ for both OpenWRT and Linux.</p>
+<h2 id="when-is-babel-needed"><a class="header" href="#when-is-babel-needed">When is Babel needed?</a></h2>
+<p>Babel is only required when your node routes IPs or a subnet that was not provided by a remote node.</p>
+<h2 id="babeld-console"><a class="header" href="#babeld-console">Babeld console</a></h2>
+<p>Depending what port the service started on (<code>local-port</code> or <code>-G</code> options) you can access babeld's console using on of the following (assuming 999 is the port).</p>
+<ul>
+<li><code>nc :: 999</code></li>
+<li><code>telnet :: 999</code></li>
+</ul>
+<p>Note that some versions of <code>nc</code> do not support IPv6 so that command will not work.</p>
+<h3 id="dump-command"><a class="header" href="#dump-command">Dump Command</a></h3>
+<p>The command <code>dump</code> in the console will list all the currently known data points of babeld.</p>
+<pre><code>add interface &lt;INT&gt; up true ipv6 &lt;IPv6&gt; ipv4 &lt;IPv4&gt;
+</code></pre>
+<p>Indicates that the interfaces <code>&lt;INT&gt;</code> will be used to find other babeld nodes. <code>&lt;IPv6&gt;</code> and <code>&lt;IPv4&gt;</code> are required for routing traffic through the nodes. If one is missing check your interface configuration.</p>
+<p><code>add interface &lt;INT&gt; up false</code><br />
+Indicates the interfaces is assigned to babeld, but are currently not functional (cable not plugged in, or simply down)/</p>
+<pre><code>add neighbour f3ecb0 address &lt;IPv6&gt; if &lt;INT&gt; reach ffff ureach 0000 rxcost 96 txcost 96 cost
+</code></pre>
+<p>Indicates nodes found directly connected to babeld. <code>&lt;IPv6&gt;</code> is the local link IP found on the remote node,  <code>&lt;INT&gt;</code> is the interface this link was found on. The combination of the two (<code>&lt;IPv6&gt;%&lt;INT&gt;</code>) is used to access the link.</p>
+<p><code>add xroute...metric 256</code><br />
+Indicates the routes babeld is announcing from its routing table. <code>metric 256</code> is the cost that it is announced as.</p>
+<p><code>add route ...</code><br />
+Indicates routes that babeld has learned about in the network. <code>installed yes</code> or <code>installed no</code> indicates if this route is actively being used by being installed in the node's route table. Make note of <code>metric</code> numbers as they inform if the link will be used or not.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hardware-2"><a class="header" href="#hardware-2">Hardware</a></h1>
+<p>This section documents the hardware used and tested for the network.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hardware-benchmark"><a class="header" href="#hardware-benchmark">Hardware Benchmark</a></h1>
+<h2 id="lab-setup"><a class="header" href="#lab-setup">Lab setup</a></h2>
+<p><code>Device</code> Device being tested</p>
+<p><code>Endpoint1</code>, <code>Endpoint2</code> Devices not limited by CPU or network.</p>
+<p><img src="hardware/images/hardware-benchmark-network.jpg" alt="Network diagram of device, endpoint1, and endpoint2. Both endpoints are connected to the device but not to each-other." /></p>
+<p>Instructions below are non-persistent. When device is restarted changes will be removed. <code>wireguard</code> package must be installed.</p>
+<h3 id="device-lab-configuration"><a class="header" href="#device-lab-configuration">Device Lab Configuration</a></h3>
+<h4 id="configure-interfaces"><a class="header" href="#configure-interfaces">Configure interfaces</a></h4>
+<p>Configure the IP addresses on each interface</p>
+<p><code>eth0</code> Interface on device connected to <code>Endpoint 1</code></p>
+<p><code>eth1</code> Interface on device connected to <code>Endpoint 2</code></p>
+<p>If the device has only one port, see Appendix A - Single Port Router to split the single port into two VLANs.</p>
+<pre><code>ifconfig eth0 NETMASK 255.255.255.0
+ifconfig eth0 192.168.1.1 up
+
+ifconfig eth1 NETMASK 255.255.255.0
+ifconfig eth1 192.168.2.1 up
+</code></pre>
+<p><em>Note: You can add other IP addresses to an interface by using the <code>ethx:x</code> notation such as <code>eth0:1</code>.  This can be used to add your home IP address alongside the lab's IP address and share the same switch</em></p>
+<p><em>For example <code>ifconfig eth0:1 192.168.10.1</code></em></p>
+<h4 id="enable-routing"><a class="header" href="#enable-routing">Enable Routing</a></h4>
+<p>Most Linux distributions have routing disable. Enable it.</p>
+<p><code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code></p>
+<h4 id="wireguard"><a class="header" href="#wireguard">WireGuard</a></h4>
+<p>Configure a WireGuard server. Create a configuration file <code>wg0.conf</code> containing a private/public key.</p>
+<p><em>NOTE: Do not use these keys in production!</em></p>
+<pre><code>cat &lt;&lt;&quot;EOF&quot;&gt; wg0.conf
+[Interface]
+PrivateKey = 4LMdS6DPRe5gHcmMWYhZqlM9PzFTEeDz0kz0YIMCPm0=
+ListenPort = 1000
+
+[Peer]
+PublicKey = //C9KkNgCgT/0+bIb6YMS558xNx6wJOwAuGbqO8CGlI=
+AllowedIPs = 0.0.0.0/0
+AllowedIPs = ::/0
+EOF
+</code></pre>
+<p>Bring up the <code>wg0</code> interface using above configuration</p>
+<pre><code>ifconfig wg0 down
+ip link del dev wg0
+ip link add dev wg0 type wireguard
+wg setconf wg0 wg0.conf
+ip addr add 10.254.254.1/24 dev wg0
+ifconfig wg0 up
+</code></pre>
+<h3 id="endpoint1-lab-configuration"><a class="header" href="#endpoint1-lab-configuration">Endpoint1 Lab Configuration</a></h3>
+<h4 id="configure-interfaces-1"><a class="header" href="#configure-interfaces-1">Configure interfaces</a></h4>
+<p>Configure the IP addresses the interface. Make the default route the <code>Device</code>.</p>
+<p><code>eth0</code> Interface on device connected to <code>Device</code></p>
+<pre><code>ifconfig eth0 NETMASK 255.255.255.0
+ifconfig eth0 192.168.1.2 up
+ip route add 0.0.0.0/0 via 192.168.1.1
+</code></pre>
+<h4 id="wireguard-1"><a class="header" href="#wireguard-1">WireGuard</a></h4>
+<p>Configure a WireGuard client. Create a configuration file <code>wg0.conf</code> containing a private/public key.</p>
+<p><em>NOTE: Do not use these keys in production!</em></p>
+<pre><code>cat &lt;&lt;&quot;EOF&quot;&gt; wg0.conf
+[Interface]
+PrivateKey = cFP6gBOZrvqlt/XkdT7Cp6HOLuNMYa6yVNcCR+e9IEw=
+ListenPort = 1000
+
+[Peer]
+PublicKey = 1510YjIH8EfQtJ2zxEEUb5+1B4HqmIv86pwpkJwNOW4=
+AllowedIPs = 0.0.0.0/0
+AllowedIPs = ::/0
+Endpoint = 192.168.1.2:1000
+EOF
+</code></pre>
+<p>Bring up the <code>wg0</code> interface using above configuration.</p>
+<pre><code>ifconfig wg0 down
+ip link del dev wg0
+ip link add dev wg0 type wireguard
+wg setconf wg0 wg0.conf
+ip addr add 10.254.254.2/24 dev wg0
+ifconfig wg0 up
+</code></pre>
+<h3 id="endpoint2-lab-configuration"><a class="header" href="#endpoint2-lab-configuration">Endpoint2 Lab Configuration</a></h3>
+<h4 id="configure-interfaces-2"><a class="header" href="#configure-interfaces-2">Configure interfaces</a></h4>
+<p>Configure the IP addresses the interface. Make the default route the <code>Device</code>.</p>
+<p><code>eth0</code> Interface on device connected to <code>Device</code></p>
+<pre><code>ifconfig eth0 NETMASK 255.255.255.0
+ifconfig eth0 192.168.1.2 up
+ip route add 0.0.0.0/0 via 192.168.2.1
+</code></pre>
+<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
+<p><code>iperf3</code> package must be installed. During <code>iperf3</code> tests there are several things to remember:</p>
+<ul>
+<li>
+<p>iperf3, when run on device with low CPU resources, can consume CPU power to generate packets. Speed when transmitting will be slower than when receiving since the CPU will be taxed more</p>
+<ul>
+<li>using the <code>--repeating-payload</code> flag can reduce the stress placed on the CPU by not generating random data to transmit</li>
+</ul>
+</li>
+<li>
+<p>CPU load can be seen by using the <code>top</code> command during the test</p>
+</li>
+<li>
+<p>Watching  <code>/proc/interrupts</code> can also show where CPU cycles are being spent</p>
+</li>
+<li>
+<p>Some devices have hardware offloading that can increase performance when routing through the device</p>
+</li>
+</ul>
+<h3 id="interface-speed"><a class="header" href="#interface-speed">Interface speed</a></h3>
+<p>This will test the interface speed between the <code>Device</code> and <code>Endpoint1</code>.</p>
+<p>On <code>Endpoint1</code>:</p>
+<p><code>iperf3 -s</code></p>
+<p>On <code>Device</code>:</p>
+<ul>
+<li>
+<p>Test Forward speed
+<code>iperf3 -c 192.168.1.2</code></p>
+</li>
+<li>
+<p>Test Reverse speed
+<code>iperf3 -c 192.168.1.2 -R</code></p>
+</li>
+</ul>
+<h3 id="wireguard-to-wireguard"><a class="header" href="#wireguard-to-wireguard">WireGuard to WireGuard</a></h3>
+<p>This will test the interface speed over WireGuard.</p>
+<p>On <code>Endpoint1</code>:</p>
+<p><code>iperf3 -s</code></p>
+<p>On <code>Device</code>:</p>
+<ul>
+<li>
+<p>Test Forward speed
+<code>iperf3 -c 10.254.254.2</code></p>
+</li>
+<li>
+<p>Test Reverse speed
+<code>iperf3 -c 10.254.254.2 -R</code></p>
+</li>
+</ul>
+<h3 id="endpoint2-through-device-to-endpoint1"><a class="header" href="#endpoint2-through-device-to-endpoint1">Endpoint2 through Device to Endpoint1</a></h3>
+<p>This test will show how well the <code>Device</code> can route packets between subnets.</p>
+<p>On <code>Endpoint1</code>:</p>
+<p><code>iperf3 -s</code></p>
+<p>On <code>Endpoint12</code>:</p>
+<ul>
+<li>
+<p>Test Forward speed
+<code>iperf3 -c 192.168.1.2</code></p>
+</li>
+<li>
+<p>Test Reverse speed
+<code>iperf3 -c 192.168.1.2 -R</code></p>
+</li>
+</ul>
+<h3 id="endpoint2-through-device-over-wg-to-endpoint1"><a class="header" href="#endpoint2-through-device-over-wg-to-endpoint1">Endpoint2 through Device over WG to Endpoint1</a></h3>
+<p>This test will show how well the <code>Device</code> can route packets between subnets while encrypting traffic over the <code>wg0</code> interface.</p>
+<p>An additional route needs to be added on Endpoint1 to send all packets back over wg0 when doing reverse test.</p>
+<p>On <code>Endpoint1</code>:</p>
+<p><code>ip route add 192.168.2.0/24 dev wg0</code>
+<code>iperf3 -s</code></p>
+<p>On <code>Endpoint2</code>:</p>
+<ul>
+<li>
+<p>Test Forward speed
+<code>iperf3 -c 10.254.254.2</code></p>
+</li>
+<li>
+<p>Test Reverse speed
+<code>iperf3 -c 10.254.254.2 -R</code></p>
+</li>
+</ul>
+<p>On Endpoint1 (once completed test):
+<code>ip route delete 192.168.2.0/24 dev wg0</code></p>
+<h2 id="appendix-a---single-port-router"><a class="header" href="#appendix-a---single-port-router">Appendix A - Single Port Router</a></h2>
+<p>If a device only has one port, routing can be accomplished using 2 VLANs and a switch. You may required to use <code>modprobe 8021q</code> to enable VLAN support.</p>
+<h3 id="device-vlan-configuration"><a class="header" href="#device-vlan-configuration">Device VLAN Configuration</a></h3>
+<p>Split the interface into two VLANs creating 2 interfaces called <code>eth0.10</code> and <code>eth0.11</code>.</p>
+<pre><code>apt-get install vlan
+vconfig add eth0 10
+vconfig add eth0 11
+</code></pre>
+<h3 id="switch-configuration"><a class="header" href="#switch-configuration">Switch Configuration</a></h3>
+<p>When a managed switch is used, port connected to the device should be configured as a <code>trunk</code> or <code>general</code> mode and VLAN 10 and 11 set as <code>tagged</code>. Two other ports on the switch should then be configured as access to VLAN 10 and VLAN 11 respectively. In this setup the VLAN is transparent to <code>Endpoint 1</code> and <code>Endpoint 2</code>.</p>
+<p>When an unmanaged switch is used, <code>Endpoint 1</code> and <code>Endpoint 2</code> must be configured to use access the VLAN directly.</p>
+<h3 id="endpoint-1-vlan-configuration"><a class="header" href="#endpoint-1-vlan-configuration">Endpoint 1 VLAN Configuration</a></h3>
+<pre><code>apt-get install vlan
+vconfig add eth0 10
+</code></pre>
+<h3 id="endpoint-2-vlan-configuration"><a class="header" href="#endpoint-2-vlan-configuration">Endpoint 2 VLAN Configuration</a></h3>
+<pre><code>apt-get install vlan
+vconfig add eth0 11
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="benchmark-results"><a class="header" href="#benchmark-results">Benchmark Results</a></h1>
+<h2 id="definitions"><a class="header" href="#definitions">Definitions</a></h2>
+<p><code>D2E</code> Device to Endpoint - Device connected to endpoint and <code>iperf3</code> between the two.</p>
+<p><code>E2E</code> Endpoint to Endpoint - Device connected to two endpoints on different subnets. <code>iperf3</code> between two endpoints through device.</p>
+<p><code>WG D2E</code> Device to Endpoint over WG - Device connected to endpoint with <code>wg</code> tunnel and <code>iperf3</code> over <code>wg</code>.</p>
+<p><code>WG E2E</code>  Endpoint to Endpoint over WG - Device connected to two endpoints on different subnets. <code>wg</code> between device and one endpoint. <code>iperf3</code> between two endpoints through device over WG</p>
+<p><code>L2TP D2E</code> Device to Endpoint over L2TP - Device connected to endpoint with L2TP tunnel and <code>iperf3</code> over L2TP.</p>
+<p><code>L2TP E2E</code>  Endpoint to Endpoint over L2TP - Device connected to two endpoints on different subnets. L2TP between device and one endpoint. <code>iperf3</code> between two endpoints through device over L2TP.</p>
+<h2 id="results"><a class="header" href="#results">Results</a></h2>
+<table><thead><tr><th>Devices</th><th>D2E</th><th>E2E</th><th>WG D2E</th><th>WG E2E</th><th>L2TP D2E</th><th>L2TP E2E</th></tr></thead><tbody>
+<tr><td>AtomicPi</td><td>923</td><td>837</td><td>895</td><td>665</td><td>767/863</td><td>798/705</td></tr>
+<tr><td>EdgerouteX</td><td>533/356</td><td>750/510</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>EdgerouteX FastPath</td><td>569/388</td><td>913/927</td><td>217/180</td><td>180/211</td><td>312/188</td><td>320/290</td></tr>
+<tr><td>EspressoBin</td><td>931</td><td>335/403</td><td>213/335</td><td></td><td></td><td></td></tr>
+<tr><td>OmniTik POE</td><td></td><td>900</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>PC Engines apu2c4</td><td>936</td><td></td><td>645</td><td></td><td></td><td></td></tr>
+<tr><td>Raspberry Pi 4B</td><td>950</td><td></td><td>770</td><td></td><td></td><td></td></tr>
+<tr><td>WRT1900ACV1</td><td>920</td><td>879</td><td>350/450</td><td>280/338</td><td></td><td></td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="edgerouter-x-and-edgerouter-x-sfp"><a class="header" href="#edgerouter-x-and-edgerouter-x-sfp">EdgeRouter X and EdgeRouter X-SFP</a></h1>
+<p><a href="https://www.ui.com/edgemax/edgerouter-x/">EdgeRouter X</a> and <a href="https://www.ui.com/edgemax/edgerouter-x-sfp/">EdgeRoute X-SFP</a> will be both identified in this document as ER-X. Document is written for Firmware 2.x.</p>
+<h2 id="device-specific-instructions"><a class="header" href="#device-specific-instructions">Device Specific Instructions</a></h2>
+<p>In shell to enter configuration mode, enter the command <code>configuration</code>.</p>
+<p>To apply the configuration use <code>commit</code> and then to save it permanently use <code>save</code>.</p>
+<p>Configurations can also be entered using the GUI found on port 80. Select <code>Config Tree</code> from menu. Tree is a hierarchical representation of the commands below. For example <code>set system hostname XXXX</code> would be <code>system</code> branch, <code>hostname</code> field, <code>XXX</code> would be the value.</p>
+<h2 id="configure-hostname"><a class="header" href="#configure-hostname">Configure Hostname</a></h2>
+<p><em>NOTE:  Hostname of device should follow the appropriate syntax defined in the TCN Standards</em></p>
+<pre><code>set system host-name SN1R1
+</code></pre>
+<h2 id="disable-analytic-reports"><a class="header" href="#disable-analytic-reports">Disable Analytic Reports</a></h2>
+<p>Disable sending crash reports to Ubiquiti</p>
+<pre><code>set system analytics-handler send-analytics-report false
+set system crash-handler send-crash-report false
+</code></pre>
+<h2 id="configured-dns-and-ntp-server"><a class="header" href="#configured-dns-and-ntp-server">Configured DNS and NTP Server</a></h2>
+<p>Configure Date,Time, DNS and NTP services required for basic operations of the ER-X.</p>
+<pre><code>set system time-zone America/Toronto
+
+set service dns forwarding name-server 10.10.10.10
+set service dns forwarding listen-on 53
+
+delete system ntp
+set system ntp
+set system ntp server 10.10.10.123 prefer
+set system ntp server 206.108.0.131
+set system ntp server 1.ubnt.pool.ntp.org
+set system ntp server 2.ubnt.pool.ntp.org
+set system ntp server 3.ubnt.pool.ntp.org
+set system ntp server 4.ubnt.pool.ntp.org
+</code></pre>
+<p>ER-X does not have an internal clock so if working offline you must set the date and time manually to something recent otherwise there will be issues with date related things like certificates.</p>
+<p><code>date --set=&quot;1 Jan 2021 18:00:00&quot;</code></p>
+<h2 id="enable-hardware-acceleration"><a class="header" href="#enable-hardware-acceleration">Enable Hardware Acceleration</a></h2>
+<pre><code>set system offload hwnat enable
+</code></pre>
+<h2 id="configure-ethernet-ports"><a class="header" href="#configure-ethernet-ports">Configure Ethernet Ports</a></h2>
+<p>Delete the default DHCP configuration on <code>eth1</code>.</p>
+<pre><code>delete interfaces ethernet eth1 address dhcp
+</code></pre>
+<p>Configure each port with a unique IPv4 and IPv6 IP address. Use a <code>/24</code> subnet for IPv4 and <code>/64</code> for IPv6.</p>
+<pre><code>set interfaces ethernet eth1 address 100.64.10.1/24
+set interfaces ethernet eth1 address fd54:4f4d:5348:400a::1/64
+</code></pre>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p><em>Note: eth0 should be configured independently since it is the port that is being used for configuration.</em></p>
+<pre><code>delete interfaces ethernet eth0
+delete interfaces ethernet eth1 address dhcp
+
+set interfaces ethernet eth0 address 192.168.2.254/24
+set interfaces ethernet eth1 address 100.64.10.1/24
+set interfaces ethernet eth1 address fd54:4f4d:5348:400a::1/64
+set interfaces ethernet eth2 address 100.64.11.1/24
+set interfaces ethernet eth2 address fd54:4f4d:5348:400b::1/64
+set interfaces ethernet eth3 address 100.64.12.1/24
+set interfaces ethernet eth3 address fd54:4f4d:5348:400c::1/64
+set interfaces ethernet eth4 address 100.64.13.1/24
+set interfaces ethernet eth4 address fd54:4f4d:5348:400d::1/64
+</code></pre>
+<h2 id="enable-poe"><a class="header" href="#enable-poe">Enable POE</a></h2>
+<p>Enable POE on the ports that will have an antenna attached to it. 
+<em>Note: Avoid plugging in any device not meant to receive passive POE while it is one to avoid damage to your device. This step can be defer until the antennas are ready for use</em></p>
+<p>Turn on POE on a port </p>
+<pre><code>set interfaces ethernet eth1 poe output 24v 
+</code></pre>
+<p>Turn off POE on a port</p>
+<pre><code>set interfaces ethernet eth1 poe output off
+</code></pre>
+<h2 id="add-dhcp-ipv4"><a class="header" href="#add-dhcp-ipv4">Add DHCP (IPv4)</a></h2>
+<p>Enable the DHCP server by setting <code>disabled</code> as false.</p>
+<pre><code>set service dhcp-server disabled false
+</code></pre>
+<p>Create a DHCP named definition. Use the IP network subnet as the name.</p>
+<pre><code>set service dhcp-server shared-network-name &lt;IPv4 Network&gt; subnet &lt;IPv4 Network&gt;/&lt;CIDR&gt;
+</code></pre>
+<p>Set as authoritative for the subnet
+<code>set service dhcp-server shared-network-name &lt;IPv4 Network&gt; authoritative enable</code></p>
+<p>The next series of command will be repeated per DHCP <code>shared-network-name</code> instance defined above. These commands should be prefixed with <code>set service dhcp-server shared-network-name &lt;IPv4 Network&gt; subnet &lt;IPv4 Network&gt;/&lt;CIDR&gt;</code> in place of  <code>...</code>.</p>
+<p>Define the default route that will be used.
+<code>... default-router xxxx.xxxx.xxxx.1</code></p>
+<p>Define the DNS server that will be used.
+<code>... dns-server 10.10.10.10</code> </p>
+<p>Define the NTP server that will be used
+<code>...ntp-server 10.10.10.123</code></p>
+<p>Define the domain suffix that will be used. The clients will attempt to add this to the end of any domain names that are used if not found. For example <code>sn1a1</code> will try to resolve <code>sn1a1.core.tcn.tomesh.net</code>
+<code>... domain-name core.tcn.tomesh.net</code></p>
+<p>Define the length of the lease in seconds.
+<code>... lease 600</code></p>
+<p>Define the first and last IP address that will be issued.
+<code>... start xxx.xxx.xxx.127 stop xxx.xxx.xxx.254</code></p>
+<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
+<pre><code>set service dhcp-server disabled false
+delete service dhcp-server shared-network-name
+set service dhcp-server shared-network-name 100.64.10.0 authoritative enable
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 default-router 100.64.10.1
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 dns-server 10.10.10.10
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 domain-name tcn.tomesh.net
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 ntp-server 10.10.10.123
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 lease 600
+set service dhcp-server shared-network-name 100.64.10.0 subnet 100.64.10.0/24 start 100.64.10.127 stop 100.64.10.254
+
+set service dhcp-server shared-network-name 100.64.11.0 authoritative enable
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 default-router 100.64.11.1
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 dns-server 10.10.10.10
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 domain-name tcn.tomesh.net
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 ntp-server 10.10.10.123
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 lease 600
+set service dhcp-server shared-network-name 100.64.11.0 subnet 100.64.11.0/24 start 100.64.11.127 stop 100.64.11.254
+
+set service dhcp-server shared-network-name 100.64.12.0 authoritative enable
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 default-router 100.64.12.1
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 dns-server 10.10.10.10
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 domain-name tcn.tomesh.net
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 ntp-server 10.10.10.123
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 lease 600
+set service dhcp-server shared-network-name 100.64.12.0 subnet 100.64.12.0/24 start 100.64.12.127 stop 100.64.12.254
+
+set service dhcp-server shared-network-name 100.64.13.0 authoritative enable
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 default-router 100.64.13.1
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 dns-server 10.10.10.10
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 domain-name tcn.tomesh.net
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 ntp-server 10.10.10.123
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 lease 600
+set service dhcp-server shared-network-name 100.64.13.0 subnet 100.64.13.0/24 start 100.64.13.127 stop 100.64.13.254
+</code></pre>
+<h2 id="l2tp-tunnel"><a class="header" href="#l2tp-tunnel">L2TP Tunnel</a></h2>
+<p>L2TP Tunnels is used to connect back to the an <a href="hardware/../network/exit-node.html">exit node</a>.</p>
+<p>All commands are prefixed with <code>set interfaces l2tpv3 l2tpeth0</code> where <code>l2tpeth0</code> is a numbered interface starting from 0.</p>
+<p>Between the exit node configuration and the client node the following values are filled:</p>
+<pre><code>- destination-port &lt;&gt; source-port
+- session-id &lt;&gt; peer-session-id
+- tunnel-id &lt;&gt; peer-tunnel-id
+- remote-ip &lt;&gt; local-ip
+</code></pre>
+<p><code>local-ip</code> must be an IP address defined on the router. This means if the device is behind a NAT, this will be a local IP, and not the public IP. Also, if the device is behind NAT, sometimes the <code>source-port</code> needs to be added to the router's port forward settings.</p>
+<p>Configure each port with a unique IPv4 and IPv6 address. Use a <code>/30</code> subnet for IPv4 and <code>/126</code> for IPv6. Check with the exit node you are using to confirm to the numbering selected.</p>
+<p>Please note that the target IP must be reachable before the config can be saved. This means if a workaround is being used, implement it first.</p>
+<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
+<pre><code>set interfaces l2tpv3 l2tpeth0 description &quot;To Exit Node NJ&quot;
+set interfaces l2tpv3 l2tpeth0 destination-port 5000
+set interfaces l2tpv3 l2tpeth0 local-ip 192.168.40.55
+set interfaces l2tpv3 l2tpeth0 mtu 1412
+set interfaces l2tpv3 l2tpeth0 peer-session-id 1000
+set interfaces l2tpv3 l2tpeth0 peer-tunnel-id 3000
+set interfaces l2tpv3 l2tpeth0 remote-ip 199.195.250.209
+set interfaces l2tpv3 l2tpeth0 session-id 2000
+set interfaces l2tpv3 l2tpeth0 source-port 6000
+set interfaces l2tpv3 l2tpeth0 tunnel-id 4000
+
+set interfaces l2tpv3 l2tpeth0 address 100.127.2.2/30
+set interfaces l2tpv3 l2tpeth0 address fd74:6f6d:7368:7f02::2/126
+</code></pre>
+<h2 id="babeld"><a class="header" href="#babeld">Babeld</a></h2>
+<p>Babeld does not come standard on ER-X.  Use the deb package located at https://github.com/tomeshnet/RouterX-Babeld-Package and install it using <code>dpkg -i</code> on the router. Review the instructions on <a href="https://github.com/tomeshnet/RouterX-Babeld-Package">the README</a> to allow package to survive firmware upgrades.</p>
+<p>All commands below must be prefixed with <code>set protocols babeld</code>.</p>
+<p><code>denydefault</code> and <code>denydefaultlocal</code> add a &quot;deny all&quot; rules to the end of the configuration. This prevents unwanted IPs from being announced such as the local IP address of the gateway network in case of a gateway.</p>
+<p><code>local-port</code> defines the port on the loopback address that will let you interact with babeld. Mainly used for debugging.</p>
+<p><code>interface ethX</code><br />
+Listen to babeld protocol on and peer with anything on this interface.</p>
+<pre><code>filter [name] action allow
+filter [name] if [if]
+filter [name] type redistribute
+</code></pre>
+<p>These 3 lines makeup a rule called <code>name</code>. This rules will allow redistribution of all IPs on the <code>if</code> interface.</p>
+<h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
+<pre><code>set protocols babeld local-port 999
+set protocols babeld denydefault true
+set protocols babeld denydefaultlocal true
+set protocols babeld interface l2tpeth0
+set protocols babeld interface eth1
+set protocols babeld interface eth2
+set protocols babeld interface eth3
+set protocols babeld interface eth4
+
+set protocols babeld filter eth1 action allow
+set protocols babeld filter eth1 if eth1
+set protocols babeld filter eth1 type redistribute
+
+set protocols babeld filter eth2 action allow
+set protocols babeld filter eth2 if eth2
+set protocols babeld filter eth2 type redistribute
+
+set protocols babeld filter eth3 action allow
+set protocols babeld filter eth3 if eth3
+set protocols babeld filter eth3 type redistribute
+
+
+set protocols babeld filter eth4 action allow
+set protocols babeld filter eth4 if eth4
+set protocols babeld filter eth4 type redistribute
+
+set protocols babeld filter l2tpeth0 action allow
+set protocols babeld filter l2tpeth0 if l2tpeth0
+set protocols babeld filter l2tpeth0 type redistribute
+</code></pre>
+<h2 id="ddns-for-l2tp-gateway-nodes"><a class="header" href="#ddns-for-l2tp-gateway-nodes">DDNS for L2TP Gateway Nodes</a></h2>
+<p>L2TP Tunnels require known static points <code>ip</code> addresses to connect to. Many internet providers provide dynamic <code>ip</code> addresses. Although <code>ip</code> addresses do not change often, if they do the connection to the mesh may be lost.</p>
+<p>To solve this issue <code>ddns</code> is used to update a hostname anytime the IP changes. Due to the way DNS works, there may be up to a 5 min delay in re-establishing the links. </p>
+<p>The <code>ddns</code> server that is being used is Hurricane Electric's <code>dns.he.net</code>. Hostname, login and password are set in the <code>dns.he.net</code> control panel and are unique per device. Access to DNS cannot be guaranteed when the link is down, IP addresses are resolved and hard coded.</p>
+<p>Example below is for <code>sn1r1</code>. </p>
+<p>Bypass default route pointing at the mesh exit node, and send traffic directly over the local internet connection for the two services.</p>
+<pre><code>set protocols static route 184.105.242.3/32 next-hop 192.168.2.1
+set protocols static route 184.105.242.4/32 next-hop 192.168.2.1
+</code></pre>
+<p>Configure the <code>ddns</code> service.</p>
+<pre><code>set service dns dynamic interface eth0 service dyndns host-name sn1r1.pub.tcn.tomesh.net
+set service dns dynamic interface eth0 service dyndns login sn1r1.pub.tcn.tomesh.net
+set service dns dynamic interface eth0 service dyndns password &lt;PASSWORD&gt;
+set service dns dynamic interface eth0 service dyndns server 184.105.242.3
+</code></pre>
+<p>By default <code>ddns</code> will use the IP address of <code>eth0</code> which will be the internal IP address. Configure <code>ddns</code> to use Hurricane Electric's <code>checkip.dns.he.net</code> get the public IP address.</p>
+<pre><code>set service dns dynamic interface eth0 web 184.105.242.4
+set service dns dynamic interface eth0 web-skip &quot;Your IP address is : &quot;
+</code></pre>
+<h2 id="gateway-loop-issues"><a class="header" href="#gateway-loop-issues">Gateway Loop Issues</a></h2>
+<p>The paradox of the gateway and routing babeld:</p>
+<ul>
+<li>DHCP provides the default route to exit to the Internet</li>
+<li>Tunnel is established by using the default route</li>
+<li>Babeld receives the IP address from the neighbour on the other side of the tunnel</li>
+<li>The default route gets replaced with the exit node</li>
+<li>All Internet traffic is rerouted through the tunnel</li>
+<li>Since the tunnel uses Internet traffic it is also rerouted</li>
+<li>Tunnel collapses, since it is now feeding into itself</li>
+</ul>
+<h3 id="workaround-1---static-iproute"><a class="header" href="#workaround-1---static-iproute">Workaround 1 - Static IP/Route</a></h3>
+<p><strong>Description</strong>
+The default route to the internet is removed, and a static route for the destination IP Addresses created.</p>
+<p><strong>Pro</strong></p>
+<ul>
+<li>Easy to understand</li>
+<li>Easy to implement</li>
+<li>Access to mesh from local device</li>
+<li>Cannot use DHCP for LAN configuration (Must be static)</li>
+</ul>
+<p><strong>Con</strong></p>
+<ul>
+<li>When mesh is offline, only manually routed IP addresses are available</li>
+<li>Manually routed IP Addresses always exit out the local internet and not will not be available from the mesh if routing passes through device</li>
+</ul>
+<p>*<em>Process</em></p>
+<ul>
+<li>Define static IP on <code>ETH0</code> (WAN facing port)</li>
+<li>Remove default gateway</li>
+<li>Create route out to the gateway for only the exit node</li>
+</ul>
+<pre><code>delete interfaces ethernet eth0
+set interfaces ethernet eth0 address 192.168.2.254/24
+
+delete protocols static route 0.0.0.0/0
+set protocols static route 199.195.250.209/32 next-hop 192.168.2.1
+</code></pre>
+<h3 id="workaround-2---route-tables"><a class="header" href="#workaround-2---route-tables">Workaround 2 - Route Tables</a></h3>
+<p><strong>Description</strong></p>
+<p>Multiple route tables are used to store the two networks. Local internet's default route (0.0.0.0) remains in the global route table. Babeld is instructed to place all the installed routes into a new separate routing table including the mesh's default route. A rule is used to route all packets coming in from mesh facing interfaces through this new route table. Routes for the local node's IP addresses are added manually since Babeld will not install these. Rules and routes must be installed in both the IPv4 and IPv6 stacks.</p>
+<p><strong>Pro</strong></p>
+<ul>
+<li>Static routes to the Internet are not required</li>
+<li>Access to Internet form local node is available when mesh is not online</li>
+<li>Does not break routing for individual IP addresses</li>
+</ul>
+<p><strong>Con</strong></p>
+<ul>
+<li>Harder to understand</li>
+<li>Harder to setup</li>
+<li>No way to access mesh network from local device</li>
+</ul>
+<p><strong>Process</strong></p>
+<p>Configure Babeld to place all mesh routes into separate route table.</p>
+<pre><code>set protocols babeld export-table 10
+</code></pre>
+<p>Create a  shell script at <code>/config/scripts/post-config.d/mesh.sh</code> and mark it executable </p>
+<pre><code>echo &quot;#!/bin/bash&quot; &gt;  /config/scripts/post-config.d/mesh.sh
+chmod +x /config/scripts/post-config.d/mesh.sh
+</code></pre>
+<p>Populate the script with the following for each interface that Babeld will route though. <code>-6</code> indicates it is an IPv6 address.</p>
+<pre><code>ip [-6] rule add iif &lt;INT&gt; table 10
+</code></pre>
+<p>Configure interface based routes in table 10 for each interface and IP that the above interfaces are responsible for. </p>
+<pre><code>set protocols static table 10 interface-route &lt;IPv4&gt;/&lt;CDIR&gt; next-hop-interface &lt;INT&gt;
+set protocols static table 10 interface-route6 &lt;IPv6&gt;/&lt;CDIR&gt; next-hop-interface &lt;INT&gt;
+</code></pre>
+<p><em>Reference: The above configuration lines are the equivalent of <code>ip [-6] route add &lt;IPv4&gt;/&lt;CDIR&gt; dev &lt;INT&gt; table 10</code></em></p>
+<h4 id="example-4"><a class="header" href="#example-4">Example</a></h4>
+<p>Create <code>/config/scripts/post-config.d/mesh.sh</code></p>
+<pre><code>#!/bin/sh
+ip rule add iif eth4 table 10
+ip -6 rule add iif eth4 table 10
+ip rule add iif l2tpeth63 table 10
+ip -6 rule add iif l2tpeth63 table 10
+</code></pre>
+<p>Configuration</p>
+<pre><code>set protocols babeld export-table 10
+set protocols static table 10 interface-route 100.64.20.0/24 next-hop-interface eth4
+set protocols static table 10 interface-route fd54:4f00::/24 next-hop-interface eth4
+set protocols static table 10 interface-route 100.127.2.252/30 next-hop-interface l2tpeth63
+set protocols static table 10 interface-route fd74:6f6d:7368:7f02::fc/126 next-hop-interface l2tpeth63
+</code></pre>
+<h2 id="openvpn---management-tunnel"><a class="header" href="#openvpn---management-tunnel">OpenVPN - Management Tunnel</a></h2>
+<p>OpenVPN is used to set up a management tunnel to allow an alternative means of accessing the router from outside of the mesh network, in case the mesh fails.</p>
+<p>For OpenVPN to work correctly it must have the correct date time. Before the device establishes a connection to the mesh for the first time the date/time may be incorrect. To configure the date/time manually:</p>
+<pre><code>date -s `2020-11-11 12:00:00`
+</code></pre>
+<p>Write certificates (provided by OpenVPN server). For example:</p>
+<pre><code>cat &lt;&lt;&quot;EOF&quot;&gt;/config/auth/VPN1.crt
+-----BEGIN CERTIFICATE-----
+[REDACTED]
+-----END CERTIFICATE-----
+EOF
+cat &lt;&lt;&quot;EOF&quot;&gt;/config/auth/VPN1.key
+-----BEGIN PRIVATE KEY-----
+[REDACTED]
+-----END PRIVATE KEY-----
+EOF
+cat &lt;&lt;&quot;EOF&quot;&gt; /config/auth/ca.crt
+-----BEGIN CERTIFICATE-----
+MIIEszCCA5ugAwIBAgIJAIiwPYS5mr9AMA0GCSqGSIb3DQEBCwUAMIGXMQswCQYD
+VQQGEwJDQTELMAkGA1UECBMCT04xEDAOBgNVBAcTB1Rvcm9udG8xFTATBgNVBAoT
+DFRvcm9udG8gTWVzaDEPMA0GA1UECxMGdG9tZXNoMQ8wDQYDVQQDEwZ0b21lc2gx
+DzANBgNVBCkTBnRvbWVzaDEfMB0GCSqGSIb3DQEJARYQaGVsbG9AdG9tZXNoLm5l
+dDAeFw0yMDA3MjAyMDEwNTNaFw0zMDA3MTgyMDEwNTNaMIGXMQswCQYDVQQGEwJD
+QTELMAkGA1UECBMCT04xEDAOBgNVBAcTB1Rvcm9udG8xFTATBgNVBAoTDFRvcm9u
+dG8gTWVzaDEPMA0GA1UECxMGdG9tZXNoMQ8wDQYDVQQDEwZ0b21lc2gxDzANBgNV
+BCkTBnRvbWVzaDEfMB0GCSqGSIb3DQEJARYQaGVsbG9AdG9tZXNoLm5ldDCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMkWwPiHTd9T1a82HXAJao771ZRJ
+1438yx6Ovm8mt+Z6MZ0r87BZ/pQ1TjcAgPNoV2TfnXkj8I1x2hoOub/EUu+WAYtf
+54Ozjse1nUEiXB8WHNTh1VsYqcDlna16Js9/jcK+WkQvolf9bHZgwzJxqV62Yt+P
+0pFPoIFsU4otdNCBKHmPF3UvEhq7Xa+BY3mtfFf6AIz/cjuS4sODz/jiNV9FfEbg
+0aW6/NOuM/TbUy7Cu3ubuf5ESMnI20jEBhln+ksCkzqLANegdMRp8d7WZxYkvdgb
+CYX9hRL83hQe2jhwijYw0DXvR5CqUwJXg8ERuRoxtpoNx00nuuk2dVY3gwUCAwEA
+AaOB/zCB/DAdBgNVHQ4EFgQUzuAyZEfBiPvL7oHQWAfkfMOC8O0wgcwGA1UdIwSB
+xDCBwYAUzuAyZEfBiPvL7oHQWAfkfMOC8O2hgZ2kgZowgZcxCzAJBgNVBAYTAkNB
+MQswCQYDVQQIEwJPTjEQMA4GA1UEBxMHVG9yb250bzEVMBMGA1UEChMMVG9yb250
+byBNZXNoMQ8wDQYDVQQLEwZ0b21lc2gxDzANBgNVBAMTBnRvbWVzaDEPMA0GA1UE
+KRMGdG9tZXNoMR8wHQYJKoZIhvcNAQkBFhBoZWxsb0B0b21lc2gubmV0ggkAiLA9
+hLmav0AwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAjdLedME06tE3
+WZgZlA20TdlMThdV67hkKBZbGUhlIqJuaykSi2Fp8zVg5CxgGNOp5GJRQ2z1rMtr
+dPSIV6lYxfFgGTqfBRyw4dMyfDxA2XO3mMlTJzVNYcE1zXJp75ZpLxUEhcPNllYa
+l481UxG2SQdQh9UPrtKJxf3KSTvRJufzxrh6i3iPmZRzLhPt7Vc+aCYjUFq+EJ/z
+q1ACKn0pA8H3YbbdhA/RPQh3CRKiuE4kdq3BP4YYjW8xysrEU3TKfXHz4BY1OTPl
+JxRDuteL3nTPh22VfcY/j6OeVtGKg+BGJv4xRDEb0a0xx58Ki+9R6TPotNuHYj1L
+clmLw8d8Ew==
+-----END CERTIFICATE-----
+EOF
+</code></pre>
+<p>Configure OpenVPN tunnel named vtun99. </p>
+<pre><code>set interfaces openvpn vtun99 mode client
+set interfaces openvpn vtun99 protocol udp
+set interfaces openvpn vtun99 remote-host 198.98.49.249
+set interfaces openvpn vtun99 remote-port 4141
+set interfaces openvpn vtun99 tls ca-cert-file /config/auth/ca.crt
+set interfaces openvpn vtun99 tls cert-file /config/auth/VPN1.crt
+set interfaces openvpn vtun99 tls key-file /config/auth/VPN1.key
+</code></pre>
+<p>If needed for the babeld workaround 2, a static route can be defined:</p>
+<pre><code>set protocols static route 198.98.49.249/32 next-hop 192.168.2.1
+</code></pre>
+<h1 id="appendix-a---babeld---cross-compile"><a class="header" href="#appendix-a---babeld---cross-compile">Appendix A - Babeld - Cross-Compile</a></h1>
+<p>Babeld can be cross compiled to work on ER-X as follows:</p>
+<pre><code>sudo apt-get install gcc-mipsel-linux-gnu
+git clone git://github.com/jech/babeld.git
+cd babeld
+make CC='mipsel-linux-gnu-gcc -static'
+scp babeld admin@&lt;IPADDRESS&gt;:/tmp
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cpe---ubiquiti"><a class="header" href="#cpe---ubiquiti">CPE - Ubiquiti</a></h1>
+<p>This document covers setup for the following devices. Other devices may be similar.</p>
+<ul>
+<li><a href="https://www.ui.com/airmax/nanostation-ac/">Loco5AC</a></li>
+<li><a href="https://www.ui.com/airmax/litebeam-ac/">LBE‑5AC‑23</a></li>
+</ul>
+<h2 id="what-you-will-need"><a class="header" href="#what-you-will-need">What You Will Need</a></h2>
+<p>You will need to collect the following information:</p>
+<ul>
+<li>SSID of the supernode antenna you wish to connect to</li>
+<li>Your assigned node name</li>
+<li>Your assigned <code>IP Address</code>, <code>Netmask</code> and <code>Gateway</code></li>
+<li>A computer with WiFi for use with the <a href="hardware/cpe-ubiquiti.html#connect-using-the-management-radio">management radio</a> method or a computer with a network port for the <a href="hardware/cpe-ubiquiti.html#connection-using-an-ethernet-cable">ethernet cable</a> method.</li>
+</ul>
+<h2 id="connecting-to-the-cpe-for-the-first-time"><a class="header" href="#connecting-to-the-cpe-for-the-first-time">Connecting to the CPE for the First Time</a></h2>
+<h3 id="connect-using-the-management-radio"><a class="header" href="#connect-using-the-management-radio">Connect Using the Management Radio</a></h3>
+<p>Most devices come with a second <code>Management Radio</code> that is active for a short period of time after the device is powered on. While active it creates a wireless access point dedicated to configuration of the device. This access point can be used to connect a laptop or phone to it over Wi-Fi. The IP address of this interface static and will never change.</p>
+<ol>
+<li>Connect to the Management Radio access point of the device. It should be a combination of the name of the unit and the <code>MAC</code> address.</li>
+</ol>
+<p><img src="hardware/./images/hardware-cpe-management-wifi.jpg" alt="image" /></p>
+<p><strong>NOTE</strong> The Management Radio only is only on for a short period of time after boot. If the device cannot be found power cycle it by unplugging the device from the POE injector, wait 10 seconds, and plug it in again.</p>
+<ol start="2">
+<li>Once the WiFi connection is establish, open the browser and visit <code>https://192.168.172.1/</code></li>
+</ol>
+<h3 id="connect-using-an-ethernet-cable"><a class="header" href="#connect-using-an-ethernet-cable">Connect Using an Ethernet Cable</a></h3>
+<p>Device can be connected to using an Ethernet cable. This method requires the knowledge of the device's IP address. If the device has been previously configured, and the IP address is known, adjust the steps below accordingly. If the IP address is not known, a factory reset can be performed by pressing the reset button for 30 seconds. This will erase all settings on the device and set the default IP address of 192.168.1.20 again.</p>
+<ol>
+<li>
+<p>Plug a network cable into your computer and into the <code>Network</code> port of your <code>POE injector</code></p>
+</li>
+<li>
+<p>Configure your laptop's network interface to <code>192.168.1.50</code>.</p>
+</li>
+<li>
+<p>Open the browser and visit <code>https://192.168.1.20/</code></p>
+</li>
+</ol>
+<h3 id="first-time-configuration"><a class="header" href="#first-time-configuration">First Time Configuration</a></h3>
+<ol>
+<li>
+<p>If there is a warning about a certificate, process anyway.</p>
+<ul>
+<li>Firefox: Press Advanced, then <code>Accept the Risk and continue</code></li>
+<li>Chrome: Press Advanced, then <code>Proceed to xxx.xxx.xxx.xxx (unsafe)</code></li>
+</ul>
+</li>
+<li>
+<p>Select the country as <code>Canada</code></p>
+</li>
+<li>
+<p>Accept the user <code>EULA</code></p>
+</li>
+<li>
+<p>Click <code>Continue</code></p>
+</li>
+<li>
+<p>Choose Your username and password for the device. TCN Standard username is <code>tomesh</code></p>
+</li>
+</ol>
+<h3 id="configure-wireless"><a class="header" href="#configure-wireless">Configure Wireless</a></h3>
+<ol>
+<li>Select the <code>Wireless</code> icon from the left menu</li>
+</ol>
+<p><img src="hardware/./images/hardware-cpe-wireless-menu-item.jpg" alt="image" /></p>
+<ol start="2">
+<li>
+<p>Enter the remote antennas SSID under <code>SSID</code></p>
+</li>
+<li>
+<p>Enter the <code>WPA2 PRESHARED KEY</code>. TCN standard key is <code>torontocommunitynetwork</code></p>
+</li>
+</ol>
+<p><img src="hardware/./images/hardware-cpe-config-wireless.jpg" alt="image" /></p>
+<ol start="4">
+<li>Select <code>Save Changes</code></li>
+</ol>
+<h3 id="configure-network"><a class="header" href="#configure-network">Configure Network</a></h3>
+<ol>
+<li>Select the <code>Network</code> icon from the left menu</li>
+</ol>
+<p><img src="hardware/./images/hardware-cpe-network-menu-item.jpg" alt="image" /></p>
+<ol start="2">
+<li>
+<p>Set the <code>IP ADDRESS</code> to the address assigned to your node</p>
+</li>
+<li>
+<p>Set the <code>NETMASK</code> if needed. The default is <code>255.255.255.0</code> and used in most instances</p>
+</li>
+<li>
+<p>Enter the <code>GATEWAY</code> assigned to your node. Usually same as your <code>IP ADDRESS</code> but ending in <code>1</code></p>
+</li>
+<li>
+<p>Set the DNS to <code>10.10.10.10</code></p>
+</li>
+<li>
+<p>Set <code>IPV6</code> address to <code>STATIC</code></p>
+</li>
+<li>
+<p>Enter <code>IPV6 ADDRESS</code>, <code>IPV6 NETAMSK</code> and <code>IPV6 GATEWAY</code> to values provided. <code>IPV6 NETAMSK</code> is usually <code>64</code></p>
+</li>
+</ol>
+<p><img src="hardware/./images/hardware-cpe-config-network.jpg" alt="image" /></p>
+<ol start="8">
+<li>Select <code>Save Changes</code></li>
+</ol>
+<p><strong>NOTE</strong> If you are using a network cable method of connecting to the device, you will need to change your IP address of your computer to the same network as you entered in the <code>IP ADDRESS</code> field. Simply select a different at the end. For example, if your assigned IP address is <code>100.64.10.55</code> set your computer to <code>100.65.10.200</code>. You will have to use your browser to visit https://<code>YOUR ASSIGNED IP</code> for example <code>https://100.64.10.55</code></p>
+<h3 id="configure-system"><a class="header" href="#configure-system">Configure System</a></h3>
+<ol>
+<li>Select the <code>System</code> icon from the left menu</li>
+</ol>
+<p><img src="hardware/./images/hardware-cpe-system-menu-item.jpg" alt="image" /></p>
+<ol start="2">
+<li>
+<p>Set <code>DEVICE NAME</code> to your assigned node name</p>
+</li>
+<li>
+<p>Toggle <code>NTP CLIENT</code> on</p>
+</li>
+<li>
+<p>Set <code>NTP SERVER</code> to <code>10.10.10.123</code></p>
+</li>
+<li>
+<p>Set <code>TIMEZONE</code> to <code>(GMT -05.00) Eastern</code></p>
+</li>
+<li>
+<p>Toggle <code>READ-ONLY ACCOUNT</code> on</p>
+</li>
+<li>
+<p>Set <code>READ-ONLY ACCOUNT NAME</code> to <code>ubnt</code></p>
+</li>
+<li>
+<p>Click <code>CHANGE</code> next to <code>Change Read Only User Password</code> and set the password to <code>tomeshnet</code></p>
+</li>
+<li>
+<p>Fill out the location section.</p>
+</li>
+</ol>
+<p><img src="hardware/./images/hardware-cpe-config-system.jpg" alt="image" /></p>
+<ol start="10">
+<li>Select <code>Save Changes</code></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operations"><a class="header" href="#operations">Operations</a></h1>
+<p>This section documents the operational aspects of the project.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="working-groups"><a class="header" href="#working-groups">Working Groups</a></h1>
+<p>We use <a href="https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams">GitHub Teams</a> to manage membership of working groups and <a href="https://github.com/tomeshnet/toronto-community-network/projects/1">GitHub Projects</a> to track task status on a public project board.
+These are our current <a href="https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams">working groups</a>.</p>
+<h2 id="communications-and-community-engagement"><a class="header" href="#communications-and-community-engagement">Communications and Community Engagement</a></h2>
+<p>Connect with people living and working in the areas served by the network(s), inform people regarding intentions and activities of the community network and engage them in dialogue with a view to mutual learning and collaboration in advancing the value of the network and related opportunities in the community.</p>
+<table><thead><tr><th align="left">Spaces</th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">Meetings</td><td align="left">Sunday 3 PM ET weekly (<a href="https://calendar.google.com/calendar/embed?src=rtir6741jis1vovitm068jfob0%40group.calendar.google.com"><code>calendar</code></a> <a href="https://calendar.google.com/calendar/ical/rtir6741jis1vovitm068jfob0%40group.calendar.google.com/public/basic.ics"><code>iCal</code></a> <a href="https://www.when2meet.com/?9397727-snnPz"><code>time poll</code></a>)</td></tr>
+<tr><td align="left">Group Email</td><td align="left">communications@tomesh.net</td></tr>
+<tr><td align="left">Chat</td><td align="left"><a href="https://chat.tomesh.net/#/room/#communications:tomesh.net">#communications:tomesh.net</a></td></tr>
+<tr><td align="left">Tasks</td><td align="left"><a href="https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Acommunications"><code>communications</code></a> label</td></tr>
+<tr><td align="left">Membership</td><td align="left"><a href="https://github.com/orgs/tomeshnet/teams/communications-and-community-engagement">communications-and-community-engagement</a> team</td></tr>
+</tbody></table>
+<h2 id="network-planning-design-and-operations"><a class="header" href="#network-planning-design-and-operations">Network Planning, Design and Operations</a></h2>
+<p>Plan, design, implement and maintain a well-functioning community network.</p>
+<p><strong>NOTE</strong> Regular meetings for this working group have been suspended. If there is interest in restarting a regular meetup time please let us know. Otherwise please direct any questions to the Email or Chat below</p>
+<table><thead><tr><th align="left">Spaces</th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">Meetings</td><td align="left">Regular meetings suspended until further notice (<a href="https://calendar.google.com/calendar/embed?src=rtir6741jis1vovitm068jfob0%40group.calendar.google.com"><code>calendar</code></a> <a href="https://calendar.google.com/calendar/ical/rtir6741jis1vovitm068jfob0%40group.calendar.google.com/public/basic.ics"><code>iCal</code></a> <a href="https://www.when2meet.com/?9397732-hLOdX"><code>time poll</code></a>)</td></tr>
+<tr><td align="left">Group Email</td><td align="left">network@tomesh.net</td></tr>
+<tr><td align="left">Chat</td><td align="left"><a href="https://chat.tomesh.net/#/room/#network:tomesh.net">#network:tomesh.net</a></td></tr>
+<tr><td align="left">Tasks</td><td align="left"><a href="https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Anetwork"><code>network</code></a> label</td></tr>
+<tr><td align="left">Membership</td><td align="left"><a href="https://github.com/orgs/tomeshnet/teams/network-planning-design-and-operations">network-planning-design-and-operations</a> team</td></tr>
+</tbody></table>
+<h2 id="organizational-and-program-governance"><a class="header" href="#organizational-and-program-governance">Organizational and Program Governance</a></h2>
+<p>Develop administrative processes ensuring Toronto Mesh meets their commitments.
+Attend to assets and resources.
+Assist in integrating and synthesizing priorities, plans and schedules across different disciplines and activities to realize the mission of Toronto Mesh and the Toronto Community Network.
+Formalize relationships and agreements with and within the community network.</p>
+<table><thead><tr><th align="left">Spaces</th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">Meetings</td><td align="left">Monday 6 PM ET weekly (<a href="https://calendar.google.com/calendar/embed?src=rtir6741jis1vovitm068jfob0%40group.calendar.google.com"><code>calendar</code></a> <a href="https://calendar.google.com/calendar/ical/rtir6741jis1vovitm068jfob0%40group.calendar.google.com/public/basic.ics"><code>iCal</code></a> <a href="https://www.when2meet.com/?9397736-b9JNO"><code>time poll</code></a>)</td></tr>
+<tr><td align="left">Group Email</td><td align="left">governance@tomesh.net</td></tr>
+<tr><td align="left">Chat</td><td align="left"><a href="https://chat.tomesh.net/#/room/#governance:tomesh.net">#governance:tomesh.net</a></td></tr>
+<tr><td align="left">Tasks</td><td align="left"><a href="https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Agovernance"><code>governance</code></a> label</td></tr>
+<tr><td align="left">Membership</td><td align="left"><a href="https://github.com/orgs/tomeshnet/teams/organizational-and-program-governance">organizational-and-program-governance</a> team</td></tr>
+</tbody></table>
+<h2 id="project-operations"><a class="header" href="#project-operations">Project Operations</a></h2>
+<p>Assist in organizing and removing barriers to the completion of work - including projects involving production of a funding application, design and deployment of network equipment, convening of meetings and workshops, etc.</p>
+<table><thead><tr><th align="left">Spaces</th><th align="left"></th></tr></thead><tbody>
+<tr><td align="left">Meetings</td><td align="left">Saturday 12 PM ET biweekly (<a href="https://calendar.google.com/calendar/embed?src=rtir6741jis1vovitm068jfob0%40group.calendar.google.com"><code>calendar</code></a> <a href="https://calendar.google.com/calendar/ical/rtir6741jis1vovitm068jfob0%40group.calendar.google.com/public/basic.ics"><code>iCal</code></a> <a href="https://www.when2meet.com/?9397742-spOMQ"><code>time poll</code></a>)</td></tr>
+<tr><td align="left">Group Email</td><td align="left">operations@tomesh.net</td></tr>
+<tr><td align="left">Chat</td><td align="left"><a href="https://chat.tomesh.net/#/room/#operations:tomesh.net">#operations:tomesh.net</a></td></tr>
+<tr><td align="left">Tasks</td><td align="left"><a href="https://github.com/tomeshnet/toronto-community-network/projects/1?card_filter_query=label%3Aoperations"><code>operations</code></a> label</td></tr>
+<tr><td align="left">Membership</td><td align="left"><a href="https://github.com/orgs/tomeshnet/teams/project-operations">project-operations</a> team</td></tr>
+</tbody></table>
+<h2 id="get-involved"><a class="header" href="#get-involved">Get Involved</a></h2>
+<p>If you would like to join a working group and contribute to the <em>Toronto Community Network</em>, please email <code>hello@tomesh.net</code> to introduce yourself and indicate how you may like to participate.</p>
+<p>In order to do our best work together we have a <a href="https://tomesh.net/code-of-conduct/">Code of Conduct</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="learning-group"><a class="header" href="#learning-group">Learning Group</a></h1>
+<p>Toronto Community Network has established a learning group for us to develop deeper understanding about projects related to our community network.
+This group meets regularly with the <a href="operations/./working-groups.html#organizational-and-program-governance">Organizational and Program Governance Working Group</a> and you can find the meeting schedule on <a href="https://link.tomesh.net/calendar">our calendar</a>.</p>
+<h2 id="reading-list"><a class="header" href="#reading-list">Reading List</a></h2>
+<p>Please use the <em>notepad</em> associated with each reading to indicate your name once you have completed the reading, and to put your reflections and questions anonymously, so we can decide which readings are ready to be discussed when we meet.</p>
+<ol>
+<li>
+<p><a href="https://dsg.ac.upc.edu/sites/default/files/dsg/phd_roger.pdf">Development and management of collective network and cloud computing infrastructures</a>
+(<a href="https://hackmd.io/3rGGRcSgSRaAhquF9PkOIg?edit">notepad</a>, added 2020-08-29)</p>
+</li>
+<li>
+<p><a href="https://medium.com/decentralized-web/community-networks-adapt-to-new-realities-under-covid-a-dweb-meetup-recap-d9367f74735a">Community Networks Adapt to New Realities Under COVID: A DWeb Meetup Recap</a>: Zenzeleni Networks
+(<a href="https://hackmd.io/--Su1k0KQKWn7QjyMBOvwg?edit">notepad</a>, added 2020-08-29)</p>
+</li>
+<li>
+<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2608414">Constellations of Trust and Distrust in Internet Governance</a>
+(<a href="https://hackmd.io/KCegiKWDSmSdjHxMyPnVEw?edit">notepad</a>, added 2020-08-29)</p>
+</li>
+<li>
+<p><a href="https://evonomics.com/tragedy-of-the-commons-elinor-ostrom/">The Tragedy of the Commons: How Elinor Ostrom Solved One of Life’s Greatest Dilemmas</a>
+(<a href="https://hackmd.io/BO_Mt-W2S1KPb9nhW2VoXA?edit">notepad</a>, added 2020-09-09)</p>
+</li>
+<li>
+<p><a href="https://github.com/tomeshnet/documents/tree/master/tomesh_mission/2018">Toronto Mesh Mission</a> (added 2020-09-09)</p>
+</li>
+</ol>
+<p>Please add interesting articles <a href="https://hackmd.io/kgCejt3nQdOdFBals8exTg?edit">here</a> for the group to triage as future readings.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="legal"><a class="header" href="#legal">Legal</a></h1>
+<p>Toronto Mesh is a community organization <a href="https://tomesh.net/timeline/">established in 2016</a>, stewarded by a group of individual contributors and supported by many value-aligned organizations.
+It is not an independent legal entity.</p>
+<p>The Toronto Community Network is a project led by the Toronto Mesh community, and adopts a multi-stakeholder model to its project governance.
+Since neither Toronto Mesh or the Toronto Community Network has its own independent legal entity or bank accounts, it relies on trustees to provide fiscal administration capacity.</p>
+<p>It is necessary for Toronto Mesh or the Toronto Community Network to engage into contractual agreements to work with many institutional collaborators.
+Depending on the nature of the collaboration, our <a href="operations/./working-groups.html#organizational-and-program-governance">Organizational and Program Governance Working Group</a> will designate appropriate signatories to sign the agreement on behalf of Toronto Mesh or the Toronto Community Network on a case-by-case basis.</p>
+<p>We understand that some organizations can only work with legally registered entities.
+If a contract must be made with a legal entity, we suggest a contract covering a specific project scope be made with one of our institutional collaborators.
+This way, you can indirectly work with the Toronto Community Network through this institutional collaborator.
+It is important to note that this contract will not bind Toronto Mesh or the Toronto Community Network as a whole, as collaborators do not individually represent the entire multi-stakeholder project.</p>
+<h3 id="deciding-appropriate-signatories"><a class="header" href="#deciding-appropriate-signatories">Deciding Appropriate Signatories</a></h3>
+<p>TBD</p>
+<h2 id="collaborators-and-supporters"><a class="header" href="#collaborators-and-supporters">Collaborators and Supporters</a></h2>
+<div style="display:flex; flex-wrap:wrap; margin-top:-20px;">
+  <a href="https://www.freegeektoronto.org" target="_blank">
+    <img src="operations/images/logo-fgt.svg" alt="Free Geek Toronto logo" style="height:100px; margin-top:20px; margin-right:40px;">
+  </a>
+  <a href="https://hypha.coop" target="_blank">
+    <img src="operations/images/logo-hypha.svg" alt="HYPHA Worker Co-operative logo" style="height:100px; margin-top:20px; margin-right:40px;">
+  </a>
+  <a href="https://www.torontopubliclibrary.ca/" target="_blank">
+    <img src="operations/images/logo-tpl.svg" alt="Toronto Public Library logo" style="height:100px; padding-top:20px; margin-right:40px;">
+  </a>
+</div>
+<h2 id="licenses"><a class="header" href="#licenses">Licenses</a></h2>
+<p>Unless otherwise specified, Toronto Mesh <strong>code</strong> is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a>, <strong>content and documentation</strong> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike International 4.0 (CC BY-SA 4.0)</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="finances"><a class="header" href="#finances">Finances</a></h1>
+<p>The purpose of this document is to describe the financial status and processes of the Toronto Community Network.</p>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>The Toronto Community Network is a community project that current does not have its own independent legal entity or bank accounts, and relies on trustees to provide fiscal administration capacity.
+Aside from out-of-pocket spending from some of our members, our current financing comes from one single grant from the <a href="https://www.internetsociety.org">Internet Society</a> administering through <a href="https://www.freegeektoronto.org">Free Geek Toronto</a>.</p>
+<h2 id="internet-society-grant-for-supernodes-2020"><a class="header" href="#internet-society-grant-for-supernodes-2020">Internet Society Grant for Supernodes (2020)</a></h2>
+<p>Internet Society was involved in discussions since ideation phases of the Toronto Community Network, and that is reflected in our <a href="https://github.com/tomeshnet/toronto-community-network/blob/master/operations/published-documents/proposal-draft-v003.pdf">Proposal to Establish a Toronto Community Network</a>.
+This eventually led to a grant focused on deployment of high-capacity supernodes, which will establish an initial backbone from which to grow and sustain the Toronto Community Network.
+The initial supernodes span several major neighborhoods across the City of Toronto, selected and scheduled according to opportunities presented by the City of Toronto and our other collaborators through the <a href="https://newsroom.cisco.com/press-release-content?type=webcontent&amp;articleId=2095927">Digital Canopy project</a>.</p>
+<p>The grant totals CAD 13,525 with the following budget:</p>
+<ul>
+<li>$10,428.00 for hardware, covering 4 supernode deployments</li>
+<li>$1,744.50 for operational expenses, including data centre colocation and internet transit</li>
+<li>$1,352.00 for grant administration, a 10% fee retained by our fiscal host <a href="https://freegeektoronto.org">Free Geek Toronto</a></li>
+</ul>
+<p>The funds are payable to Free Geek Toronto in two installments, CAD 7,000 followed by CAD 6,525 upon completion of the milestone where 2 supernodes have been deployed.
+Toronto Mesh estimated a contribution of 1630 member hours of volunteer labour to the project.</p>
+<p>Toronto Mesh and Free Geek Toronto are expected to deliver 3 reports by the following dates:</p>
+<ul>
+<li>1st report: September 30, 2020</li>
+<li>2nd report: November 15, 2020</li>
+<li>Final report: January 31, 2020 (summarizing all the work done until December 31, 2020)</li>
+</ul>
+<p>Four core members of Toronto Mesh, who will serve as Administrators for this grant (explained below), have signed a Memorandum of Understanding (MoU) with Free Geek Toronto to formalize the fiscal hosting relationship.
+The full Internet Society Partnership Agreement and MoU are <a href="https://cloud.tomesh.net/apps/files/?dir=/tomeshnet-trusted/Internet%20Society/2020%20TCN%20ISOC%20Grant%20for%20Supernodes&amp;fileid=4935">archived on our trusted drive</a>, accessible only to core members due to confidentiality requirements from our partners.</p>
+<h3 id="administration"><a class="header" href="#administration">Administration</a></h3>
+<p>The first of two installments in the amount of CAD 7,000 is paid to Free Geek Toronto in September of 2020, and the balance of CAD 6,300 (after 10% of administrative fees) is to be distributed for the project according to the budget set out in the grant proposal.
+We have two-levels of approvals for fund allocations:</p>
+<ol>
+<li>
+<p>Four members of Toronto Mesh involved in the grant application are selected as Administrators, and will approve allocations according to whether an expense fits with the spirit of the grant objectives and its proposed budget.</p>
+</li>
+<li>
+<p>Free Geek Toronto will approve allocations according to the MoU, and they reserve the right to reject allocations that may put them in a position of legal liability due to violation of grant terms.</p>
+</li>
+</ol>
+<p>Expenses generally require pre-approval and receipt copies, <a href="https://cloud.tomesh.net/apps/files/?dir=/tomeshnet-trusted/Internet%20Society/2020%20TCN%20ISOC%20Grant%20for%20Supernodes&amp;fileid=4935">archive and tracked in a spreadsheet on our trusted drive</a>.</p>
+<p>In the course of administering the grant, Administrators may draft request for proposals (RFPs) or delegate budgets to working groups to allocate as they deem necessary.
+For example, the Administrators may allocate a budget for training and request for member applications, or delegate a small budget for the <em>Communications and Community Engagement</em> working group to spend on an event as they see fit.</p>
+<p>Hardware purchase makes up the bulk of the Internet Society grant budget.
+The <em>Network Planning, Design and Operations</em> working group will be responsible for making hardware procurement proposals using the following template, submitted as a pull request to <a href="https://github.com/tomeshnet/toronto-community-network/new/master/operations/hardware-budgets/">operations/hardware-budgets</a>:</p>
+<pre><code class="language-markdown"># YYYY-MM-DD Hardware Budget for Toronto Community Network
+
+## Purpose
+
+_What is the hardware for? If this is related to a particular deployment and require approval by a specific date, please mention it here._
+
+## Hardware List
+
+_A list of all hardware items and the prices from specific vendors we plan to order from._
+
+| Item   | Vendor   | Price | Currency | Quantity |
+|:-------|:---------|------:|---------:|---------:|
+| Item 1 | Vendor 1 |  0.00 |      CAD |        1 |
+| Item 2 | Vendor 2 |  0.00 |      USD |        1 |
+
+## Budget Requested
+
+_The Administrators acknowledge that final reimbursement amounts may differ due to unforeseen costs like duties and exchange rates. This should be a best-effort estimate in Canadian Dollars._
+
+| Budget    | Estimate (CAD) |
+|:----------|---------------:|
+| Hardware  |           0.00 |
+| Shipping  |           0.00 |
+| Duties    |           0.00 |
+| Taxes     |           0.00 |
+| **Total** |           0.00 |
+
+## Sign-off
+
+_The sign-off should include at least one experienced member in the Network working group._
+
+Members of Network Planning, Design and Operations:
+- Member 1
+- Member 2
+
+Grant Administrators:
+- Administrator 1
+- Administrator 2
+- Administrator 3
+- Administrator 4
+</code></pre>
+<p>For budget allocations above CAD 1,000, approval by 3 of 4 Administrators are needed. For amounts below that, only 2 of 4 approvals are necessary.
+The four Toronto Mesh Administrators are:
+<a href="https://github.com/yurkowashere">@yurkowashere</a>,
+<a href="https://github.com/TimTor">@TimTor</a>,
+<a href="https://github.com/Shrinks99">@Shrinks99</a>,
+and <a href="https://github.com/benhylau">@benhylau</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="data"><a class="header" href="#data">Data</a></h1>
+<p>Toronto Community Network operates on principles of transparency, so most of our work is conducted in public digital spaces.
+The exception to this rule is when managing with personal information and sensitive information of our supporters and collaborators.
+This document describes our policy is finding the balance between working openly and restrictive access to certain information.</p>
+<h2 id="document-management"><a class="header" href="#document-management">Document Management</a></h2>
+<p>We store our documents on two main platforms:</p>
+<ol>
+<li>Our Toronto Mesh <strong>GitHub</strong> hosts our <a href="https://github.com/tomeshnet/toronto-community-network/">main organizing repository</a> in addition other repositories for more specific content, like <a href="https://github.com/tomeshnet/node-list/">data about our community network nodes</a>.</li>
+<li>Our self-hosted <strong>Nextcloud</strong> drive contains two folders with different access levels:
+<ul>
+<li><a href="https://cloud.tomesh.net/f/480">tomeshnet</a> stores semi-public information. Any Toronto Mesh member gets full access.</li>
+<li><a href="https://cloud.tomesh.net/f/481">tomeshnet-trusted</a> stores sensitive information, such as contact lists containing personal information and collaborator contracts that are explicitly asked to be kept private. Only active members with more than one year of contribution in our working groups have access to this folder, and access shall be revoked when the member is no longer actively involved with the project. In special cases, access may be allowed to specific members with less history as contributor on an as-needed basis, by approval of the <a href="operations/./working-groups.html#organizational-and-program-governance">Organizational and Program Governance Working Group</a>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="communication-policy"><a class="header" href="#communication-policy">Communication Policy</a></h2>
+<p>In general, we copy email and other communication to a working group address, for reasons of transparency and information redundancy.
+However, there are times when we seek to contain communication to a small group (for example, engaging new prospective collaborators, handling Code of Conduct violations).
+In these instances, we seek to keep groups to at least 3 members--one as lead, two copied, and have these roles listed on our contact sheet.
+Here is our communication policy in order of preference:</p>
+<ol>
+<li>Copied to appropriate working group.</li>
+<li>Copied to two others.</li>
+<li>Temporarily individual, but move to high redundancy as soon as possible.</li>
+</ol>
+<h2 id="meeting-recording"><a class="header" href="#meeting-recording">Meeting Recording</a></h2>
+<p>In general, we do not record our meetings, but for workshops/interviews we have three options in order of preference:</p>
+<ol>
+<li><strong>Public recorded session</strong> with unrecorded discussion in the end (for example, publish on &quot;YouTube&quot;).</li>
+<li><strong>Private recorded session</strong> with unrecorded discussion in the end (for example, archive to our member Nextcloud).</li>
+<li><strong>Unrecorded session</strong>.</li>
+</ol>
+<p>This is a choice of the facilitator/presenter of the session.
+Where possible, we will publish to a platform with closed captioning for accessibility.</p>
+<p>In general, we have recorded sessions at <a href="https://link.tomesh.net/recorded">our recorded BigBlueButton room</a>, where a disclaimer is presented when someone enters the room.</p>
+<h2 id="network-data"><a class="header" href="#network-data">Network Data</a></h2>
+<p>TBD</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="managing-secrets"><a class="header" href="#managing-secrets">Managing Secrets</a></h1>
+<p>The purpose of this document is to provide information to contributors on how to store and view the Toronto Community Network's &quot;secrets&quot;, such as passwords, keys, credentials, and other information kept private for security reasons.</p>
+<h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
+<p>The Toronto Community Network uses <a href="https://bitwarden.com/">Bitwarden</a> to share and manage secrets across the organization. Bitwarden is a free and open-source password management service that stores sensitive information (such as website credentials) in an encrypted vault.</p>
+<p>Bitwarden supports the following clients:</p>
+<ul>
+<li>Desktop (Linux/macOS/Windows)</li>
+<li>Web Browser (Chrome/Safari/Firefox/Vivaldi/Opera/Brave/Edge/Tor Browser)</li>
+<li>Mobile (Android/iPhone)</li>
+<li>Command Line (via NPM)</li>
+</ul>
+<p>For more information about supported clients, see Bitwarden's <a href="https://bitwarden.com/download/">download options</a>.</p>
+<h2 id="accessing-secrets"><a class="header" href="#accessing-secrets">Accessing Secrets</a></h2>
+<p>The Toronto Community Network is using the self-hosted version of Bitwarden, and can be accessed at <a href="https://pass.tomesh.net">https://pass.tomesh.net</a>.</p>
+<p>For secrets to be shared, they must exist within the <a href="https://pass.tomesh.net/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault">Toronto Community Network organization</a>.</p>
+<p>When using the Bitwarden applications, please make sure to <a href="https://bitwarden.com/help/article/change-client-environment/#:%7E:text=On%20the%20home%20screen%20of,com%20for%20the%20Server%20URL">change the Server URL</a> in the Bitwarden settings to the <code>https://pass.tomesh.net</code>.</p>
+<h2 id="obtaining-access"><a class="header" href="#obtaining-access">Obtaining Access</a></h2>
+<p>Obtaining access to Bitwarden is a 4-step process.</p>
+<ol>
+<li>
+<p>Send an email to operations@tomesh.net with the following information:</p>
+<ul>
+<li>Your Name</li>
+<li>GitHub Handle</li>
+<li>Detailed description of your use case or requirement.</li>
+</ul>
+</li>
+<li>
+<p>A member of our Project Operations team will invite you to Bitwarden.</p>
+<ul>
+<li>Bitwarden will send you an email from tomeshnet@gmail.com</li>
+<li>Please make sure to whitelist the email address.</li>
+</ul>
+</li>
+<li>
+<p>Use the link in the invitation to create an account.</p>
+</li>
+<li>
+<p>After registration, Bitwarden requires us to confirm your account. Upon confirmation, you will have access to the organization.</p>
+</li>
+</ol>
+<p>We recommend that you setup <a href="https://bitwarden.com/help/article/setup-two-step-login/">two-factor authentication</a> on your account to increase the security of your account. </p>
+<h2 id="access-control"><a class="header" href="#access-control">Access Control</a></h2>
+<p>When storing credentials, you must store them within the <a href="https://pass.tomesh.net/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault">Toronto Community Network organization</a>. Bitwarden organizes secrets in groups called <a href="https://bitwarden.com/help/article/collections/">Collections</a> and within those Collections are four <a href="https://bitwarden.com/help/article/user-types-access-control/#user-types">User Types</a>: <em>User</em>, <em>Manager</em>, <em>Admin</em>, and <em>Owner</em>.</p>
+<p>In order to maintain integrity of the Toronto Community Network operations, most users will be granted only User or Manager access. The Project Operations team will determine your access based on your use case or requirements.</p>
+<h2 id="storing-secrets"><a class="header" href="#storing-secrets">Storing Secrets</a></h2>
+<p>All secrets must be attached to a <a href="https://bitwarden.com/help/article/collections/">Collection</a> to facilitate access control. Please be sure to attach the secret to an existing <a href="https://github.com/orgs/tomeshnet/teams/toronto-community-network/teams">Toronto Community Network Work Group</a>. These collection names start with <code>_OU</code>.</p>
+<p>Additional Collections may be created or utilized to classify the secret such as <em>Social</em>, <em>Service</em> <em>Accounts</em>, <em>Website</em>, and more.</p>
+<p>When naming your credential, please use the following convention: <em>System/Function - Identifier</em>.</p>
+<blockquote>
+<p><strong>For example:</strong></p>
+<ul>
+<li>A public SSH key may be named <em>&quot;Public Key - Contributor A&quot;</em></li>
+<li>A GitHub deployment key may be named <em>&quot;GitHub - Deploy Key (docs.tomesh.net)&quot;</em></li>
+<li>A shared login social media may be named <em>&quot;Twitter - tomeshnet&quot;</em></li>
+</ul>
+</blockquote>
+<p>When determining a password or passphrase, please use strong entropy to prevent unauthorized access. For more information, please see our <a href="operations/secrets.html#recommended-best-practices">Recommended Best Practices</a> below.</p>
+<p>All public keys and private keys must be saved as <em>Secured Notes</em>.</p>
+<p>Please be mindful that secrets stored in this system can be accessed by any authorized contributor in the Toronto Community Network. While your connection to the system is secured via TLS, the secrets you choose to store in the group can be seen by others. Please refrain from using the system for storing any personal information.</p>
+<p>For more information about managing items, please see Bitwarden's official documentation on <a href="https://bitwarden.com/help/article/managing-items/">Managing Items</a>.</p>
+<h2 id="data-backup"><a class="header" href="#data-backup">Data Backup</a></h2>
+<p>The VM that hosts the Bitwarden container is backed up on a weekly basis. </p>
+<p>Administrators of the <a href="https://pass.tomesh.net/#/organizations/e4573938-547f-4157-a977-b28fc15bcec0/vault">Toronto Community Network organization</a> have the ability to export the entire vault to a JSON or CSV file.</p>
+<p>As the export function provides secrets in clear-text, please secure or encrypt the file immediately.</p>
+<h2 id="recommended-best-practices"><a class="header" href="#recommended-best-practices">Recommended Best Practices</a></h2>
+<p>The Government of Canada's <a href="https://cyber.gc.ca/">Canadian Centre for Cyber Security</a> provides recommendations for organizations to protect networks, systems, and information. By using these best practices, you can protect yourself and the integrity of the Toronto Community Network.</p>
+<ul>
+<li><a href="https://cyber.gc.ca/en/guidance/password-managers-security-itsap30025">Password Managers-Security (ITSAP.30.025)</a></li>
+<li><a href="https://www.cyber.gc.ca/en/guidance/best-practices-passphrases-and-passwords-itsap30032">Best Practices for Passphrases and Passwords (ITSAP.30.032)</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme-ext/sidebar.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>

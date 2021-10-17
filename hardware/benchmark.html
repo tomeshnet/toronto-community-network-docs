@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hardware Benchmark - Toronto Community Network</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme-ext/style.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../notice.html">Notice</a></li><li class="chapter-item expanded "><a href="../network/main.html"><strong aria-hidden="true">1.</strong> Network</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../network/standards-ip-address.html"><strong aria-hidden="true">1.1.</strong> IP Address Standard</a></li><li class="chapter-item expanded "><a href="../network/standards-hostname.html"><strong aria-hidden="true">1.2.</strong> Hostname Standard</a></li><li class="chapter-item expanded "><a href="../network/supernode1.html"><strong aria-hidden="true">1.3.</strong> Supernode 1</a></li><li class="chapter-item expanded "><a href="../network/supernode4.html"><strong aria-hidden="true">1.4.</strong> Supernode 4</a></li><li class="chapter-item expanded "><a href="../network/exit-node.html"><strong aria-hidden="true">1.5.</strong> Exit Node</a></li><li class="chapter-item expanded "><a href="../network/protocol-babel.html"><strong aria-hidden="true">1.6.</strong> Babel</a></li></ol></li><li class="chapter-item expanded "><a href="../hardware/main.html"><strong aria-hidden="true">2.</strong> Hardware</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../hardware/benchmark.html" class="active"><strong aria-hidden="true">2.1.</strong> Hardware Benchmark</a></li><li class="chapter-item expanded "><a href="../hardware/benchmark-results.html"><strong aria-hidden="true">2.2.</strong> Hardware Benchmark Results</a></li><li class="chapter-item expanded "><a href="../hardware/router-er-x-sfp.html"><strong aria-hidden="true">2.3.</strong> ER-X-SFP</a></li><li class="chapter-item expanded "><a href="../hardware/cpe-ubiquiti.html"><strong aria-hidden="true">2.4.</strong> CPE - Ubiquiti</a></li></ol></li><li class="chapter-item expanded "><a href="../operations/main.html"><strong aria-hidden="true">3.</strong> Operations</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../operations/working-groups.html"><strong aria-hidden="true">3.1.</strong> Working Groups</a></li><li class="chapter-item expanded "><a href="../operations/learning-group.html"><strong aria-hidden="true">3.2.</strong> Learning Group</a></li><li class="chapter-item expanded "><a href="../operations/legal.html"><strong aria-hidden="true">3.3.</strong> Legal</a></li><li class="chapter-item expanded "><a href="../operations/finances.html"><strong aria-hidden="true">3.4.</strong> Finances</a></li><li class="chapter-item expanded "><a href="../operations/data.html"><strong aria-hidden="true">3.5.</strong> Data</a></li><li class="chapter-item expanded "><a href="../operations/secrets.html"><strong aria-hidden="true">3.6.</strong> Managing Secrets</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Toronto Community Network</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!--
+                        Page table of contents 
+                        Source: https://github.com/JorelAli/mdBook-pagetoc/blob/3b9165bca3ceb54119001890d3a7e9356b171a72/README.md
+                        -->
+                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        
+                        <h1 id="hardware-benchmark"><a class="header" href="#hardware-benchmark">Hardware Benchmark</a></h1>
+<h2 id="lab-setup"><a class="header" href="#lab-setup">Lab setup</a></h2>
+<p><code>Device</code> Device being tested</p>
+<p><code>Endpoint1</code>, <code>Endpoint2</code> Devices not limited by CPU or network.</p>
+<p><img src="images/hardware-benchmark-network.jpg" alt="Network diagram of device, endpoint1, and endpoint2. Both endpoints are connected to the device but not to each-other." /></p>
+<p>Instructions below are non-persistent. When device is restarted changes will be removed. <code>wireguard</code> package must be installed.</p>
+<h3 id="device-lab-configuration"><a class="header" href="#device-lab-configuration">Device Lab Configuration</a></h3>
+<h4 id="configure-interfaces"><a class="header" href="#configure-interfaces">Configure interfaces</a></h4>
+<p>Configure the IP addresses on each interface</p>
+<p><code>eth0</code> Interface on device connected to <code>Endpoint 1</code></p>
+<p><code>eth1</code> Interface on device connected to <code>Endpoint 2</code></p>
+<p>If the device has only one port, see Appendix A - Single Port Router to split the single port into two VLANs.</p>
+<pre><code>ifconfig eth0 NETMASK 255.255.255.0
+ifconfig eth0 192.168.1.1 up
+
+ifconfig eth1 NETMASK 255.255.255.0
+ifconfig eth1 192.168.2.1 up
+</code></pre>
+<p><em>Note: You can add other IP addresses to an interface by using the <code>ethx:x</code> notation such as <code>eth0:1</code>.  This can be used to add your home IP address alongside the lab's IP address and share the same switch</em></p>
+<p><em>For example <code>ifconfig eth0:1 192.168.10.1</code></em></p>
+<h4 id="enable-routing"><a class="header" href="#enable-routing">Enable Routing</a></h4>
+<p>Most Linux distributions have routing disable. Enable it.</p>
+<p><code>echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code></p>
+<h4 id="wireguard"><a class="header" href="#wireguard">WireGuard</a></h4>
+<p>Configure a WireGuard server. Create a configuration file <code>wg0.conf</code> containing a private/public key.</p>
+<p><em>NOTE: Do not use these keys in production!</em></p>
+<pre><code>cat &lt;&lt;&quot;EOF&quot;&gt; wg0.conf
+[Interface]
+PrivateKey = 4LMdS6DPRe5gHcmMWYhZqlM9PzFTEeDz0kz0YIMCPm0=
+ListenPort = 1000
+
+[Peer]
+PublicKey = //C9KkNgCgT/0+bIb6YMS558xNx6wJOwAuGbqO8CGlI=
+AllowedIPs = 0.0.0.0/0
+AllowedIPs = ::/0
+EOF
+</code></pre>
+<p>Bring up the <code>wg0</code> interface using above configuration</p>
+<pre><code>ifconfig wg0 down
+ip link del dev wg0
+ip link add dev wg0 type wireguard
+wg setconf wg0 wg0.conf
+ip addr add 10.254.254.1/24 dev wg0
+ifconfig wg0 up
+</code></pre>
+<h3 id="endpoint1-lab-configuration"><a class="header" href="#endpoint1-lab-configuration">Endpoint1 Lab Configuration</a></h3>
+<h4 id="configure-interfaces-1"><a class="header" href="#configure-interfaces-1">Configure interfaces</a></h4>
+<p>Configure the IP addresses the interface. Make the default route the <code>Device</code>.</p>
+<p><code>eth0</code> Interface on device connected to <code>Device</code></p>
+<pre><code>ifconfig eth0 NETMASK 255.255.255.0
+ifconfig eth0 192.168.1.2 up
+ip route add 0.0.0.0/0 via 192.168.1.1
+</code></pre>
+<h4 id="wireguard-1"><a class="header" href="#wireguard-1">WireGuard</a></h4>
+<p>Configure a WireGuard client. Create a configuration file <code>wg0.conf</code> containing a private/public key.</p>
+<p><em>NOTE: Do not use these keys in production!</em></p>
+<pre><code>cat &lt;&lt;&quot;EOF&quot;&gt; wg0.conf
+[Interface]
+PrivateKey = cFP6gBOZrvqlt/XkdT7Cp6HOLuNMYa6yVNcCR+e9IEw=
+ListenPort = 1000
+
+[Peer]
+PublicKey = 1510YjIH8EfQtJ2zxEEUb5+1B4HqmIv86pwpkJwNOW4=
+AllowedIPs = 0.0.0.0/0
+AllowedIPs = ::/0
+Endpoint = 192.168.1.2:1000
+EOF
+</code></pre>
+<p>Bring up the <code>wg0</code> interface using above configuration.</p>
+<pre><code>ifconfig wg0 down
+ip link del dev wg0
+ip link add dev wg0 type wireguard
+wg setconf wg0 wg0.conf
+ip addr add 10.254.254.2/24 dev wg0
+ifconfig wg0 up
+</code></pre>
+<h3 id="endpoint2-lab-configuration"><a class="header" href="#endpoint2-lab-configuration">Endpoint2 Lab Configuration</a></h3>
+<h4 id="configure-interfaces-2"><a class="header" href="#configure-interfaces-2">Configure interfaces</a></h4>
+<p>Configure the IP addresses the interface. Make the default route the <code>Device</code>.</p>
+<p><code>eth0</code> Interface on device connected to <code>Device</code></p>
+<pre><code>ifconfig eth0 NETMASK 255.255.255.0
+ifconfig eth0 192.168.1.2 up
+ip route add 0.0.0.0/0 via 192.168.2.1
+</code></pre>
+<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
+<p><code>iperf3</code> package must be installed. During <code>iperf3</code> tests there are several things to remember:</p>
+<ul>
+<li>
+<p>iperf3, when run on device with low CPU resources, can consume CPU power to generate packets. Speed when transmitting will be slower than when receiving since the CPU will be taxed more</p>
+<ul>
+<li>using the <code>--repeating-payload</code> flag can reduce the stress placed on the CPU by not generating random data to transmit</li>
+</ul>
+</li>
+<li>
+<p>CPU load can be seen by using the <code>top</code> command during the test</p>
+</li>
+<li>
+<p>Watching  <code>/proc/interrupts</code> can also show where CPU cycles are being spent</p>
+</li>
+<li>
+<p>Some devices have hardware offloading that can increase performance when routing through the device</p>
+</li>
+</ul>
+<h3 id="interface-speed"><a class="header" href="#interface-speed">Interface speed</a></h3>
+<p>This will test the interface speed between the <code>Device</code> and <code>Endpoint1</code>.</p>
+<p>On <code>Endpoint1</code>:</p>
+<p><code>iperf3 -s</code></p>
+<p>On <code>Device</code>:</p>
+<ul>
+<li>
+<p>Test Forward speed
+<code>iperf3 -c 192.168.1.2</code></p>
+</li>
+<li>
+<p>Test Reverse speed
+<code>iperf3 -c 192.168.1.2 -R</code></p>
+</li>
+</ul>
+<h3 id="wireguard-to-wireguard"><a class="header" href="#wireguard-to-wireguard">WireGuard to WireGuard</a></h3>
+<p>This will test the interface speed over WireGuard.</p>
+<p>On <code>Endpoint1</code>:</p>
+<p><code>iperf3 -s</code></p>
+<p>On <code>Device</code>:</p>
+<ul>
+<li>
+<p>Test Forward speed
+<code>iperf3 -c 10.254.254.2</code></p>
+</li>
+<li>
+<p>Test Reverse speed
+<code>iperf3 -c 10.254.254.2 -R</code></p>
+</li>
+</ul>
+<h3 id="endpoint2-through-device-to-endpoint1"><a class="header" href="#endpoint2-through-device-to-endpoint1">Endpoint2 through Device to Endpoint1</a></h3>
+<p>This test will show how well the <code>Device</code> can route packets between subnets.</p>
+<p>On <code>Endpoint1</code>:</p>
+<p><code>iperf3 -s</code></p>
+<p>On <code>Endpoint12</code>:</p>
+<ul>
+<li>
+<p>Test Forward speed
+<code>iperf3 -c 192.168.1.2</code></p>
+</li>
+<li>
+<p>Test Reverse speed
+<code>iperf3 -c 192.168.1.2 -R</code></p>
+</li>
+</ul>
+<h3 id="endpoint2-through-device-over-wg-to-endpoint1"><a class="header" href="#endpoint2-through-device-over-wg-to-endpoint1">Endpoint2 through Device over WG to Endpoint1</a></h3>
+<p>This test will show how well the <code>Device</code> can route packets between subnets while encrypting traffic over the <code>wg0</code> interface.</p>
+<p>An additional route needs to be added on Endpoint1 to send all packets back over wg0 when doing reverse test.</p>
+<p>On <code>Endpoint1</code>:</p>
+<p><code>ip route add 192.168.2.0/24 dev wg0</code>
+<code>iperf3 -s</code></p>
+<p>On <code>Endpoint2</code>:</p>
+<ul>
+<li>
+<p>Test Forward speed
+<code>iperf3 -c 10.254.254.2</code></p>
+</li>
+<li>
+<p>Test Reverse speed
+<code>iperf3 -c 10.254.254.2 -R</code></p>
+</li>
+</ul>
+<p>On Endpoint1 (once completed test):
+<code>ip route delete 192.168.2.0/24 dev wg0</code></p>
+<h2 id="appendix-a---single-port-router"><a class="header" href="#appendix-a---single-port-router">Appendix A - Single Port Router</a></h2>
+<p>If a device only has one port, routing can be accomplished using 2 VLANs and a switch. You may required to use <code>modprobe 8021q</code> to enable VLAN support.</p>
+<h3 id="device-vlan-configuration"><a class="header" href="#device-vlan-configuration">Device VLAN Configuration</a></h3>
+<p>Split the interface into two VLANs creating 2 interfaces called <code>eth0.10</code> and <code>eth0.11</code>.</p>
+<pre><code>apt-get install vlan
+vconfig add eth0 10
+vconfig add eth0 11
+</code></pre>
+<h3 id="switch-configuration"><a class="header" href="#switch-configuration">Switch Configuration</a></h3>
+<p>When a managed switch is used, port connected to the device should be configured as a <code>trunk</code> or <code>general</code> mode and VLAN 10 and 11 set as <code>tagged</code>. Two other ports on the switch should then be configured as access to VLAN 10 and VLAN 11 respectively. In this setup the VLAN is transparent to <code>Endpoint 1</code> and <code>Endpoint 2</code>.</p>
+<p>When an unmanaged switch is used, <code>Endpoint 1</code> and <code>Endpoint 2</code> must be configured to use access the VLAN directly.</p>
+<h3 id="endpoint-1-vlan-configuration"><a class="header" href="#endpoint-1-vlan-configuration">Endpoint 1 VLAN Configuration</a></h3>
+<pre><code>apt-get install vlan
+vconfig add eth0 10
+</code></pre>
+<h3 id="endpoint-2-vlan-configuration"><a class="header" href="#endpoint-2-vlan-configuration">Endpoint 2 VLAN Configuration</a></h3>
+<pre><code>apt-get install vlan
+vconfig add eth0 11
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../hardware/main.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../hardware/benchmark-results.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../hardware/main.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../hardware/benchmark-results.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme-ext/sidebar.js"></script>
+    </body>
+</html>
